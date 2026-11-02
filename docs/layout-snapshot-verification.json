@@ -1,0 +1,10 @@
+{
+  "unitId":"VWA-001",
+  "baseSha":"eaa463ae73a07e5299ff0e8f1fb6b2f012955c17",
+  "scope":"Stable full graph layout and detached validated render snapshot",
+  "beforeFix":{"command":"node --test tests/projection.test.ts","passed":5,"failed":3,"cases":["Equivalent dependency/agent enumeration changes full layout","Returned nodes change with caller mutation","Invalid current time accepted with no agents"]},
+  "afterFix":{"command":"node --test tests/projection.test.ts tests/render-interaction.test.ts","passed":11,"failed":0,"coverage":["Full layout ordering and detached nodes","Valid current time without agents","Renderer reads admitted timeline only","Existing exact graph/table inspector and keyboard interactions","Existing cross-tenant, cycle, duplicate and script-terminator rejection"]},
+  "focusedTypecheck":"TypeScript7.0.2 strict NodeNext core/projection tests: pass",
+  "review":["No cross-scope record admitted","Locale-independent stable ordering","No renderer read of unvalidated caller timeline after layout","Escaping, private defaults, inactive lease behavior and reduced-motion output retained"],
+  "limits":["DOM tests use jsdom26.1.0 with native dialog stub; not real-browser or assistive-technology acceptance","Full engine dependency-backed typecheck/build/tests require exact-head hosted CI","No live host, private export transfer, subscription or production acceptance"]
+}

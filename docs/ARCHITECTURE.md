@@ -53,3 +53,7 @@ Mounted operator controls also provide backend-projected folders and literal sea
 [Private participant controls](PARTICIPANT_CONTROLS.md) use the pinned accepted Consent PR8 client for one explicitly selected offer, inert exact disclosure/terms, unchecked affirmative acknowledgement, separate decline/withdraw and immutable pending replay. They issue no automatic requests. Current authenticated hosting, identity/purpose lifecycle, private reload recovery and actual browser/assistive-technology acceptance remain pending. No invitation/send/publication controls exist.
 
 Private exact Factual plan/effort snapshot review is documented in FACTUAL_REVIEW.md. It preserves selected editions and unresolved histories, without inventing question refs, audit events, agents or closure.
+
+## Stable detached projection admission
+
+Layout captures detached context/snapshot records before validation, normalizes dependency order, sorts node keys by locale-independent code-unit order and sorts agent IDs. Edges are emitted from the placed-node order. Equivalent graph enumerations therefore produce the same full layout, including dependencies, edges and agent slots. Later caller mutation cannot rewrite returned node records. Rendering also captures the entire timeline/title snapshot before admission rather than reading caller-owned fields again after validation. Current time is validated even for an empty agent list. These are projection consistency checks; authenticated host filtering and private export authorization remain mandatory.
