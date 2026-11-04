@@ -4,7 +4,7 @@
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 6,
-  "observedAt": "2026-11-04T16:04:18Z",
+  "observedAt": "2026-11-04T16:13:36Z",
   "units": [
     {
       "id": "VWA-001",
@@ -84,12 +84,12 @@
         "Evidence timeline and correction-impact inspectors"
       ],
       "acceptanceCriteria": "Verify required behavior, rejection paths, source-bound test evidence and private defaults; live acceptance remains separate.",
-      "implementationStatus": "partial_private_knowledge_record_projection; PR18 owning validators, exact selected and one-hop captured records plus containing storage revision; historical subjects never substituted; no permission/audit/verified finding invention. Four new owning-domain/JSDOM groups and all91 ordinary local checks pass. Installed exports/final-head CI pending. Host Identity/Consent/full-snapshot/private export and browser/AT/live acceptance remain separate.",
+      "implementationStatus": "partial_private_knowledge_record_projection; PR18 owning validators, exact selected and one-hop captured records/predecessor plus containing storage revision; historical subjects never substituted; no permission/audit/verified finding invention. All92 ordinary local and installed compiled-public-export tests pass, including five new owning-domain/JSDOM groups; typecheck/build/registry/example pass. Final-head CI pending/queued. Host Identity/Consent/full-snapshot/private export and browser/AT/live acceptance remain separate.",
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
         "example": "docs/examples/private-knowledge-review.html",
-        "status": "Explicitly incomplete draft: all91 local checks pass; installed package setup and current-head GitHub Actions pending/queued; do not merge without actual checks",
+        "status": "Explicitly incomplete draft: all92 local and installed compiled-public-export tests pass; current-head GitHub Actions pending/queued; do not merge without actual final-head checks",
         "verification": "docs/knowledge-review-verification.json"
       }
     },
@@ -133,12 +133,12 @@
         "Accessible correspondence and investigation views"
       ],
       "acceptanceCriteria": "Verify required behavior, rejection paths, source-bound test evidence and private defaults; live acceptance remains separate.",
-      "implementationStatus": "partial_private_knowledge_record_projection; PR18 owning validators, exact selected and one-hop captured records plus containing storage revision; historical subjects never substituted; no permission/audit/verified finding invention. Four new owning-domain/JSDOM groups and all91 ordinary local checks pass. Installed exports/final-head CI pending. Host Identity/Consent/full-snapshot/private export and browser/AT/live acceptance remain separate.",
+      "implementationStatus": "partial_private_knowledge_record_projection; PR18 owning validators, exact selected and one-hop captured records/predecessor plus containing storage revision; historical subjects never substituted; no permission/audit/verified finding invention. All92 ordinary local and installed compiled-public-export tests pass, including five new owning-domain/JSDOM groups; typecheck/build/registry/example pass. Final-head CI pending/queued. Host Identity/Consent/full-snapshot/private export and browser/AT/live acceptance remain separate.",
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
         "example": "docs/examples/private-knowledge-review.html",
-        "status": "Explicitly incomplete draft: all91 local checks pass; installed package setup and current-head GitHub Actions pending/queued; do not merge without actual checks",
+        "status": "Explicitly incomplete draft: all92 local and installed compiled-public-export tests pass; current-head GitHub Actions pending/queued; do not merge without actual final-head checks",
         "verification": "docs/knowledge-review-verification.json"
       }
     },

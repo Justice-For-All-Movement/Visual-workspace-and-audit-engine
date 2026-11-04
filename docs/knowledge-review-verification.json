@@ -1,27 +1,40 @@
 {
   "status": "incomplete_draft_checkpoint",
   "local": {
-    "ordinaryTests": 91,
-    "newFocusedGroups": 4,
+    "ordinaryTests": 92,
+    "newFocusedGroups": 5,
     "typecheck": "passed",
     "build": "passed",
     "registry": "passed"
   },
-  "installed": "NOT QUALIFIED: normal setup still pending; no installed test pass claimed",
+  "installed": {
+    "ordinaryTests": 92,
+    "newFocusedGroups": 5,
+    "failures": 0,
+    "skips": 0,
+    "publicExports": "passed through separately installed compiled package",
+    "compiledByteMatch": [
+      "knowledge-review.js",
+      "factual-review.js",
+      "index.js"
+    ],
+    "example": "identical fictional private HTML regenerated through installed public exports",
+    "setup": "normal npm installation/prepare/build completed; no ignore-scripts"
+  },
   "ci": {
-    "initialSource": "9b54ef7e7e8f7f967210afdbbf7d986e641e3962",
-    "run": 41863297487,
+    "observedSource": "c2cabc11d5fd049d90b816819c0c381707375f23",
+    "run": 41864612148,
     "status": "queued; not passed; actual final-head checks required"
   },
   "review": [
     "Owning full-history validators and storage/count check; exact scoped selected refs and purpose",
     "Original captured subjects/predecessor retained; latest references label capture only; no live substitution",
     "Detached inert record inspectors, private export, no audit/agent/permission/finding invention",
-    "3MiB input/512KiB output/256node512edge rejection; malformed extra fields and oversized input tested"
+    "3MiB input/512KiB output/256node512edge rejection; malformed extra fields and oversized input tested",
+    "Valid owning large-history fixture exceeds visual output budget and rejects whole projection; exact predecessor remains historical without expansion"
   ],
   "remaining": [
-    "Finish installed package setup and run public exports/example checks",
-    "Inspect required final-head CI/branch rules and review before merge",
+    "Inspect actual final-head CI before merge; main unprotected/rulesets empty observed, no independent human review gate",
     "Host full-snapshot authorization/current Identity-Consent/private export; transitive correction impact, actual browser/AT/multilingual/live qualification"
   ],
   "boundaries": [
@@ -30,14 +43,14 @@
   ],
   "sourceSha256": {
     "src/knowledge-review.ts": "6ed2a3f2ed55ac83622d3bd2407854bc71cb3312d729525cc17dd8efcce81523",
-    "tests/knowledge-review.test.ts": "ec690a34d222f5d4ece0c1caf9979c0f0af0eeef36cf1efdda4340b01bf6ada1",
+    "tests/knowledge-review.test.ts": "562970c8c99e632cb538a62f4976014462d099000e34d3814172e986a6037222",
     "package.json": "72cacfb08831fbbcecc3f129cfeab20111a356923cd0d5ae340263d1ab0fedb0",
     "package-lock.json": "872d2ca20a07643d071fc59a5e7abed309b271e46a46c838d6f0c25dcce00245",
     "scripts/validate-pr-registry.mjs": "313e8ff75289b465debe4cafd2695ead4fbf05036b514dcb4e7a4023b4f7f807",
-    "docs/KNOWLEDGE_REVIEW.md": "45b9509328383083f5fca8aee7acd5b74ecaa63b7cbcec047b21b96738a697dc",
+    "docs/KNOWLEDGE_REVIEW.md": "3908187b014be460af4f77ff1ccb748492c873588e843e947988d29874a60147",
     "docs/ARCHITECTURE.md": "9cbffd607f834c06913c7d67695542af66705349d8413868c1ba98ba169ef9e6",
-    "scripts/render-knowledge-example.mjs": "4bfdfdc97f226082320bd035fb295f40943cfae0b1065ef0581941633f844113",
+    "scripts/render-knowledge-example.mjs": "99820c30ec4b3d401ce6d7a52fb0a9bb1a60592da84e610a1ca9f820e9edfda0",
     "docs/examples/private-knowledge-review.html": "1445ab3574fff1a7c97d08ea8d05ff28b893380d4c71405e98cbe6be173c95cc",
-    "registry/prs.json": "794370e38c3fd9b68db3b62c7f10a33eea8d8e7b3f0215e7fed13ec6cb29f7a7"
+    "registry/prs.json": "ab6097bb2cbc1da8fd8c60defe64eb514cb3c1e23e5572ea420b1dd8a1f38d5e"
   }
 }
