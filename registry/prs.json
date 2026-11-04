@@ -4,7 +4,7 @@
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 6,
-  "observedAt": "2026-11-04T16:54:07Z",
+  "observedAt": "2026-11-04T20:00:06Z",
   "units": [
     {
       "id": "VWA-001",
@@ -85,7 +85,7 @@
         "Evidence timeline and correction-impact inspectors"
       ],
       "acceptanceCriteria": "Verify required behavior, rejection paths, source-bound test evidence and private defaults; live acceptance remains separate.",
-      "implementationStatus": "partial; accepted PR18 record inspector92 tests/current-head CI; PR19 captured citation inspector all96 local/typecheck/build/registry and four installed public-export groups pass. Full installed96 tests also pass; current-head CI pending. Host Identity/Consent/export/browser/live/full correction impact remain separate.",
+      "implementationStatus": "partial; accepted PR18/19 captured record/citation inspectors; new proposal review source checkpoint has four owning-validator/JSDOM groups and typecheck passing. Full local/installed/current-head CI pending. Read-only captured unassessed assertions/quotes/basis; no source/Consent authentication, persisted proposal IDs or acceptance. Host/private export/browserAT/full correction impact/live remain separate.",
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
@@ -94,11 +94,16 @@
         "verification": "docs/knowledge-review-verification.json"
       },
       "capturedLinkReview": {
-        "status": "incomplete draft: all96 local and all96 installed public-export tests pass; current-head CI pending",
+        "status": "PR19 merged82d3a19 after finalCI41872201568 success96; previous pending notes superseded",
         "docs": "docs/EVIDENCE_LINK_REVIEW.md",
         "focusedTests": 4,
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/19",
         "verification": "docs/evidence-link-review-verification.json"
+      },
+      "proposalReview": {
+        "status": "incomplete source checkpoint",
+        "docs": "docs/PROPOSAL_REVIEW.md",
+        "example": "docs/examples/private-proposal-review.html"
       }
     },
     {
@@ -142,7 +147,7 @@
         "Accessible correspondence and investigation views"
       ],
       "acceptanceCriteria": "Verify required behavior, rejection paths, source-bound test evidence and private defaults; live acceptance remains separate.",
-      "implementationStatus": "partial; accepted PR18 record inspector92 tests/current-head CI; PR19 captured citation inspector all96 local/typecheck/build/registry and four installed public-export groups pass. Full installed96 tests also pass; current-head CI pending. Host Identity/Consent/export/browser/live/full correction impact remain separate.",
+      "implementationStatus": "partial; accepted PR18/19 captured record/citation inspectors; new proposal review source checkpoint has four owning-validator/JSDOM groups and typecheck passing. Full local/installed/current-head CI pending. Read-only captured unassessed assertions/quotes/basis; no source/Consent authentication, persisted proposal IDs or acceptance. Host/private export/browserAT/full correction impact/live remain separate.",
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
@@ -151,11 +156,16 @@
         "verification": "docs/knowledge-review-verification.json"
       },
       "capturedLinkReview": {
-        "status": "incomplete draft: all96 local and all96 installed public-export tests pass; current-head CI pending",
+        "status": "PR19 merged82d3a19 after finalCI41872201568 success96; previous pending notes superseded",
         "docs": "docs/EVIDENCE_LINK_REVIEW.md",
         "focusedTests": 4,
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/19",
         "verification": "docs/evidence-link-review-verification.json"
+      },
+      "proposalReview": {
+        "status": "incomplete source checkpoint",
+        "docs": "docs/PROPOSAL_REVIEW.md",
+        "example": "docs/examples/private-proposal-review.html"
       }
     },
     {

@@ -63,3 +63,5 @@ Timeline rows now open exact event/resource records in the shared inert inspecto
 KNOWLEDGE_REVIEW.md describes a pure private exact-record capture inspector using owning Knowledge validators. Captured historical subject editions and containing storage revisions remain explicit; no source/Consent authentication, transitive impact, audit event or verified finding is inferred.
 
 EVIDENCE_LINK_REVIEW.md documents captured citation-set inspectors; unloaded Evidence references and historical claim editions never become current permission or truth.
+
+PROPOSAL_REVIEW.md describes captured unassessed proposal cards and exact citation inspectors. No source service observation or acceptance is inferred.
