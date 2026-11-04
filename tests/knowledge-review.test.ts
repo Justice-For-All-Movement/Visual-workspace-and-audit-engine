@@ -119,8 +119,30 @@ test("Knowledge graph/table inspector renders hostile literal text inert and pre
 });
 test("Knowledge projection rejects fabricated storage, foreign refs, wrong purpose and injected approval", () => {
   const f = fixture();
-  assert.throws(() => projectKnowledgeRecord(c, { revision: 3, state: f.state, permission: true } as never, f.claim, "tested"), { code: "invalid_knowledge_snapshot" });
-  assert.throws(() => projectKnowledgeRecord(c, { revision: 3, state: f.state, padding: "x".repeat(3 * 1024 * 1024) } as never, f.claim, "tested"), { code: "projection_too_large" });
+  assert.throws(
+    () =>
+      projectKnowledgeRecord(
+        c,
+        { revision: 3, state: f.state, permission: true } as never,
+        f.claim,
+        "tested",
+      ),
+    { code: "invalid_knowledge_snapshot" },
+  );
+  assert.throws(
+    () =>
+      projectKnowledgeRecord(
+        c,
+        {
+          revision: 3,
+          state: f.state,
+          padding: "x".repeat(3 * 1024 * 1024),
+        } as never,
+        f.claim,
+        "tested",
+      ),
+    { code: "projection_too_large" },
+  );
   assert.throws(
     () =>
       projectKnowledgeRecord(
@@ -194,6 +216,7 @@ test("entity, event and relationship inspectors preserve unknown times and unass
   });
   for (const selected of [
     state.records[0]!.ref,
+    state.records[2]!.ref,
     state.records[3]!.ref,
     state.records[4]!.ref,
   ]) {
@@ -205,5 +228,62 @@ test("entity, event and relationship inspectors preserve unknown times and unass
     );
     assert.equal(view.nodes.at(-1)!.ref.id, selected.id);
     assert.deepEqual(view.events, []);
+    if (selected.id === "person" && selected.revision === 2) {
+      assert.deepEqual(
+        view.nodes.at(-1)!.dependencies.find((r) => r.id === "person"),
+        f.person,
+      );
+      assert.equal(
+        (
+          view.nodes.find((n) => n.ref.id === "person" && n.ref.revision === 1)!
+            .details as any
+        ).record.value.label,
+        "Fictional person",
+      );
+    }
   }
+});
+
+// A valid owning history can still exceed the smaller bounded visual response.
+test("valid large Knowledge histories reject the entire over-budget inspector", () => {
+  let state = createKnowledgeState(c);
+  for (let i = 0; i < 64; i++) {
+    state = reviseKnowledge(c, state, {
+      id: `entity-${i}`,
+      expectedRevision: 0,
+      value: {
+        type: "entity",
+        label: `Fictional ${i}`,
+        category: "person",
+        description: "x".repeat(8000),
+      },
+    });
+  }
+  state = reviseKnowledge(c, state, {
+    id: "many-subjects",
+    expectedRevision: 0,
+    value: {
+      type: "claim",
+      text: "Unassessed fictional assertion",
+      subjectRefs: state.records.map((r) => r.ref),
+      time: { earliest: null, latest: null },
+      accountType: "observation",
+      limitations: [],
+      assessment: null,
+      proceduralPosture: null,
+      editorialApproval: null,
+    },
+  });
+  const before = structuredClone(state);
+  assert.throws(
+    () =>
+      projectKnowledgeRecord(
+        c,
+        { revision: 65, state },
+        state.records.at(-1)!.ref,
+        "tested",
+      ),
+    { code: "projection_too_large" },
+  );
+  assert.deepEqual(state, before);
 });
