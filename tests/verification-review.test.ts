@@ -363,3 +363,58 @@ test("whole oversized captured input and extra authority fields reject before an
     { code: "projection_too_large" },
   );
 });
+
+test("valid owning citation captures can exceed the output budget and reject the whole view without truncation", () => {
+  const f = setup(),
+    text = "x".repeat(16032),
+    source = f.evidence.versions[0]!;
+  f.evidence = e.addRepresentation(f.evidence, c, {
+    id: "large-text",
+    evidence: source.ref,
+    sourceSha256: source.sha256,
+    text,
+    pages: null,
+    durationMs: null,
+    toolVersion: "synthetic-budget-fixture",
+  });
+  const rep = f.evidence.representations.at(-1)!;
+  const selector = {
+    kind: "text" as const,
+    evidence: source.ref,
+    sha256: source.sha256,
+    representationId: rep.id,
+    representationDigest: rep.digest,
+    page: null,
+    start: 0,
+    end: text.length,
+    quote: text,
+  };
+  f.state = reviseEvidenceLinks(c, f.knowledge, f.evidence, f.state, {
+    ...f.command,
+    expectedRevision: 1,
+    links: Array.from({ length: 32 }, (_, i) => ({
+      id: `passage-${i}`,
+      relation: "quotes" as const,
+      selector: {
+        ...selector,
+        start: i,
+        end: i + 16000,
+        quote: text.slice(i, i + 16000),
+      },
+    })),
+  });
+  f.reviews = recordVerificationReview(c, f.knowledge, f.state, f.reviews, {
+    linkRef: f.state.records[1]!.ref,
+    expectedRevision: 1,
+    checks: f.checks,
+    rationale: "Large exact captured passages remain unresolved",
+  });
+  const old = structuredClone(f.reviews);
+  assert.throws(() => project(f, f.reviews.records[1]!.ref), {
+    code: "projection_too_large",
+  });
+  assert.throws(() => render(f, f.reviews.records[1]!.ref), {
+    code: "projection_too_large",
+  });
+  assert.deepEqual(f.reviews, old);
+});

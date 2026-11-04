@@ -66,7 +66,8 @@
         17,
         18,
         19,
-        20
+        20,
+        21
       ],
       "dependsOn": [
         "VWA-001"
@@ -112,7 +113,9 @@
       "verificationReview": {
         "docs": "docs/VERIFICATION_REVIEW.md",
         "verification": "docs/verification-review-verification.json",
-        "status": "Incomplete WIP; six owning-domain/JSDOM groups pass; full local/installed/current-head CI pending; unit remains partial"
+        "status": "Full107 local+installed suites pass plus seventh local budget group/all seven installed focused groups; declarations/module/example match. Initial CI41930909576 passed107; expanded/current-head CI pending. Unit remains partial.",
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/21",
+        "example": "docs/examples/private-verification-review.html"
       }
     },
     {
@@ -133,7 +136,8 @@
         17,
         18,
         19,
-        20
+        20,
+        21
       ],
       "dependsOn": [
         "VWA-001"
@@ -183,7 +187,9 @@
       "verificationReview": {
         "docs": "docs/VERIFICATION_REVIEW.md",
         "verification": "docs/verification-review-verification.json",
-        "status": "Incomplete WIP; six owning-domain/JSDOM groups pass; full local/installed/current-head CI pending; unit remains partial"
+        "status": "Full107 local+installed suites pass plus seventh local budget group/all seven installed focused groups; declarations/module/example match. Initial CI41930909576 passed107; expanded/current-head CI pending. Unit remains partial.",
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/21",
+        "example": "docs/examples/private-verification-review.html"
       }
     },
     {

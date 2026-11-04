@@ -1,18 +1,37 @@
 {
-  "status": "Incomplete WIP; tested first implementation checkpoint",
+  "status": "PR21 expanded qualification checkpoint; final-head CI required",
   "local": {
-    "newGroups": 6,
-    "pass": 6,
+    "newGroups": 7,
+    "pass": 7,
     "fail": 0,
     "skipped": 0,
     "typecheck": "passed",
     "build": "passed",
     "registry": "passed",
     "normalNpmCi": "passed",
-    "fullSuite": "in progress"
+    "fullSuite": "107-test first implementation suite passed plus separate seventh budget group; no single full108 invocation claimed"
   },
-  "installed": "pending",
-  "ci": "pending",
+  "installed": {
+    "fullSuite": 107,
+    "focusedGroups": 7,
+    "fail": 0,
+    "skipped": 0,
+    "normalInstall": "passed",
+    "declarations": "passed",
+    "runtimeModuleByteMatch": true,
+    "fictionalExampleByteMatch": true,
+    "full108SingleInvocation": "not claimed"
+  },
+  "ci": {
+    "source": "6deca899981fee22997d08b7d77631e213220939",
+    "run": 41930909576,
+    "check": 126927232984,
+    "tests": 107,
+    "fail": 0,
+    "skipped": 0,
+    "rawLogs": "inspected",
+    "expandedCurrentHead": "required"
+  },
   "remaining": [
     "Full local and installed package/declarations/module/example qualification",
     "Source review and current-head CI/branch rules",
@@ -21,12 +40,21 @@
   ],
   "sourceSha256": {
     "src/verification-review.ts": "7c3b663093ca6aaaa3431450a3477b182bfae585e15836210083f9d48a66ed2f",
-    "tests/verification-review.test.ts": "c6b1204154eb6cb96db102b5e18ad9a85ccb34a9fdb00b18712956fcbf60e537",
+    "tests/verification-review.test.ts": "030e7d6e4700905b04b9dee1adeacafb1a2037b3787304c87688e8b6a2e090e0",
     "package.json": "b1a1c71232d6598b8d08757b98dffcc8693a59dd8b5837dec6f0d2fdd3d74d8c",
     "package-lock.json": "3da81cb6ef193d87e7c4643cfc11e7813adb4316cc71ce75d0e1d418eed345b3",
     "scripts/validate-pr-registry.mjs": "9681bbb4f4b658fa630ba600c4c03b4338254bd802ad56c942f34f051534561b",
     "docs/ARCHITECTURE.md": "bcc9b358bc60af9677548b615d313dc727eba99a9879603795e974a0fd1841ac",
-    "docs/VERIFICATION_REVIEW.md": "75b7158cf274bea07c07264641d22607429f55d373400d7b6b8bcad5f7f765f7",
-    "registry/prs.json": "38bb13c4be0d8e874ab2d2dc19fae4c67c948d6220c2406a99594c407b9a3147"
-  }
+    "docs/VERIFICATION_REVIEW.md": "a9ddb413b03fc5e401f69ad0380e591fcabc8af9e3b48fd4e7484d00f78acc26",
+    "registry/prs.json": "224ff98d3f53f43fbd4c23b5381c10aa9db5745f10e760c4af69c4ad6fe6f909",
+    "scripts/render-verification-example.mjs": "e82f79645515ff823bcda7cb0fa3cc1fd60f38c9e1dbfc137af2a827287e4d95",
+    "docs/examples/private-verification-review.html": "a279cdc5d563ac1a13ab765ba40d1c1f40557831c05c0dc3f0bd29bfb52c0719"
+  },
+  "review": [
+    "Owning captured history validator preserves contrary IDs/null tracks and distinguishes latest captured basis status",
+    "Selected/latest/predecessor graph scope; missing captures explicitly unloaded, no deletion proof",
+    "Review actor/time are literal record metadata, no invented audit/agent/review SQL storage",
+    "Input/output caps, exact UTF8 content and callback insertion keep hostile text inert",
+    "Only accepted direct Knowledge pin upgraded; other direct/nested pins/contracts unchanged"
+  ]
 }
