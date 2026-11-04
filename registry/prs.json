@@ -66,7 +66,8 @@
         17,
         18,
         19,
-        20
+        20,
+        21
       ],
       "dependsOn": [
         "VWA-001"
@@ -108,6 +109,13 @@
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/20",
         "verification": "docs/proposal-review-verification.json",
         "focusedTests": 5
+      },
+      "verificationReview": {
+        "docs": "docs/VERIFICATION_REVIEW.md",
+        "verification": "docs/verification-review-verification.json",
+        "status": "Full107 local+installed suites, seventh local budget group/all seven installed focused groups, declarations/module/example pass; expanded sourcecacb553 CI41931605195 passed108. Final documentation-head CI required; no full108 single local/installed invocation claim. Unit remains partial.",
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/21",
+        "example": "docs/examples/private-verification-review.html"
       }
     },
     {
@@ -128,7 +136,8 @@
         17,
         18,
         19,
-        20
+        20,
+        21
       ],
       "dependsOn": [
         "VWA-001"
@@ -174,6 +183,13 @@
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/20",
         "verification": "docs/proposal-review-verification.json",
         "focusedTests": 5
+      },
+      "verificationReview": {
+        "docs": "docs/VERIFICATION_REVIEW.md",
+        "verification": "docs/verification-review-verification.json",
+        "status": "Full107 local+installed suites, seventh local budget group/all seven installed focused groups, declarations/module/example pass; expanded sourcecacb553 CI41931605195 passed108. Final documentation-head CI required; no full108 single local/installed invocation claim. Unit remains partial.",
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/21",
+        "example": "docs/examples/private-verification-review.html"
       }
     },
     {

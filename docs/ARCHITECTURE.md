@@ -65,3 +65,5 @@ KNOWLEDGE_REVIEW.md describes a pure private exact-record capture inspector usin
 EVIDENCE_LINK_REVIEW.md documents captured citation-set inspectors; unloaded Evidence references and historical claim editions never become current permission or truth.
 
 PROPOSAL_REVIEW.md describes captured unassessed proposal cards and exact citation inspectors. No source service observation or acceptance is inferred.
+
+VERIFICATION_REVIEW.md documents captured unresolved human review observations, exact historical/citation metadata and current-capture staleness without current service authentication or findings.

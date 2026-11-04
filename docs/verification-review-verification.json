@@ -1,0 +1,64 @@
+{
+  "status": "PR21 qualification complete; final documentation-head CI/branch rules required",
+  "local": {
+    "newGroups": 7,
+    "pass": 7,
+    "fail": 0,
+    "skipped": 0,
+    "typecheck": "passed",
+    "build": "passed",
+    "registry": "passed",
+    "normalNpmCi": "passed",
+    "fullSuite": "107-test first implementation suite passed plus separate seventh budget group; no single full108 invocation claimed"
+  },
+  "installed": {
+    "fullSuite": 107,
+    "focusedGroups": 7,
+    "fail": 0,
+    "skipped": 0,
+    "normalInstall": "passed",
+    "declarations": "passed",
+    "runtimeModuleByteMatch": true,
+    "fictionalExampleByteMatch": true,
+    "full108SingleInvocation": "not claimed"
+  },
+  "ci": {
+    "source": "6deca899981fee22997d08b7d77631e213220939",
+    "run": 41930909576,
+    "check": 126927232984,
+    "tests": 107,
+    "fail": 0,
+    "skipped": 0,
+    "rawLogs": "inspected",
+    "expandedCurrentHead": "passed; final documentation-head checks required",
+    "expandedSource": "cacb5537e3bbcfbd95aca087e3c0c412b9772bbf",
+    "expandedRun": 41931605195,
+    "expandedTests": 108,
+    "expandedCheck": 126929605928
+  },
+  "remaining": [
+    "Full local and installed package/declarations/module/example qualification",
+    "Source review and current-head CI/branch rules",
+    "Host current authentication/Consent/private export/CPU/heap/driver limits and real browser/AT/live",
+    "Full verification durability/workflow and correction impact/shared original cross-milestone dependencies"
+  ],
+  "sourceSha256": {
+    "src/verification-review.ts": "7c3b663093ca6aaaa3431450a3477b182bfae585e15836210083f9d48a66ed2f",
+    "tests/verification-review.test.ts": "030e7d6e4700905b04b9dee1adeacafb1a2037b3787304c87688e8b6a2e090e0",
+    "package.json": "b1a1c71232d6598b8d08757b98dffcc8693a59dd8b5837dec6f0d2fdd3d74d8c",
+    "package-lock.json": "3da81cb6ef193d87e7c4643cfc11e7813adb4316cc71ce75d0e1d418eed345b3",
+    "scripts/validate-pr-registry.mjs": "9681bbb4f4b658fa630ba600c4c03b4338254bd802ad56c942f34f051534561b",
+    "docs/ARCHITECTURE.md": "bcc9b358bc60af9677548b615d313dc727eba99a9879603795e974a0fd1841ac",
+    "docs/VERIFICATION_REVIEW.md": "f6083ac0c5b25aa3314e46dd7c67df695779c191cbbac033ff7859ca16133a9e",
+    "registry/prs.json": "a777abcfc2ce32fe184b7210be276e5ccaa455734049627b964676dd724360e4",
+    "scripts/render-verification-example.mjs": "e82f79645515ff823bcda7cb0fa3cc1fd60f38c9e1dbfc137af2a827287e4d95",
+    "docs/examples/private-verification-review.html": "a279cdc5d563ac1a13ab765ba40d1c1f40557831c05c0dc3f0bd29bfb52c0719"
+  },
+  "review": [
+    "Owning captured history validator preserves contrary IDs/null tracks and distinguishes latest captured basis status",
+    "Selected/latest/predecessor graph scope; missing captures explicitly unloaded, no deletion proof",
+    "Review actor/time are literal record metadata, no invented audit/agent/review SQL storage",
+    "Input/output caps, exact UTF8 content and callback insertion keep hostile text inert",
+    "Only accepted direct Knowledge pin upgraded; other direct/nested pins/contracts unchanged"
+  ]
+}
