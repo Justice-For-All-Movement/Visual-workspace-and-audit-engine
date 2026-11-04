@@ -59,6 +59,10 @@
     "./factual-review": {
       "types": "./dist/factual-review.d.ts",
       "default": "./dist/factual-review.js"
+    },
+    "./knowledge-review": {
+      "types": "./dist/knowledge-review.d.ts",
+      "default": "./dist/knowledge-review.js"
     }
   },
   "engines": {
@@ -81,8 +85,7 @@
     "@types/jsdom": "21.1.7",
     "@types/node": "26.6.5",
     "jsdom": "26.1.0",
-    "typescript": "7.0.2",
-    "@accountability/knowledge-verification": "git+https://github.com/neophilism/Knowledge-and-verification-engine.git#cb69243a48578feb07e85704185cced98964b1e4"
+    "typescript": "7.0.2"
   },
   "files": [
     "dist",
@@ -96,6 +99,7 @@
     "@accountability/packaging-release": "git+https://github.com/neophilism/Packaging-release-and-correction-engine.git#b3ddcaeba1bef27310ff2113d6abca9a249b40a7",
     "@accountability/processing": "github:neophilism/Document-and-Media-Processing-Engine#44d76aefb8701852398182a158248c1b6b7a8fda",
     "@accountability/resources": "git+https://github.com/neophilism/Resources-and-commercial-operations-engine.git#5a1ed825fef938702c333066935afea4c42f9b21",
-    "@accountability/factual-investigation": "git+https://github.com/neophilism/Factual-investigation-engine.git#48e02a6568f09e1d091eb24d6f161a6bcb7a8de5"
+    "@accountability/factual-investigation": "git+https://github.com/neophilism/Factual-investigation-engine.git#48e02a6568f09e1d091eb24d6f161a6bcb7a8de5",
+    "@accountability/knowledge-verification": "git+https://github.com/neophilism/Knowledge-and-verification-engine.git#08e9a4e70d7fc97855d0dc27c6ba28a5d39e612d"
   }
 }
