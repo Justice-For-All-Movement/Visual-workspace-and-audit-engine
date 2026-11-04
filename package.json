@@ -63,6 +63,10 @@
     "./knowledge-review": {
       "types": "./dist/knowledge-review.d.ts",
       "default": "./dist/knowledge-review.js"
+    },
+    "./evidence-link-review": {
+      "types": "./dist/evidence-link-review.d.ts",
+      "default": "./dist/evidence-link-review.js"
     }
   },
   "engines": {

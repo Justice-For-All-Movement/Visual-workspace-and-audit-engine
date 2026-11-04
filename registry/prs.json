@@ -4,7 +4,7 @@
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 6,
-  "observedAt": "2026-11-04T16:13:36Z",
+  "observedAt": "2026-11-04T16:50:51Z",
   "units": [
     {
       "id": "VWA-001",
@@ -84,13 +84,18 @@
         "Evidence timeline and correction-impact inspectors"
       ],
       "acceptanceCriteria": "Verify required behavior, rejection paths, source-bound test evidence and private defaults; live acceptance remains separate.",
-      "implementationStatus": "partial_private_knowledge_record_projection; PR18 owning validators, exact selected and one-hop captured records/predecessor plus containing storage revision; historical subjects never substituted; no permission/audit/verified finding invention. All92 ordinary local and installed compiled-public-export tests pass, including five new owning-domain/JSDOM groups; typecheck/build/registry/example pass. Final-head CI pending/queued. Host Identity/Consent/full-snapshot/private export and browser/AT/live acceptance remain separate.",
+      "implementationStatus": "partial; accepted PR18 record inspector92 tests/current-head CI; captured citation inspector source checkpoint adds four focused passing groups, typecheck. Full expanded suite/installed/build/current-head CI pending; host Identity/Consent/export/browser/live/full correction impact remain separate.",
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
         "example": "docs/examples/private-knowledge-review.html",
-        "status": "Explicitly incomplete draft: all92 local and installed compiled-public-export tests pass; current-head GitHub Actions pending/queued; do not merge without actual final-head checks",
+        "status": "PR18 merged423cbe4e after final-head CI41865192156 success92; current host/browser acceptance separate",
         "verification": "docs/knowledge-review-verification.json"
+      },
+      "capturedLinkReview": {
+        "status": "incomplete WIP; source checkpoint only",
+        "docs": "docs/EVIDENCE_LINK_REVIEW.md",
+        "focusedTests": 4
       }
     },
     {
@@ -133,13 +138,18 @@
         "Accessible correspondence and investigation views"
       ],
       "acceptanceCriteria": "Verify required behavior, rejection paths, source-bound test evidence and private defaults; live acceptance remains separate.",
-      "implementationStatus": "partial_private_knowledge_record_projection; PR18 owning validators, exact selected and one-hop captured records/predecessor plus containing storage revision; historical subjects never substituted; no permission/audit/verified finding invention. All92 ordinary local and installed compiled-public-export tests pass, including five new owning-domain/JSDOM groups; typecheck/build/registry/example pass. Final-head CI pending/queued. Host Identity/Consent/full-snapshot/private export and browser/AT/live acceptance remain separate.",
+      "implementationStatus": "partial; accepted PR18 record inspector92 tests/current-head CI; captured citation inspector source checkpoint adds four focused passing groups, typecheck. Full expanded suite/installed/build/current-head CI pending; host Identity/Consent/export/browser/live/full correction impact remain separate.",
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
         "example": "docs/examples/private-knowledge-review.html",
-        "status": "Explicitly incomplete draft: all92 local and installed compiled-public-export tests pass; current-head GitHub Actions pending/queued; do not merge without actual final-head checks",
+        "status": "PR18 merged423cbe4e after final-head CI41865192156 success92; current host/browser acceptance separate",
         "verification": "docs/knowledge-review-verification.json"
+      },
+      "capturedLinkReview": {
+        "status": "incomplete WIP; source checkpoint only",
+        "docs": "docs/EVIDENCE_LINK_REVIEW.md",
+        "focusedTests": 4
       }
     },
     {

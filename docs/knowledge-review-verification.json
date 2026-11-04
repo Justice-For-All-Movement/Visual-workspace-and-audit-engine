@@ -1,5 +1,5 @@
 {
-  "status": "incomplete_draft_checkpoint",
+  "status": "PR18 accepted; later capture inspector qualification separate",
   "local": {
     "ordinaryTests": 92,
     "newFocusedGroups": 5,
@@ -22,9 +22,10 @@
     "setup": "normal npm installation/prepare/build completed; no ignore-scripts"
   },
   "ci": {
-    "observedSource": "c2cabc11d5fd049d90b816819c0c381707375f23",
-    "run": 41864612148,
-    "status": "queued; not passed; actual final-head checks required"
+    "source": "c03e66af57e6f0f7ebeb9d273e9a0f518e94ca12",
+    "run": 41865192156,
+    "job": 126697533390,
+    "status": "success;92tests/zero skips/clean npm ci/typecheck/build/registry; raw logs inspected"
   },
   "review": [
     "Owning full-history validators and storage/count check; exact scoped selected refs and purpose",
@@ -34,8 +35,8 @@
     "Valid owning large-history fixture exceeds visual output budget and rejects whole projection; exact predecessor remains historical without expansion"
   ],
   "remaining": [
-    "Inspect actual final-head CI before merge; main unprotected/rulesets empty observed, no independent human review gate",
-    "Host full-snapshot authorization/current Identity-Consent/private export; transitive correction impact, actual browser/AT/multilingual/live qualification"
+    "Host full-snapshot/current Identity/Consent/private export and actual browser/AT/multilingual/live qualification",
+    "Captured citation inspector is separate incomplete source checkpoint"
   ],
   "boundaries": [
     "Source snapshots/record metadata are not authentication or a use permit",
@@ -44,13 +45,13 @@
   "sourceSha256": {
     "src/knowledge-review.ts": "6ed2a3f2ed55ac83622d3bd2407854bc71cb3312d729525cc17dd8efcce81523",
     "tests/knowledge-review.test.ts": "562970c8c99e632cb538a62f4976014462d099000e34d3814172e986a6037222",
-    "package.json": "72cacfb08831fbbcecc3f129cfeab20111a356923cd0d5ae340263d1ab0fedb0",
+    "package.json": "cbf92c15d9a8d013b86a8358f2b49f39db5c3a4865ab9b9cb35c6e09f0c94c77",
     "package-lock.json": "872d2ca20a07643d071fc59a5e7abed309b271e46a46c838d6f0c25dcce00245",
     "scripts/validate-pr-registry.mjs": "313e8ff75289b465debe4cafd2695ead4fbf05036b514dcb4e7a4023b4f7f807",
-    "docs/KNOWLEDGE_REVIEW.md": "3908187b014be460af4f77ff1ccb748492c873588e843e947988d29874a60147",
-    "docs/ARCHITECTURE.md": "9cbffd607f834c06913c7d67695542af66705349d8413868c1ba98ba169ef9e6",
+    "docs/KNOWLEDGE_REVIEW.md": "af2ac031303cb62c01f194b841a8b67fd716fa34d40980901854706c7276d52d",
+    "docs/ARCHITECTURE.md": "de143391caef0c5026ec2f0881a9fcb18b3d20ad135f9ddaca70f513a8794f86",
     "scripts/render-knowledge-example.mjs": "99820c30ec4b3d401ce6d7a52fb0a9bb1a60592da84e610a1ca9f820e9edfda0",
     "docs/examples/private-knowledge-review.html": "1445ab3574fff1a7c97d08ea8d05ff28b893380d4c71405e98cbe6be173c95cc",
-    "registry/prs.json": "ab6097bb2cbc1da8fd8c60defe64eb514cb3c1e23e5572ea420b1dd8a1f38d5e"
+    "registry/prs.json": "6cb8a5804b22660002bbe0cacfbfdb1280f4fa2f2807ae8617b1f9d94567d25d"
   }
 }
