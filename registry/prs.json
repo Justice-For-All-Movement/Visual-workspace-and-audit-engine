@@ -108,6 +108,11 @@
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/20",
         "verification": "docs/proposal-review-verification.json",
         "focusedTests": 5
+      },
+      "verificationReview": {
+        "docs": "docs/VERIFICATION_REVIEW.md",
+        "verification": "docs/verification-review-verification.json",
+        "status": "Incomplete WIP; six owning-domain/JSDOM groups pass; full local/installed/current-head CI pending; unit remains partial"
       }
     },
     {
@@ -174,6 +179,11 @@
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/20",
         "verification": "docs/proposal-review-verification.json",
         "focusedTests": 5
+      },
+      "verificationReview": {
+        "docs": "docs/VERIFICATION_REVIEW.md",
+        "verification": "docs/verification-review-verification.json",
+        "status": "Incomplete WIP; six owning-domain/JSDOM groups pass; full local/installed/current-head CI pending; unit remains partial"
       }
     },
     {

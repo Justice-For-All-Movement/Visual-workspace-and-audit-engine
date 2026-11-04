@@ -71,6 +71,10 @@
     "./proposal-review": {
       "types": "./dist/proposal-review.d.ts",
       "default": "./dist/proposal-review.js"
+    },
+    "./verification-review": {
+      "types": "./dist/verification-review.d.ts",
+      "default": "./dist/verification-review.js"
     }
   },
   "engines": {
@@ -108,6 +112,6 @@
     "@accountability/processing": "github:neophilism/Document-and-Media-Processing-Engine#44d76aefb8701852398182a158248c1b6b7a8fda",
     "@accountability/resources": "git+https://github.com/neophilism/Resources-and-commercial-operations-engine.git#5a1ed825fef938702c333066935afea4c42f9b21",
     "@accountability/factual-investigation": "git+https://github.com/neophilism/Factual-investigation-engine.git#48e02a6568f09e1d091eb24d6f161a6bcb7a8de5",
-    "@accountability/knowledge-verification": "git+https://github.com/neophilism/Knowledge-and-verification-engine.git#d6e9060b35ec7a2210fb2b457c7d47f6a1dd7b78"
+    "@accountability/knowledge-verification": "git+https://github.com/neophilism/Knowledge-and-verification-engine.git#eda0e7ba7ed3337902b8c04d58ae37bd71b2421e"
   }
 }

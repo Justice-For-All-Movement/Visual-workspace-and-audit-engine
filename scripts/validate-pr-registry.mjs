@@ -14,6 +14,6 @@ if (pkg.dependencies['@accountability/factual-investigation'] !==
     'git+https://github.com/neophilism/Factual-investigation-engine.git#48e02a6568f09e1d091eb24d6f161a6bcb7a8de5')
   throw new Error('Accepted Factual pin required');
 if (pkg.dependencies['@accountability/knowledge-verification'] !==
-    'git+https://github.com/neophilism/Knowledge-and-verification-engine.git#d6e9060b35ec7a2210fb2b457c7d47f6a1dd7b78')
+    'git+https://github.com/neophilism/Knowledge-and-verification-engine.git#eda0e7ba7ed3337902b8c04d58ae37bd71b2421e')
   throw new Error('Accepted Knowledge runtime pin required');
 console.log('Accepted Factual snapshot and Knowledge runtime SDKs pinned');
