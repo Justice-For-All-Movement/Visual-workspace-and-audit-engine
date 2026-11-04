@@ -4,7 +4,7 @@
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 6,
-  "observedAt": "2026-11-04T16:50:51Z",
+  "observedAt": "2026-11-04T16:52:33Z",
   "units": [
     {
       "id": "VWA-001",
@@ -64,7 +64,8 @@
         11,
         15,
         17,
-        18
+        18,
+        19
       ],
       "dependsOn": [
         "VWA-001"
@@ -84,7 +85,7 @@
         "Evidence timeline and correction-impact inspectors"
       ],
       "acceptanceCriteria": "Verify required behavior, rejection paths, source-bound test evidence and private defaults; live acceptance remains separate.",
-      "implementationStatus": "partial; accepted PR18 record inspector92 tests/current-head CI; captured citation inspector source checkpoint adds four focused passing groups, typecheck. Full expanded suite/installed/build/current-head CI pending; host Identity/Consent/export/browser/live/full correction impact remain separate.",
+      "implementationStatus": "partial; accepted PR18 record inspector92 tests/current-head CI; PR19 captured citation inspector all96 local/typecheck/build/registry and four installed public-export groups pass. Full installed suite/current-head CI pending. Host Identity/Consent/export/browser/live/full correction impact remain separate.",
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
@@ -93,9 +94,11 @@
         "verification": "docs/knowledge-review-verification.json"
       },
       "capturedLinkReview": {
-        "status": "incomplete WIP; source checkpoint only",
+        "status": "incomplete draft: all96 local checks/four installed groups pass; full installed suite/current-head CI pending",
         "docs": "docs/EVIDENCE_LINK_REVIEW.md",
-        "focusedTests": 4
+        "focusedTests": 4,
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/19",
+        "verification": "docs/evidence-link-review-verification.json"
       }
     },
     {
@@ -114,7 +117,8 @@
         14,
         15,
         17,
-        18
+        18,
+        19
       ],
       "dependsOn": [
         "VWA-001"
@@ -138,7 +142,7 @@
         "Accessible correspondence and investigation views"
       ],
       "acceptanceCriteria": "Verify required behavior, rejection paths, source-bound test evidence and private defaults; live acceptance remains separate.",
-      "implementationStatus": "partial; accepted PR18 record inspector92 tests/current-head CI; captured citation inspector source checkpoint adds four focused passing groups, typecheck. Full expanded suite/installed/build/current-head CI pending; host Identity/Consent/export/browser/live/full correction impact remain separate.",
+      "implementationStatus": "partial; accepted PR18 record inspector92 tests/current-head CI; PR19 captured citation inspector all96 local/typecheck/build/registry and four installed public-export groups pass. Full installed suite/current-head CI pending. Host Identity/Consent/export/browser/live/full correction impact remain separate.",
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
@@ -147,9 +151,11 @@
         "verification": "docs/knowledge-review-verification.json"
       },
       "capturedLinkReview": {
-        "status": "incomplete WIP; source checkpoint only",
+        "status": "incomplete draft: all96 local checks/four installed groups pass; full installed suite/current-head CI pending",
         "docs": "docs/EVIDENCE_LINK_REVIEW.md",
-        "focusedTests": 4
+        "focusedTests": 4,
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/19",
+        "verification": "docs/evidence-link-review-verification.json"
       }
     },
     {

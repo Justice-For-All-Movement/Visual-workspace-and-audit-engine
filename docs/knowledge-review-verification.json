@@ -52,6 +52,6 @@
     "docs/ARCHITECTURE.md": "de143391caef0c5026ec2f0881a9fcb18b3d20ad135f9ddaca70f513a8794f86",
     "scripts/render-knowledge-example.mjs": "99820c30ec4b3d401ce6d7a52fb0a9bb1a60592da84e610a1ca9f820e9edfda0",
     "docs/examples/private-knowledge-review.html": "1445ab3574fff1a7c97d08ea8d05ff28b893380d4c71405e98cbe6be173c95cc",
-    "registry/prs.json": "6cb8a5804b22660002bbe0cacfbfdb1280f4fa2f2807ae8617b1f9d94567d25d"
+    "registry/prs.json": "e23d9402d42fb4c21372a6d349db0d32097deceded4abed5e680adf4975af89c"
   }
 }
