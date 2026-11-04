@@ -61,3 +61,5 @@ Layout captures detached context/snapshot records before validation, normalizes 
 Timeline rows now open exact event/resource records in the shared inert inspector; equal-time rows use locale-independent event-ID order. See TIMELINE_REVIEW.md for projected-event provenance, bounds and pending host/browser acceptance.
 
 KNOWLEDGE_REVIEW.md describes a pure private exact-record capture inspector using owning Knowledge validators. Captured historical subject editions and containing storage revisions remain explicit; no source/Consent authentication, transitive impact, audit event or verified finding is inferred.
+
+EVIDENCE_LINK_REVIEW.md documents captured citation-set inspectors; unloaded Evidence references and historical claim editions never become current permission or truth.

@@ -1,0 +1,44 @@
+{
+  "status": "incomplete draft PR19",
+  "local": {
+    "tests": 96,
+    "fail": 0,
+    "skipped": 0,
+    "typecheck": "passed",
+    "build": "passed",
+    "registry": "passed"
+  },
+  "installed": {
+    "newPublicExportGroups": 4,
+    "moduleByteMatch": true,
+    "normalInstall": "passed",
+    "fullSuite": {
+      "tests": 96,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "ci": {
+    "observedSource": "98908e9d91edf46fd552ce6fad74b7995bb0f869",
+    "run": 41871942910,
+    "status": "in progress; actual final-head checks required"
+  },
+  "review": [
+    "Owning full-history validation, exact scoped refs/purpose/storage counts/captured Knowledge revision",
+    "Exact historical claim and link edition retained; repeated source refs coalesce without dropping contrary observations",
+    "Stored source metadata explicitly unloaded, no current permission/bytes/independence/finding inference",
+    "Whole-view budgets, detached inert inspectors; host CPU/heap/private export/current Identity-Consent required"
+  ],
+  "remaining": [
+    "Actual current-head CI before merge",
+    "Host current authorization/Consent/private export, full correction impact/browser/AT/live acceptance"
+  ],
+  "sourceSha256": {
+    "src/evidence-link-review.ts": "2f90ddddec9929bbf5458e27bf8b35978b300df20ba941014e643c9156ffc7a8",
+    "tests/evidence-link-review.test.ts": "561510eb22132394d3215632faf184041bc77c33984e8ea7657c14ddc21928d9",
+    "package.json": "cbf92c15d9a8d013b86a8358f2b49f39db5c3a4865ab9b9cb35c6e09f0c94c77",
+    "docs/EVIDENCE_LINK_REVIEW.md": "14cd309c8dbe73c5d8ab6035a4af1afa401341e0d825ae4bb2a3fbe12aa9351f",
+    "registry/prs.json": "ed1d3ca9eba891176d457404e79745c8f1d59f4d8bfb12e96a82873778cbb80a",
+    "docs/knowledge-review-verification.json": "6bfcce4644c97011682c541dd46700b7c368322bda2069444e5b7960a2763aec"
+  }
+}
