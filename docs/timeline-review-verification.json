@@ -1,0 +1,46 @@
+{
+  "scope": "Partial VWA-003/004 private projected timeline inspectors",
+  "local": {
+    "ordinaryTests": 87,
+    "typecheckBuildRegistry": "passed",
+    "newJSDOMGroups": 3
+  },
+  "installed": {
+    "publicExportTests": 87,
+    "completeTap": true,
+    "indexJsByteMatch": true
+  },
+  "initialCi": {
+    "source": "fc69933f3d6585b6f2591091c1edb70f3db9ee93",
+    "run": 41817653984,
+    "check": 126532415737,
+    "ordinaryTests": 87,
+    "headAndLogsInspected": true
+  },
+  "sourceReview": [
+    "No new identity/event/edition synthesized; actual projected containing resource retained even if no graph node",
+    "Detached admitted timeline indexed identically by row and literal inspector; stable code-unit ID order for equal times",
+    "Exact six-field profile denies undeclared credential-like extras; literal bounded actor and summary; resource scope checked",
+    "Existing script JSON and HTML escaping plus textContent preserve inert data; native button inspection only",
+    "SDK pins/contracts/migrations unchanged; PR16 merged after source review/local84 and actual headCI84/installed11focused"
+  ],
+  "limits": [
+    "Host authorization and private export access remain required",
+    "Projection metadata is not independently authenticated raw audit evidence or current permission",
+    "JSDOM dialog stub is not real browser/assistive technology/multilingual/live acceptance",
+    "5000 event cap remains; host input/CPU/heap limits mandatory; no process isolation",
+    "No provider/send/publication/payment/PAM change"
+  ],
+  "sourceSha256": {
+    "src/index.ts": "5869ea83d9a96de50b7d41c7bd6214ade9b4b3a3618ea1af73e4ded6f40785b5",
+    "tests/render-interaction.test.ts": "43cf5f0257ade852e36000d5305afb4dd41b7a8db8d773f2bc3c39cbde0bd7cf",
+    "tests/operations.test.ts": "ce5eced54069a0d5f27c82e81cb454b6c7356d0e8e8e79fb8392a98bddc23a01",
+    "docs/ARCHITECTURE.md": "8bb8673d5d8ad63243d489f13caab313ba0b36cb68570619149fe7f2b806a5a5",
+    "docs/TIMELINE_REVIEW.md": "c65ff3d784e50b61def43f89c17703e3c594cce7343228714b2f42e7ff38aeec",
+    "registry/prs.json": "a1d1b611657ce4af1aee48a4a68dc6ba094b368b2b0863de60d90d9486431b06",
+    "scripts/render-timeline-example.mjs": "f9c70820d82660fc2afea513e20742446dd04bf4f95394ad9e3bd2a7019c9494",
+    "docs/examples/private-timeline.html": "f01b7df4822e56fb29d9eca1b49785514affb0a5743e97d87e75d4c7724cde52"
+  },
+  "example": "Fictional private HTML generated from actual compiled renderer; exact event/resource inspector and no active outbound elements verified in JSDOM",
+  "initialLocalFailure": "Old operations button-count assertion excluded new inspector buttons; corrected to include event inspection only. Three new timeline groups passed; corrected full87 pass."
+}
