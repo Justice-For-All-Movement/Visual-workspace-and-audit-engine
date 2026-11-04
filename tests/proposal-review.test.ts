@@ -165,3 +165,21 @@ test("exact parent selector and separate nonzero excerpt offsets remain visible;
     "referenced-claim-not-loaded",
   );
 });
+test("replacement-pattern text in untrusted assertions and excerpts remains exact and cannot duplicate the document", () => {
+  const b = fixture();
+  const literal = "$& $` $' $$ </main><img src=x onerror=window.injected=true>";
+  b.proposals[0]!.assertion = literal;
+  b.proposals[0]!.citation.selector.start = 0;
+  b.proposals[0]!.citation.selector.end = literal.length;
+  b.proposals[0]!.citation.selector.quote = literal;
+  b.proposals[0]!.citation.excerpt = { start: 0, end: literal.length, quote: literal };
+  const dom = new JSDOM(renderClaimProposalReview(c, rehash(b), "pending"), { runScripts: "dangerously" });
+  const d = dom.window.document;
+  assert.equal(d.querySelector("article.proposal p")!.textContent, literal);
+  assert.equal(d.querySelector("article.proposal blockquote")!.textContent, literal);
+  assert.equal(d.querySelectorAll("main").length, 1);
+  assert.equal(d.querySelectorAll("article.proposal").length, 2);
+  assert.equal(d.querySelectorAll("img").length, 0);
+  assert.equal((dom.window as any).injected, undefined);
+  dom.window.close();
+});

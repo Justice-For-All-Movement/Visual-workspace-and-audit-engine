@@ -167,7 +167,7 @@ export function renderClaimProposalReview(
     "invalid_render",
     "Review layout required",
   );
-  const html = graph.replace("</main>", `${section}</main>`);
+  const html = graph.replace("</main>", () => `${section}</main>`);
   invariant(
     Buffer.byteLength(html) <= 2 * 1024 * 1024,
     "projection_too_large",
