@@ -1,5 +1,5 @@
 {
-  "status": "PR21 expanded qualification checkpoint; final-head CI required",
+  "status": "PR21 qualification complete; final documentation-head CI/branch rules required",
   "local": {
     "newGroups": 7,
     "pass": 7,
@@ -30,7 +30,11 @@
     "fail": 0,
     "skipped": 0,
     "rawLogs": "inspected",
-    "expandedCurrentHead": "required"
+    "expandedCurrentHead": "passed; final documentation-head checks required",
+    "expandedSource": "cacb5537e3bbcfbd95aca087e3c0c412b9772bbf",
+    "expandedRun": 41931605195,
+    "expandedTests": 108,
+    "expandedCheck": 126929605928
   },
   "remaining": [
     "Full local and installed package/declarations/module/example qualification",
@@ -45,8 +49,8 @@
     "package-lock.json": "3da81cb6ef193d87e7c4643cfc11e7813adb4316cc71ce75d0e1d418eed345b3",
     "scripts/validate-pr-registry.mjs": "9681bbb4f4b658fa630ba600c4c03b4338254bd802ad56c942f34f051534561b",
     "docs/ARCHITECTURE.md": "bcc9b358bc60af9677548b615d313dc727eba99a9879603795e974a0fd1841ac",
-    "docs/VERIFICATION_REVIEW.md": "a9ddb413b03fc5e401f69ad0380e591fcabc8af9e3b48fd4e7484d00f78acc26",
-    "registry/prs.json": "224ff98d3f53f43fbd4c23b5381c10aa9db5745f10e760c4af69c4ad6fe6f909",
+    "docs/VERIFICATION_REVIEW.md": "f6083ac0c5b25aa3314e46dd7c67df695779c191cbbac033ff7859ca16133a9e",
+    "registry/prs.json": "a777abcfc2ce32fe184b7210be276e5ccaa455734049627b964676dd724360e4",
     "scripts/render-verification-example.mjs": "e82f79645515ff823bcda7cb0fa3cc1fd60f38c9e1dbfc137af2a827287e4d95",
     "docs/examples/private-verification-review.html": "a279cdc5d563ac1a13ab765ba40d1c1f40557831c05c0dc3f0bd29bfb52c0719"
   },
