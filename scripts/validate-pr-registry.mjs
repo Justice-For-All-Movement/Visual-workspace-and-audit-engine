@@ -13,7 +13,7 @@ const pkg = JSON.parse(await readFile(new URL('../package.json', import.meta.url
 if (pkg.dependencies['@accountability/factual-investigation'] !==
     'git+https://github.com/neophilism/Factual-investigation-engine.git#48e02a6568f09e1d091eb24d6f161a6bcb7a8de5')
   throw new Error('Accepted Factual pin required');
-if (pkg.devDependencies['@accountability/knowledge-verification'] !==
-    'git+https://github.com/neophilism/Knowledge-and-verification-engine.git#cb69243a48578feb07e85704185cced98964b1e4')
-  throw new Error('Accepted Knowledge fixture pin required');
+if (pkg.dependencies['@accountability/knowledge-verification'] !==
+    'git+https://github.com/neophilism/Knowledge-and-verification-engine.git#08e9a4e70d7fc97855d0dc27c6ba28a5d39e612d')
+  throw new Error('Accepted Knowledge runtime pin required');
 console.log('Accepted Factual snapshot and Knowledge fixture SDKs pinned');
