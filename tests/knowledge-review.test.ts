@@ -119,6 +119,8 @@ test("Knowledge graph/table inspector renders hostile literal text inert and pre
 });
 test("Knowledge projection rejects fabricated storage, foreign refs, wrong purpose and injected approval", () => {
   const f = fixture();
+  assert.throws(() => projectKnowledgeRecord(c, { revision: 3, state: f.state, permission: true } as never, f.claim, "tested"), { code: "invalid_knowledge_snapshot" });
+  assert.throws(() => projectKnowledgeRecord(c, { revision: 3, state: f.state, padding: "x".repeat(3 * 1024 * 1024) } as never, f.claim, "tested"), { code: "projection_too_large" });
   assert.throws(
     () =>
       projectKnowledgeRecord(
