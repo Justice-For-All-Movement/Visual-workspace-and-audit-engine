@@ -4,7 +4,7 @@
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 6,
-  "observedAt": "2026-11-04T16:02:07Z",
+  "observedAt": "2026-11-04T16:04:18Z",
   "units": [
     {
       "id": "VWA-001",
@@ -88,7 +88,9 @@
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
-        "example": "docs/examples/private-knowledge-review.html"
+        "example": "docs/examples/private-knowledge-review.html",
+        "status": "Explicitly incomplete draft: all91 local checks pass; installed package setup and current-head GitHub Actions pending/queued; do not merge without actual checks",
+        "verification": "docs/knowledge-review-verification.json"
       }
     },
     {
@@ -135,7 +137,9 @@
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
-        "example": "docs/examples/private-knowledge-review.html"
+        "example": "docs/examples/private-knowledge-review.html",
+        "status": "Explicitly incomplete draft: all91 local checks pass; installed package setup and current-head GitHub Actions pending/queued; do not merge without actual checks",
+        "verification": "docs/knowledge-review-verification.json"
       }
     },
     {
