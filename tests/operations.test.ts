@@ -239,7 +239,8 @@ test("generated graph and table inspect historical manifest with inert untrusted
   assert.equal(d.querySelectorAll("form,input,a[href],iframe").length, 0);
   assert.equal(
     d.querySelectorAll("button").length,
-    projectReleases(c, releases(), "tested").nodes.length + 1,
+    projectReleases(c, releases(), "tested").nodes.length +
+      projectReleases(c, releases(), "tested").events.length + 1,
   );
   dom.window.close();
 });
