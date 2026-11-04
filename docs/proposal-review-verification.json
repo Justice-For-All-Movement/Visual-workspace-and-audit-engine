@@ -1,0 +1,56 @@
+{
+  "status": "PR20 qualification checkpoint; final documentation-head CI required before merge",
+  "local": {
+    "tests": 101,
+    "fail": 0,
+    "skipped": 0,
+    "typecheck": "passed",
+    "build": "passed",
+    "registry": "passed"
+  },
+  "installed": {
+    "fullSuite": {
+      "tests": 101,
+      "fail": 0,
+      "skipped": 0
+    },
+    "newPublicExportGroups": 5,
+    "normalInstall": "passed",
+    "moduleByteMatch": true,
+    "generatedExampleByteMatch": true
+  },
+  "ci": {
+    "observedSource": "fc5601a9dd68206c166c629c63137ba40d2b1681",
+    "run": 41903376164,
+    "job": 126831420496,
+    "tests": 101,
+    "fail": 0,
+    "skipped": 0,
+    "rawLogs": "inspected",
+    "finalDocumentationHead": "required before merge"
+  },
+  "review": [
+    "Owning validator and explicit Knowledge pin upgrade; no shared contracts/other direct pins changed",
+    "Actual captured storage/claim/link/Evidence editions; no invented proposal resources, actors, timestamps or audits",
+    "Support and challenge observations retained; source and claim explicitly unloaded",
+    "Reproduced dollar replacement-pattern corruption; callback insertion preserves exact literal text",
+    "Detached inert read-only graph/table/card rendering; whole input/projection/HTML budgets"
+  ],
+  "remaining": [
+    "Host current Identity/Consent and private export; ingress CPU/heap limits",
+    "Owning service/source-byte qualification, durable proposal acceptance, full correction impact",
+    "Real browser/AT/multilingual/live acceptance; JSDOM is not that acceptance"
+  ],
+  "sourceSha256": {
+    "src/proposal-review.ts": "3c77233168aeaf5aaa9ff9c4e06c98106d27a33b745297bfead1cdc3204a9683",
+    "tests/proposal-review.test.ts": "011e309b729e3b9699a10eb7341d75a99de022b66d298533e67b52f9dbbe4ecb",
+    "package.json": "fd682fde1e9cf4bc33c859ce751a4e327b187b04cb20808061f2b4c9ce789b9d",
+    "package-lock.json": "465953a726efc9716a84ee57a42c39c5fa533d4b9ebb43a987779097e3e5c360",
+    "scripts/validate-pr-registry.mjs": "7738b1e0ad78fc418bd07166c48aa68f82477f72dba7985d1fbe8642b1295a27",
+    "scripts/render-proposal-example.mjs": "e693d0c2690be7757886deb7c23bddf6ccf9e9650e95d6a1225eb97aa5ad24fd",
+    "docs/PROPOSAL_REVIEW.md": "12612221648c4fc04a78712534068d5bbc01b3a4383d6cf09989f6ee93ccd5fe",
+    "docs/ARCHITECTURE.md": "8bbe14ea649eef781670ae01205c82ef30033b5bc9cf447dfb820b856a7b6453",
+    "docs/examples/private-proposal-review.html": "ac42616a55a20722a3e7b23d72aebcb241c990e5af67d9381eab46ba00e1187c",
+    "registry/prs.json": "16d10ad7201a483523ad3dae18134cd410b7f16291b256200e4e9c308666131d"
+  }
+}
