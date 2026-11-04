@@ -4,7 +4,7 @@
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 6,
-  "observedAt": "2026-11-04T16:54:07Z",
+  "observedAt": "2026-11-04T20:15:00Z",
   "units": [
     {
       "id": "VWA-001",
@@ -65,7 +65,8 @@
         15,
         17,
         18,
-        19
+        19,
+        20
       ],
       "dependsOn": [
         "VWA-001"
@@ -85,7 +86,7 @@
         "Evidence timeline and correction-impact inspectors"
       ],
       "acceptanceCriteria": "Verify required behavior, rejection paths, source-bound test evidence and private defaults; live acceptance remains separate.",
-      "implementationStatus": "partial; accepted PR18 record inspector92 tests/current-head CI; PR19 captured citation inspector all96 local/typecheck/build/registry and four installed public-export groups pass. Full installed96 tests also pass; current-head CI pending. Host Identity/Consent/export/browser/live/full correction impact remain separate.",
+      "implementationStatus": "partial; PR20 private unpersisted proposal review passes101 local+installed compiled public-export tests, five new owning-validator/JSDOM groups, typecheck/build/registry and observed source fc5601a9 CI41903376164/check126831420496 pass101 with zero skips. Final documentation-head CI required before merge. Captured assertions/Unicode excerpts/exact contrary citations only; no current source/Consent authentication, acceptance or invented stored proposal resources. Host/private export/browserAT/full correction impact/live remain separate.",
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
@@ -94,11 +95,19 @@
         "verification": "docs/knowledge-review-verification.json"
       },
       "capturedLinkReview": {
-        "status": "incomplete draft: all96 local and all96 installed public-export tests pass; current-head CI pending",
+        "status": "PR19 merged82d3a19 after finalCI41872201568 success96; previous pending notes superseded",
         "docs": "docs/EVIDENCE_LINK_REVIEW.md",
         "focusedTests": 4,
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/19",
         "verification": "docs/evidence-link-review-verification.json"
+      },
+      "proposalReview": {
+        "status": "local+installed101 and observed source CI passed; final documentation-head CI required before merge",
+        "docs": "docs/PROPOSAL_REVIEW.md",
+        "example": "docs/examples/private-proposal-review.html",
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/20",
+        "verification": "docs/proposal-review-verification.json",
+        "focusedTests": 5
       }
     },
     {
@@ -118,7 +127,8 @@
         15,
         17,
         18,
-        19
+        19,
+        20
       ],
       "dependsOn": [
         "VWA-001"
@@ -142,7 +152,7 @@
         "Accessible correspondence and investigation views"
       ],
       "acceptanceCriteria": "Verify required behavior, rejection paths, source-bound test evidence and private defaults; live acceptance remains separate.",
-      "implementationStatus": "partial; accepted PR18 record inspector92 tests/current-head CI; PR19 captured citation inspector all96 local/typecheck/build/registry and four installed public-export groups pass. Full installed96 tests also pass; current-head CI pending. Host Identity/Consent/export/browser/live/full correction impact remain separate.",
+      "implementationStatus": "partial; PR20 private unpersisted proposal review passes101 local+installed compiled public-export tests, five new owning-validator/JSDOM groups, typecheck/build/registry and observed source fc5601a9 CI41903376164/check126831420496 pass101 with zero skips. Final documentation-head CI required before merge. Captured assertions/Unicode excerpts/exact contrary citations only; no current source/Consent authentication, acceptance or invented stored proposal resources. Host/private export/browserAT/full correction impact/live remain separate.",
       "knowledgeReview": {
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/18",
         "docs": "docs/KNOWLEDGE_REVIEW.md",
@@ -151,11 +161,19 @@
         "verification": "docs/knowledge-review-verification.json"
       },
       "capturedLinkReview": {
-        "status": "incomplete draft: all96 local and all96 installed public-export tests pass; current-head CI pending",
+        "status": "PR19 merged82d3a19 after finalCI41872201568 success96; previous pending notes superseded",
         "docs": "docs/EVIDENCE_LINK_REVIEW.md",
         "focusedTests": 4,
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/19",
         "verification": "docs/evidence-link-review-verification.json"
+      },
+      "proposalReview": {
+        "status": "local+installed101 and observed source CI passed; final documentation-head CI required before merge",
+        "docs": "docs/PROPOSAL_REVIEW.md",
+        "example": "docs/examples/private-proposal-review.html",
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/20",
+        "verification": "docs/proposal-review-verification.json",
+        "focusedTests": 5
       }
     },
     {
