@@ -1,0 +1,22 @@
+{
+  "status": "explicitly incomplete WIP",
+  "priorFullLocal": 141,
+  "finalLocalSynthetic": 8,
+  "priorActualHttpLocal": 3,
+  "priorInstalled": 10,
+  "finalInstalled": "running",
+  "no143FullLocalInstalledClaim": true,
+  "mountedControls": "pending",
+  "sha256": {
+    "src/verification-write-client.ts": "98c05f7a528ff5e9b1eecd750873302a8a11e7ac932c786c9d847f696c5b4ecc",
+    "src/verification-client.ts": "02daefb023eebe5f9a9b45731374605103a44f5d6f5fa7911153749db4ed7e8b",
+    "tests/verification-write-client.test.ts": "391905a18f92247d1f5ee6328f39135f0bfd0bcedcc86ef51a59d5bc96a51e33",
+    "tests/verification-write-integration.test.ts": "d19a2ba497f7eff82458637c79a2fc5711557b8f3efa9ec0d1eef6291c133fc2",
+    "package.json": "8e66d2c1466e04eb3d69383fae36c510afb77219a5c1edad96c7f12ea3bcb43b",
+    "package-lock.json": "a1d03b0824851afd66d9f0b1b2a2240abd06c725bd4b00023ee9707fc619c98f",
+    "scripts/validate-pr-registry.mjs": "23fb9c013ef736810ede19e7197d8fca9d16d4055a1b56be83563b8fca76b611",
+    "docs/VERIFICATION_WRITE_CLIENT.md": "0ad111cc1ebbce9babf195bba66a536a0bbeebe911bd72c416aaf9bcdee2dc8d",
+    "docs/ARCHITECTURE.md": "af175103e10b06877c8ccf1c71728232b03ae9a30806d6e92617ffe32b990082",
+    "registry/prs.json": "32594f46e0872c21593254f3a16bedbfde0b184451bbdaca3d4666dfecb1e546"
+  }
+}

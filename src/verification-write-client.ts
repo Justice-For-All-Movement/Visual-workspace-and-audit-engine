@@ -151,43 +151,50 @@ export class VerificationWriteClient {
     rationale: string,
     signal?: AbortSignal,
   ): Promise<VerificationAcknowledgement> {
+    const started = performance.now();
     if (this.closed) fail("closed");
     if (this.#busy) fail("busy");
     if (this.#pending) fail("pending_write");
     if (!this.#viewed || !this.#actor) fail("review_required");
-    if (!word(commandId, 128) || !word(rationale, 4000))
-      fail("invalid_command");
-    const f = this.#viewed,
-      command: VerificationWriteCommand = {
-        commandId,
-        expectedStorageRevision: f.reviewRevision,
-        input: {
-          linkRef: { ...f.record.linkRef },
-          expectedRevision: f.record.ref.revision,
-          checks: checksCopy(checks),
-          rationale,
-        },
-      };
-    const body = JSON.stringify(command);
-    if (new TextEncoder().encode(body).length > 128 * 1024)
-      fail("invalid_command");
-    return this.#send(
-      {
-        body,
-        actor: this.#actor,
-        expected: {
-          record: { ...f.record.ref, revision: f.record.ref.revision + 1 },
-          storage: {
-            tenantId: this.#scope.tenantId,
-            projectId: this.#scope.projectId,
-            kind: storageKind,
-            id: storageKey,
-            revision: f.reviewRevision + 1,
+    this.#busy = true;
+    try {
+      if (!word(commandId, 128) || !word(rationale, 4000))
+        fail("invalid_command");
+      const f = this.#viewed,
+        command: VerificationWriteCommand = {
+          commandId,
+          expectedStorageRevision: f.reviewRevision,
+          input: {
+            linkRef: { ...f.record.linkRef },
+            expectedRevision: f.record.ref.revision,
+            checks: checksCopy(checks),
+            rationale,
+          },
+        };
+      const body = JSON.stringify(command);
+      if (new TextEncoder().encode(body).length > 128 * 1024)
+        fail("invalid_command");
+      return await this.#send(
+        {
+          body,
+          actor: this.#actor,
+          expected: {
+            record: { ...f.record.ref, revision: f.record.ref.revision + 1 },
+            storage: {
+              tenantId: this.#scope.tenantId,
+              projectId: this.#scope.projectId,
+              kind: storageKind,
+              id: storageKey,
+              revision: f.reviewRevision + 1,
+            },
           },
         },
-      },
-      signal,
-    );
+        signal,
+        started,
+      );
+    } finally {
+      this.#busy = false;
+    }
   }
   async retryPending(
     signal?: AbortSignal,
@@ -204,15 +211,18 @@ export class VerificationWriteClient {
       expected: VerificationAcknowledgement;
     },
     signal?: AbortSignal,
+    started = performance.now(),
   ): Promise<VerificationAcknowledgement> {
     this.#busy = true;
     const controller = new AbortController(),
-      started = performance.now(),
       abort = () => controller.abort();
     this.#controller = controller;
     signal?.addEventListener("abort", abort, { once: true });
     if (signal?.aborted) abort();
-    const timer = setTimeout(abort, this.#timeout);
+    const timer = setTimeout(
+      abort,
+      Math.max(0, this.#timeout - (performance.now() - started)),
+    );
     const gate = () => {
       if (
         this.closed ||

@@ -155,7 +155,8 @@
         21,
         22,
         23,
-        24
+        24,
+        25
       ],
       "dependsOn": [
         "VWA-001"
@@ -229,7 +230,7 @@
       },
       "verificationWriteClient": {
         "docs": "docs/VERIFICATION_WRITE_CLIENT.md",
-        "status": "Explicitly incomplete WIP:4 initial synthetic +3 actual4restrictedDB encryptedEvidence/owningHTTP groups pass. Expanded ACK/cancel tests and full regression running. Mounted controls, installed exports, source review/current-head CI/browser/AT/live remain pending.",
+        "status": "Explicitly incomplete WIP: full141 local passed before final preflight budget+lock/two tests; final8 synthetic local+3 prior actual4DB HTTP,10 prior installed/declarations passed; final11 installed running. Mounted controls/broader wire/current-head CI/final review remain pending. No143 full-local-installed/browser/live claim.",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25"
       }
     },
@@ -242,7 +243,8 @@
         12,
         14,
         23,
-        24
+        24,
+        25
       ],
       "dependsOn": [
         "VWA-002",
@@ -269,7 +271,7 @@
       },
       "verificationWriteClient": {
         "docs": "docs/VERIFICATION_WRITE_CLIENT.md",
-        "status": "Explicitly incomplete WIP:4 initial synthetic +3 actual4restrictedDB encryptedEvidence/owningHTTP groups pass. Expanded ACK/cancel tests and full regression running. Mounted controls, installed exports, source review/current-head CI/browser/AT/live remain pending.",
+        "status": "Explicitly incomplete WIP: full141 local passed before final preflight budget+lock/two tests; final8 synthetic local+3 prior actual4DB HTTP,10 prior installed/declarations passed; final11 installed running. Mounted controls/broader wire/current-head CI/final review remain pending. No143 full-local-installed/browser/live claim.",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25"
       }
     },

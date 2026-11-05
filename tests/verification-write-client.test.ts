@@ -8,6 +8,53 @@ import {
 } from "@accountability/knowledge-verification/repository";
 
 const origin = "https://private.invalid";
+test("preflight reentry cannot dispatch a second write or replace immutable pending", async () => {
+  const f = setup();
+  await f.client.load(f.selected);
+  let nested: Promise<unknown> | undefined;
+  const input = new Proxy(f.frame.record.checks, {
+    getPrototypeOf(target) {
+      nested = f.client
+        .record("nested", f.frame.record.checks, "Nested")
+        .catch((e) => e.code);
+      return Object.getPrototypeOf(target);
+    },
+  });
+  await f.client.record("outer", input, "Outer");
+  assert.equal(await nested, "busy");
+  assert.equal(f.posts.length, 1);
+  assert.equal(JSON.parse(f.posts[0]!).commandId, "outer");
+});
+test("write deadline includes blocked preflight data traps before any new I/O", async () => {
+  const f = frameFixture();
+  let calls = 0;
+  const client = new VerificationWriteClient(
+    origin,
+    f.scope,
+    f.scope.purpose,
+    async (url) => {
+      calls++;
+      return String(url).endsWith("/session")
+        ? response({ actorId: "viewer", csrfToken: "x" })
+        : response(f.frame);
+    },
+    25,
+  );
+  await client.load(f.selected);
+  const before = calls;
+  const trapped = new Proxy(f.frame.record.checks, {
+    getPrototypeOf(target) {
+      const until = performance.now() + 60;
+      while (performance.now() < until) {}
+      return Object.getPrototypeOf(target);
+    },
+  });
+  await assert.rejects(client.record("late", trapped, "Note"), {
+    code: "write_unavailable",
+  });
+  assert.equal(calls, before);
+  assert.equal(client.pending, null);
+});
 const response = (v: unknown, status = 200) =>
   new Response(JSON.stringify(v), {
     status,
@@ -142,30 +189,88 @@ test("input authority/accessors are refused before write I/O", async () => {
   assert.equal(f.posts.length, 0);
 });
 
-test("rejected and malformed ACKs preserve exact pending without automatic retry", async()=>{
- const f=frameFixture();
- for(const outcome of [()=>response({error:"denied"},403),()=>response({record:f.selected,storage:f.selected}),()=>response({grant:true}),()=>new Response(Uint8Array.of(0xc3,0x28),{headers:{"content-type":"application/json","cache-control":"no-store"}})]){
-  let posts=0;
-  const client=new VerificationWriteClient(origin,f.scope,f.scope.purpose,async(url,init)=>{
-   if(String(url).endsWith("/session"))return response({actorId:"viewer",csrfToken:"x"});
-   if(String(url).endsWith("/review"))return response(f.frame);
-   posts++;return outcome();
-  });
-  await client.load(f.selected);await assert.rejects(client.record("pending",f.frame.record.checks,"Note"));
-  assert.equal(posts,1);assert.equal(client.pending!.commandId,"pending");await assert.rejects(client.load(f.selected),{code:"pending_write"});
- }
+test("rejected and malformed ACKs preserve exact pending without automatic retry", async () => {
+  const f = frameFixture();
+  for (const outcome of [
+    () => response({ error: "denied" }, 403),
+    () => response({ record: f.selected, storage: f.selected }),
+    () => response({ grant: true }),
+    () =>
+      new Response(Uint8Array.of(0xc3, 0x28), {
+        headers: {
+          "content-type": "application/json",
+          "cache-control": "no-store",
+        },
+      }),
+  ]) {
+    let posts = 0;
+    const client = new VerificationWriteClient(
+      origin,
+      f.scope,
+      f.scope.purpose,
+      async (url, init) => {
+        if (String(url).endsWith("/session"))
+          return response({ actorId: "viewer", csrfToken: "x" });
+        if (String(url).endsWith("/review")) return response(f.frame);
+        posts++;
+        return outcome();
+      },
+    );
+    await client.load(f.selected);
+    await assert.rejects(
+      client.record("pending", f.frame.record.checks, "Note"),
+    );
+    assert.equal(posts, 1);
+    assert.equal(client.pending!.commandId, "pending");
+    await assert.rejects(client.load(f.selected), { code: "pending_write" });
+  }
 });
 
-test("cancellation after POST preserves uncertainty and fences a late acknowledged response",async()=>{
- const f=frameFixture(),control=new AbortController();let release!:(v:Response)=>void,posted!:()=>void;
- const started=new Promise<void>(r=>{posted=r;});
- const client=new VerificationWriteClient(origin,f.scope,f.scope.purpose,async(url)=>{
-  if(String(url).endsWith("/session"))return response({actorId:"viewer",csrfToken:"x"});
-  if(String(url).endsWith("/review"))return response(f.frame);
-  posted();return new Promise<Response>(r=>{release=r;});
- });
- await client.load(f.selected);const pending=client.record("cancelled",f.frame.record.checks,"Note",control.signal);
- await started;control.abort();await assert.rejects(pending,{code:"write_unavailable"});assert.ok(client.pending);
- let cancelled=false;release(new Response(new ReadableStream({cancel(){cancelled=true;}})));await new Promise(r=>setTimeout(r,0));assert.equal(cancelled,true);assert.ok(client.pending);
- client.dispose();await assert.rejects(client.retryPending(),{code:"closed"});
+test("cancellation after POST preserves uncertainty and fences a late acknowledged response", async () => {
+  const f = frameFixture(),
+    control = new AbortController();
+  let release!: (v: Response) => void, posted!: () => void;
+  const started = new Promise<void>((r) => {
+    posted = r;
+  });
+  const client = new VerificationWriteClient(
+    origin,
+    f.scope,
+    f.scope.purpose,
+    async (url) => {
+      if (String(url).endsWith("/session"))
+        return response({ actorId: "viewer", csrfToken: "x" });
+      if (String(url).endsWith("/review")) return response(f.frame);
+      posted();
+      return new Promise<Response>((r) => {
+        release = r;
+      });
+    },
+  );
+  await client.load(f.selected);
+  const pending = client.record(
+    "cancelled",
+    f.frame.record.checks,
+    "Note",
+    control.signal,
+  );
+  await started;
+  control.abort();
+  await assert.rejects(pending, { code: "write_unavailable" });
+  assert.ok(client.pending);
+  let cancelled = false;
+  release(
+    new Response(
+      new ReadableStream({
+        cancel() {
+          cancelled = true;
+        },
+      }),
+    ),
+  );
+  await new Promise((r) => setTimeout(r, 0));
+  assert.equal(cancelled, true);
+  assert.ok(client.pending);
+  client.dispose();
+  await assert.rejects(client.retryPending(), { code: "closed" });
 });
