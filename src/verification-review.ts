@@ -9,6 +9,8 @@ import {
   KNOWLEDGE_KEY,
   EVIDENCE_LINKS_KIND,
   EVIDENCE_LINKS_KEY,
+  VERIFICATION_REVIEWS_KIND,
+  VERIFICATION_REVIEWS_KEY,
 } from "@accountability/knowledge-verification/repository";
 import {
   canonical,
@@ -17,6 +19,7 @@ import {
   requireScope,
   validateRef,
 } from "./contracts.ts";
+import type { KnowledgeRepository } from "@accountability/knowledge-verification/repository";
 import type { Context, Json, Ref } from "./contracts.ts";
 import { layoutWorkspace, renderWorkspace } from "./index.ts";
 import type { WorkspaceSnapshot, VisualNode, WorkStage } from "./index.ts";
@@ -286,7 +289,11 @@ export function renderVerificationReview(
       selected,
       stage,
     ),
-    graph = renderWorkspace(c, view);
+    html = renderReviewSnapshot(c, view);
+  return html;
+}
+function renderReviewSnapshot(c: Context, view: WorkspaceSnapshot): string {
+  const graph = renderWorkspace(c, view);
   const cards = view.nodes
     .filter((n) => n.ref.kind === "knowledge-verification-review")
     .map((n) => {
@@ -294,6 +301,7 @@ export function renderVerificationReview(
           record: VerificationReviewState["records"][number];
           selected: boolean;
           latestReviewBasisStatus: string;
+          containingStorage?: Ref;
         },
         r = d.record;
       const checks = Object.entries(r.checks)
@@ -302,7 +310,10 @@ export function renderVerificationReview(
             `<dt>${escape(axis)}: ${escape(check.status)}</dt><dd>${escape(check.note)}</dd>`,
         )
         .join("");
-      return `<article><h3>${d.selected ? "Selected" : "Related"} captured review edition ${r.ref.revision}</h3><p>Resolution: unresolved. Latest captured review basis: ${escape(d.latestReviewBasisStatus)}.</p><dl>${checks}</dl><p>${escape(r.rationale)}</p><p>Captured record actor: ${escape(r.actorId)}. Captured record time: ${escape(r.createdAt)}. These fields are not authenticated audit events.</p><p>Captured contrary citation IDs: ${r.challengeLinkIds.length ? r.challengeLinkIds.map(escape).join(", ") : "none recorded; not completeness proof"}.</p></article>`;
+      const storage = d.containingStorage
+        ? `<p>Observed verification storage revision ${d.containingStorage.revision}; this containing edition does not establish when the selected record was created.</p>`
+        : "";
+      return `<article><h3>${d.selected ? "Selected" : "Related"} captured review edition ${r.ref.revision}</h3><p>Resolution: unresolved. Latest captured review basis: ${escape(d.latestReviewBasisStatus)}.</p>${storage}<dl>${checks}</dl><p>${escape(r.rationale)}</p><p>Captured record actor: ${escape(r.actorId)}. Captured record time: ${escape(r.createdAt)}. These fields are not authenticated audit events.</p><p>Captured contrary citation IDs: ${r.challengeLinkIds.length ? r.challengeLinkIds.map(escape).join(", ") : "none recorded; not completeness proof"}.</p></article>`;
     })
     .join("");
   const section = `<section aria-label="Unresolved verification observations"><h2>Human verification observations</h2><p>Private captured assertions. All checks remain separate from verified findings, answers, case closure and publication approval. Current source/Consent permission and original bytes were not checked by this view.</p>${cards}</section>`;
@@ -318,4 +329,145 @@ export function renderVerificationReview(
     "Verification HTML exceeds 2MiB",
   );
   return html;
+}
+
+/** Actual owning repository result shape; supplied capture metadata is not authentication. */
+export type VerificationCapture = Awaited<
+  ReturnType<KnowledgeRepository["loadVerificationReviews"]>
+>;
+export function projectStoredVerificationReview(
+  context: Context,
+  knowledgeInput: KnowledgeCapture,
+  linksInput: LinksCapture,
+  reviewInput: VerificationCapture,
+  selected: Ref,
+  stage: WorkStage,
+): WorkspaceSnapshot {
+  invariant(
+    Buffer.byteLength(
+      canonical({ knowledgeInput, linksInput, reviewInput, selected }),
+    ) <=
+      5 * 1024 * 1024,
+    "projection_too_large",
+    "Stored verification input exceeds 5MiB",
+  );
+  const c = structuredClone(context),
+    knowledge = structuredClone(knowledgeInput),
+    links = structuredClone(linksInput),
+    reviews = structuredClone(reviewInput),
+    choice = structuredClone(selected);
+  exact(reviews, [
+    "revision",
+    "state",
+    "knowledgeRevision",
+    "linksRevision",
+    "latest",
+  ]);
+  invariant(
+    Number.isSafeInteger(reviews.revision) &&
+      reviews.revision === reviews.state.records.length &&
+      reviews.knowledgeRevision === knowledge.revision &&
+      reviews.linksRevision === links.revision,
+    "invalid_review_snapshot",
+    "Owning verification containing revisions differ",
+  );
+  const observed = inspectVerificationReviews(
+    c,
+    knowledge.state,
+    links.state,
+    reviews.state,
+  );
+  invariant(
+    same(
+      reviews.latest,
+      observed.latest.map(({ record, basisStatus }) => ({
+        ref: record.ref,
+        basisStatus,
+      })),
+    ),
+    "invalid_review_snapshot",
+    "Owning verification latest metadata differs",
+  );
+  const base = projectVerificationReview(
+    c,
+    knowledge,
+    links,
+    reviews.state,
+    choice,
+    stage,
+  );
+  const storage = validateRef({
+    tenantId: c.tenantId,
+    projectId: c.projectId,
+    kind: VERIFICATION_REVIEWS_KIND,
+    id: VERIFICATION_REVIEWS_KEY,
+    revision: reviews.revision,
+  });
+  invariant(
+    !base.nodes.some((n) => refKey(n.ref) === refKey(storage)),
+    "reference_collision",
+    "Distinct verification containing edition required",
+  );
+  const nodes: VisualNode[] = [
+    ...base.nodes.map((n) =>
+      n.ref.kind !== "knowledge-verification-review"
+        ? n
+        : {
+            ...n,
+            dependencies: [...n.dependencies, storage],
+            details: json({
+              ...(n.details as Record<string, Json>),
+              containingStorage: storage,
+              notice:
+                "Supplied owning containing storage edition; record actor/time are captured metadata, not authenticated audits or creation-storage proof.",
+            }),
+          },
+    ),
+    {
+      ref: storage,
+      label: "Captured verification storage edition",
+      kind: "artifact",
+      state: "captured-storage-edition",
+      stage,
+      dependencies: [],
+      summary:
+        "Observed owning aggregate revision, not a record creation edition, current authorization or source attestation.",
+      details: {
+        revision: reviews.revision,
+        knowledgeRevision: reviews.knowledgeRevision,
+        linksRevision: reviews.linksRevision,
+      },
+    },
+  ];
+  const view = { ...base, nodes };
+  invariant(
+    nodes.length <= 256 &&
+      nodes.reduce((n, x) => n + x.dependencies.length, 0) <= 512 &&
+      Buffer.byteLength(canonical(view)) <= 512 * 1024,
+    "projection_too_large",
+    "Stored verification projection exceeds budget",
+  );
+  layoutWorkspace(c, view);
+  return view;
+}
+export function renderStoredVerificationReview(
+  context: Context,
+  knowledge: KnowledgeCapture,
+  links: LinksCapture,
+  reviews: VerificationCapture,
+  selected: Ref,
+  stage: WorkStage,
+): string {
+  const c = structuredClone(context);
+  return renderReviewSnapshot(
+    c,
+    projectStoredVerificationReview(
+      c,
+      knowledge,
+      links,
+      reviews,
+      selected,
+      stage,
+    ),
+  );
 }
