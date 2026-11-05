@@ -4,7 +4,11 @@
   "finalLocalSynthetic": 8,
   "priorActualHttpLocal": 3,
   "priorInstalled": 10,
-  "finalInstalled": "running",
+  "finalInstalled": {
+    "synthetic": 8,
+    "actualHttp": 3,
+    "mode": "separate complete-footer runs"
+  },
   "no143FullLocalInstalledClaim": true,
   "mountedControls": "pending",
   "sha256": {
@@ -15,8 +19,12 @@
     "package.json": "8e66d2c1466e04eb3d69383fae36c510afb77219a5c1edad96c7f12ea3bcb43b",
     "package-lock.json": "a1d03b0824851afd66d9f0b1b2a2240abd06c725bd4b00023ee9707fc619c98f",
     "scripts/validate-pr-registry.mjs": "23fb9c013ef736810ede19e7197d8fca9d16d4055a1b56be83563b8fca76b611",
-    "docs/VERIFICATION_WRITE_CLIENT.md": "0ad111cc1ebbce9babf195bba66a536a0bbeebe911bd72c416aaf9bcdee2dc8d",
+    "docs/VERIFICATION_WRITE_CLIENT.md": "333d4651828c568eb6cb2bddd642081c3dd22e273c880a69f3bb27786c0a69eb",
     "docs/ARCHITECTURE.md": "af175103e10b06877c8ccf1c71728232b03ae9a30806d6e92617ffe32b990082",
-    "registry/prs.json": "32594f46e0872c21593254f3a16bedbfde0b184451bbdaca3d4666dfecb1e546"
-  }
+    "registry/prs.json": "26dfd28159c8ea4e1d78ccc4e8a3dccc3e4fdb02bf61d43e71c7b68d6dd6b0ec"
+  },
+  "installedDeclarations": "strict pass",
+  "runtimeModulesByteMatched": 2,
+  "finalCurrentHeadCI": "required",
+  "sourceReview": "preflight time/reentry fixes applied; final broader review pending"
 }
