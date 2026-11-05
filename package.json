@@ -75,6 +75,18 @@
     "./verification-review": {
       "types": "./dist/verification-review.d.ts",
       "default": "./dist/verification-review.js"
+    },
+    "./selected-verification": {
+      "types": "./dist/selected-verification.d.ts",
+      "default": "./dist/selected-verification.js"
+    },
+    "./verification-client": {
+      "types": "./dist/verification-client.d.ts",
+      "default": "./dist/verification-client.js"
+    },
+    "./verification-controls": {
+      "types": "./dist/verification-controls.d.ts",
+      "default": "./dist/verification-controls.js"
     }
   },
   "engines": {
@@ -112,6 +124,6 @@
     "@accountability/processing": "github:neophilism/Document-and-Media-Processing-Engine#44d76aefb8701852398182a158248c1b6b7a8fda",
     "@accountability/resources": "git+https://github.com/neophilism/Resources-and-commercial-operations-engine.git#5a1ed825fef938702c333066935afea4c42f9b21",
     "@accountability/factual-investigation": "git+https://github.com/neophilism/Factual-investigation-engine.git#48e02a6568f09e1d091eb24d6f161a6bcb7a8de5",
-    "@accountability/knowledge-verification": "git+https://github.com/neophilism/Knowledge-and-verification-engine.git#a6d50806af49160ca786d77e1477532cd5840e2c"
+    "@accountability/knowledge-verification": "git+https://github.com/neophilism/Knowledge-and-verification-engine.git#31211e545f73dd99318d2960be3212a511b7cffd"
   }
 }

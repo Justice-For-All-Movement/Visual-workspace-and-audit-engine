@@ -71,3 +71,5 @@ VERIFICATION_REVIEW.md documents captured unresolved human review observations, 
 STORED_VERIFICATION_REVIEW.md documents the explicit owning verification snapshot profile with actual containing aggregate revisions; the pure profile retains its earlier limits. Neither formatter authenticates supplied captures or current permission.
 
 CORRESPONDENCE_DEADLINE_COMPATIBILITY.md records an explicit consumer upgrade to the accepted hardened Correspondence operator SDK; private UI behavior and host deployment requirements remain unchanged.
+
+SELECTED_VERIFICATION_READ.md describes the separate minimal selected-response view. It never manufactures whole histories to satisfy earlier capture inspectors. An explicit fresh-session read client and fixed-selection inert controls now use the accepted current-source/Consent backend; source/local/installed qualification is recorded there, with current-head CI and host/browser/live acceptance separate.

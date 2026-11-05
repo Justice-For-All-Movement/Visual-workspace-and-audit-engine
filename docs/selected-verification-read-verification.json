@@ -1,0 +1,31 @@
+{
+  "status": "partial read-only profile; local and installed focused qualification passed; final current-head CI required",
+  "localFocusedGroups": 15,
+  "priorFullLocalAndCI": 131,
+  "full132LocalInstalledClaim": false,
+  "browserATLive": "pending",
+  "sha256": {
+    "src/selected-verification.ts": "7785ad4a572704924226cfa4b9a33259d170605057c7039e9f1f72dca1d93444",
+    "src/verification-client.ts": "0920848b5bf7f50da622447a292b68ff738077369386e8cea52a782944d73336",
+    "src/verification-controls.ts": "b07da4c621381de7ca702a6b49ec4dbf459c5efab2963f253ae9355ede6d98a3",
+    "tests/selected-verification.test.ts": "545e76cb1f63d4f8669fc2d62c0342df5cc73373142cdc6c85e254976f7830ec",
+    "tests/selected-verification-fixture.ts": "89c2536f65014c2bb7d7500ed487867b98070110365fb5e1d96517654392d93d",
+    "tests/verification-client.test.ts": "9d17b26f1facc4f94bf2fc24e95b7584dd8e72d889f70ad6d76b0cabcce74e13",
+    "tests/verification-http-fixture.ts": "5619b60cdef2d0fd498d745578a0067bb71b89964de4189150ba35bd77752e86",
+    "tests/verification-http-client.test.ts": "f020ced2e2652d94962bd4dad217151665cfbb70c1db6f9263baaf52be2cdfab",
+    "scripts/render-selected-verification-example.mjs": "cbdfc3873d2559e1bcdff46bdcb0081af4cb01bffc529149a92cdc72c934bf21",
+    "scripts/validate-pr-registry.mjs": "5f9b6e1681f13f286eac8331cc5b0a7949c9f89c1e2b3c48a1fedd49db3946c8",
+    "docs/examples/private-selected-verification-read.html": "b13c892c703c19b3421eccea8527e1aa78a5bbc0a4c7924d90ba63a93f4839ad",
+    "docs/SELECTED_VERIFICATION_READ.md": "6da931af5f30bee569cf917cf490611a854b326e4608f57c27ae8f58f3e8a984",
+    "registry/prs.json": "4ee329b0ee41a0e30d4d97b54a7c470690730082d029ecb64a1e87ed1e856514",
+    "docs/ARCHITECTURE.md": "b89916758935e37ccd498e66f211eb58cc6ab9a5ca7f3ac62cc6a212c120e13f",
+    "package.json": "26e9269ea6231702d12c8f3558b8c6d91640c13e5ffd5ccfe0df04fc938833f8",
+    "package-lock.json": "452ee86fb5cd561424b71a27b58e051b4fdea0e687bcbfb585df3aac015b0a13"
+  },
+  "installedFocusedGroups": 15,
+  "strictInstalledDeclarations": "passed",
+  "runtimeModulesByteMatched": 3,
+  "sourceReview": "no unresolved issue in implemented read-only scope",
+  "isolatedBrowserESM": "three modules linked without Node imports/globals; VM only",
+  "realSQLNetworkBrowserATLive": "not qualified by this change"
+}
