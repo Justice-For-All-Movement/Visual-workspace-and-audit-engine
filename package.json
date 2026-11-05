@@ -91,6 +91,10 @@
     "./verification-write-client": {
       "types": "./dist/verification-write-client.d.ts",
       "default": "./dist/verification-write-client.js"
+    },
+    "./verification-write-controls": {
+      "types": "./dist/verification-write-controls.d.ts",
+      "default": "./dist/verification-write-controls.js"
     }
   },
   "engines": {

@@ -75,3 +75,5 @@ CORRESPONDENCE_DEADLINE_COMPATIBILITY.md records an explicit consumer upgrade to
 SELECTED_VERIFICATION_READ.md describes the separate minimal selected-response view. It never manufactures whole histories to satisfy earlier capture inspectors. An explicit fresh-session read client and fixed-selection inert controls now use the accepted current-source/Consent backend; source/local/installed qualification is recorded there, with current-head CI and host/browser/live acceptance separate.
 
 VERIFICATION_WRITE_CLIENT.md records incomplete explicit selected-review write/replay browser integration; existing read-only controls retain their contracts.
+
+VERIFICATION_WRITE_CONTROLS.md documents the explicit private unresolved editor, actual protected read/write client ownership, dirty/pending guards and manual exact replay; qualification remains partial.

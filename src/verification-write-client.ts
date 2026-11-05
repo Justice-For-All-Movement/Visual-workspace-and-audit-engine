@@ -113,6 +113,9 @@ export class VerificationWriteClient {
   get origin() {
     return this.#origin;
   }
+  get scope(): VerificationScope {
+    return { ...this.#scope };
+  }
   get viewed() {
     return this.#viewed ? structuredClone(this.#viewed) : null;
   }
