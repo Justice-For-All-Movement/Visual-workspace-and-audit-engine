@@ -1,5 +1,5 @@
 {
-  "status": "partial; final-head CI and installed rerun pending",
+  "status": "partial read-only profile; local and installed focused qualification passed; final current-head CI required",
   "localFocusedGroups": 15,
   "priorFullLocalAndCI": 131,
   "full132LocalInstalledClaim": false,
@@ -16,10 +16,16 @@
     "scripts/render-selected-verification-example.mjs": "cbdfc3873d2559e1bcdff46bdcb0081af4cb01bffc529149a92cdc72c934bf21",
     "scripts/validate-pr-registry.mjs": "5f9b6e1681f13f286eac8331cc5b0a7949c9f89c1e2b3c48a1fedd49db3946c8",
     "docs/examples/private-selected-verification-read.html": "b13c892c703c19b3421eccea8527e1aa78a5bbc0a4c7924d90ba63a93f4839ad",
-    "docs/SELECTED_VERIFICATION_READ.md": "c8fd34f8f02a98cd5148a0796081217dcded28161b1b7fe46087b1c281cf18aa",
-    "registry/prs.json": "9fff72bc17fb8cf825dc2fdc77e0022f7543e8b23cea9a588f74c9d8590203ea",
-    "docs/ARCHITECTURE.md": "27d69e3f3b0a063a2a6ae2eee108c19e7b2bf8de64c48b7a13d29489e8c78d43",
+    "docs/SELECTED_VERIFICATION_READ.md": "6da931af5f30bee569cf917cf490611a854b326e4608f57c27ae8f58f3e8a984",
+    "registry/prs.json": "4ee329b0ee41a0e30d4d97b54a7c470690730082d029ecb64a1e87ed1e856514",
+    "docs/ARCHITECTURE.md": "b89916758935e37ccd498e66f211eb58cc6ab9a5ca7f3ac62cc6a212c120e13f",
     "package.json": "26e9269ea6231702d12c8f3558b8c6d91640c13e5ffd5ccfe0df04fc938833f8",
     "package-lock.json": "452ee86fb5cd561424b71a27b58e051b4fdea0e687bcbfb585df3aac015b0a13"
-  }
+  },
+  "installedFocusedGroups": 15,
+  "strictInstalledDeclarations": "passed",
+  "runtimeModulesByteMatched": 3,
+  "sourceReview": "no unresolved issue in implemented read-only scope",
+  "isolatedBrowserESM": "three modules linked without Node imports/globals; VM only",
+  "realSQLNetworkBrowserATLive": "not qualified by this change"
 }

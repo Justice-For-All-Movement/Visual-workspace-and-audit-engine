@@ -129,7 +129,7 @@
       "selectedVerificationRead": {
         "docs": "docs/SELECTED_VERIFICATION_READ.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
-        "status": "Partial read-only implementation; final qualification incomplete.12 final local wire/client/JSDOM and3 actual4restrictedDB HTTP groups pass; prior full131 local+CI41959341817 pass. Final current-head CI and complete installed15-group rerun still required; declarations/3runtime bytes match. No132 full local/installed or browser/AT/live claim. Source review clear; protected writes/full correction impact/host/current rights remain pending.",
+        "status": "Partial read-only profile implemented/reviewed:12 focused wire/client/JSDOM plus3 actual4restrictedDB encrypted-Evidence/HTTP groups pass locally AND installed compiled public exports; declarations/3runtime bytes match. Prior full131 local+CI41959341817 passed; final current-head CI required. No132 full local/installed or real browser/AT/live claim. Protected writes/full correction impact/host identity/current rights remain pending.",
         "example": "docs/examples/private-selected-verification-read.html"
       }
     },
@@ -224,7 +224,7 @@
       "selectedVerificationRead": {
         "docs": "docs/SELECTED_VERIFICATION_READ.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
-        "status": "Partial read-only implementation; final qualification incomplete.12 final local wire/client/JSDOM and3 actual4restrictedDB HTTP groups pass; prior full131 local+CI41959341817 pass. Final current-head CI and complete installed15-group rerun still required; declarations/3runtime bytes match. No132 full local/installed or browser/AT/live claim. Source review clear; protected writes/full correction impact/host/current rights remain pending.",
+        "status": "Partial read-only profile implemented/reviewed:12 focused wire/client/JSDOM plus3 actual4restrictedDB encrypted-Evidence/HTTP groups pass locally AND installed compiled public exports; declarations/3runtime bytes match. Prior full131 local+CI41959341817 passed; final current-head CI required. No132 full local/installed or real browser/AT/live claim. Protected writes/full correction impact/host identity/current rights remain pending.",
         "example": "docs/examples/private-selected-verification-read.html"
       }
     },
@@ -259,7 +259,7 @@
       "selectedVerificationRead": {
         "docs": "docs/SELECTED_VERIFICATION_READ.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
-        "status": "Partial read-only implementation; final qualification incomplete.12 final local wire/client/JSDOM and3 actual4restrictedDB HTTP groups pass; prior full131 local+CI41959341817 pass. Final current-head CI and complete installed15-group rerun still required; declarations/3runtime bytes match. No132 full local/installed or browser/AT/live claim. Source review clear; protected writes/full correction impact/host/current rights remain pending.",
+        "status": "Partial read-only profile implemented/reviewed:12 focused wire/client/JSDOM plus3 actual4restrictedDB encrypted-Evidence/HTTP groups pass locally AND installed compiled public exports; declarations/3runtime bytes match. Prior full131 local+CI41959341817 passed; final current-head CI required. No132 full local/installed or real browser/AT/live claim. Protected writes/full correction impact/host identity/current rights remain pending.",
         "example": "docs/examples/private-selected-verification-read.html"
       }
     },
