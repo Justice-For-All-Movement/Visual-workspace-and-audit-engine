@@ -141,3 +141,31 @@ test("input authority/accessors are refused before write I/O", async () => {
   assert.equal(reads, 0);
   assert.equal(f.posts.length, 0);
 });
+
+test("rejected and malformed ACKs preserve exact pending without automatic retry", async()=>{
+ const f=frameFixture();
+ for(const outcome of [()=>response({error:"denied"},403),()=>response({record:f.selected,storage:f.selected}),()=>response({grant:true}),()=>new Response(Uint8Array.of(0xc3,0x28),{headers:{"content-type":"application/json","cache-control":"no-store"}})]){
+  let posts=0;
+  const client=new VerificationWriteClient(origin,f.scope,f.scope.purpose,async(url,init)=>{
+   if(String(url).endsWith("/session"))return response({actorId:"viewer",csrfToken:"x"});
+   if(String(url).endsWith("/review"))return response(f.frame);
+   posts++;return outcome();
+  });
+  await client.load(f.selected);await assert.rejects(client.record("pending",f.frame.record.checks,"Note"));
+  assert.equal(posts,1);assert.equal(client.pending!.commandId,"pending");await assert.rejects(client.load(f.selected),{code:"pending_write"});
+ }
+});
+
+test("cancellation after POST preserves uncertainty and fences a late acknowledged response",async()=>{
+ const f=frameFixture(),control=new AbortController();let release!:(v:Response)=>void,posted!:()=>void;
+ const started=new Promise<void>(r=>{posted=r;});
+ const client=new VerificationWriteClient(origin,f.scope,f.scope.purpose,async(url)=>{
+  if(String(url).endsWith("/session"))return response({actorId:"viewer",csrfToken:"x"});
+  if(String(url).endsWith("/review"))return response(f.frame);
+  posted();return new Promise<Response>(r=>{release=r;});
+ });
+ await client.load(f.selected);const pending=client.record("cancelled",f.frame.record.checks,"Note",control.signal);
+ await started;control.abort();await assert.rejects(pending,{code:"write_unavailable"});assert.ok(client.pending);
+ let cancelled=false;release(new Response(new ReadableStream({cancel(){cancelled=true;}})));await new Promise(r=>setTimeout(r,0));assert.equal(cancelled,true);assert.ok(client.pending);
+ client.dispose();await assert.rejects(client.retryPending(),{code:"closed"});
+});

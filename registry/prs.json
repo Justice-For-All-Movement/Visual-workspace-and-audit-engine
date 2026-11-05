@@ -229,7 +229,8 @@
       },
       "verificationWriteClient": {
         "docs": "docs/VERIFICATION_WRITE_CLIENT.md",
-        "status": "Explicitly incomplete WIP: four synthetic owning-profile browser client groups pass; real handler/restricted-DB integration, mounted controls, installed/current-head CI/source review pending. Unit remains partial."
+        "status": "Explicitly incomplete WIP:4 initial synthetic +3 actual4restrictedDB encryptedEvidence/owningHTTP groups pass. Expanded ACK/cancel tests and full regression running. Mounted controls, installed exports, source review/current-head CI/browser/AT/live remain pending.",
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25"
       }
     },
     {
@@ -268,7 +269,8 @@
       },
       "verificationWriteClient": {
         "docs": "docs/VERIFICATION_WRITE_CLIENT.md",
-        "status": "Explicitly incomplete WIP: four synthetic owning-profile browser client groups pass; real handler/restricted-DB integration, mounted controls, installed/current-head CI/source review pending. Unit remains partial."
+        "status": "Explicitly incomplete WIP:4 initial synthetic +3 actual4restrictedDB encryptedEvidence/owningHTTP groups pass. Expanded ACK/cancel tests and full regression running. Mounted controls, installed exports, source review/current-head CI/browser/AT/live remain pending.",
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25"
       }
     },
     {
