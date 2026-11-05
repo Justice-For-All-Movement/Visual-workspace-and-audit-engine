@@ -4,7 +4,7 @@
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 6,
-  "observedAt": "2026-11-04T20:15:00Z",
+  "observedAt": "2026-11-05T03:00:00Z",
   "units": [
     {
       "id": "VWA-001",
@@ -124,6 +124,10 @@
         "status": "All114 local+installed compiled-public-export tests/typecheck/build/registry pass; six new groups/declarations/module+actual owning example match. Initial CI41938464678/check126952845117 passed114; final documentation-head CI required; unit remains partial.",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/22",
         "example": "docs/examples/private-stored-verification-review.html"
+      },
+      "selectedVerificationRead": {
+        "docs": "docs/SELECTED_VERIFICATION_READ.md",
+        "status": "Explicitly incomplete WIP: browser-safe selected-frame wire admission and inert DOM renderer;4 focused local groups pass. Browser authenticated client/controls and expanded qualification still pending; existing whole-history renderers unchanged. Host/current authorization/browser/AT/live acceptance remain pending."
       }
     },
     {
@@ -212,6 +216,10 @@
         "docs": "docs/CORRESPONDENCE_DEADLINE_COMPATIBILITY.md",
         "status": "Partial integration: accepted Correspondence PR6 pin adopted explicitly;3 actual-handler/client regressions reproduce3 failures on old pin and pass on new pin;117 local tests and3 installed groups/declarations/client JS match. Only2 lock entries changed; other pins/contracts unchanged. Source review clear; final current-head CI required; host/browser/live remain pending.",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/23"
+      },
+      "selectedVerificationRead": {
+        "docs": "docs/SELECTED_VERIFICATION_READ.md",
+        "status": "Explicitly incomplete WIP: browser-safe selected-frame wire admission and inert DOM renderer;4 focused local groups pass. Browser authenticated client/controls and expanded qualification still pending; existing whole-history renderers unchanged. Host/current authorization/browser/AT/live acceptance remain pending."
       }
     },
     {
