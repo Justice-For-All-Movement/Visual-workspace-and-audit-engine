@@ -106,7 +106,7 @@
   ],
   "dependencies": {
     "@accountability/consent-rights": "github:neophilism/Consent-rights-and-use-decisions-engine#43c4d786be774ee61c03c8ec599c4ee3521046e9",
-    "@accountability/correspondence": "git+https://github.com/neophilism/Correspondence-and-Outreach-Engine.git#97778c1212a02194e61a27f53b928f098af81b88",
+    "@accountability/correspondence": "git+https://github.com/neophilism/Correspondence-and-Outreach-Engine.git#e6555140adefdab37c9140ef8362dcfb0e10fcf5",
     "@accountability/discovery-acquisition": "git+https://github.com/neophilism/Discovery-and-Acquisition-Engine.git#f87ba8cba1bde7d47c90dd7375f501728ffc40e0",
     "@accountability/packaging-release": "git+https://github.com/neophilism/Packaging-release-and-correction-engine.git#b3ddcaeba1bef27310ff2113d6abca9a249b40a7",
     "@accountability/processing": "github:neophilism/Document-and-Media-Processing-Engine#44d76aefb8701852398182a158248c1b6b7a8fda",

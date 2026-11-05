@@ -206,6 +206,10 @@
         "status": "All114 local+installed compiled-public-export tests/typecheck/build/registry pass; six new groups/declarations/module+actual owning example match. Initial CI41938464678/check126952845117 passed114; final documentation-head CI required; unit remains partial.",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/22",
         "example": "docs/examples/private-stored-verification-review.html"
+      },
+      "correspondenceDeadlineCompatibility": {
+        "docs": "docs/CORRESPONDENCE_DEADLINE_COMPATIBILITY.md",
+        "status": "Explicitly incomplete checkpoint: accepted Correspondence PR6 pin upgrade; three handler/client regressions pass locally; broader/installed/source review/current-head CI pending. No new UI behavior or deployed acceptance."
       }
     },
     {
@@ -228,7 +232,11 @@
         "Live event delivery operator controls and policy projections"
       ],
       "acceptanceCriteria": "Verify required behavior, rejection paths, source-bound test evidence and private defaults; live acceptance remains separate.",
-      "implementationStatus": "Partial: PR12 adds explicit private Processing reconciliation client/controls over accepted DMP-005 HTTP adapter, fresh CSRF and immutable pending-request replay with uncertainty locks. Current authenticated hosting/Identity wiring, task navigation, reload recovery, real browser/accessibility and deployment qualification remain pending. No execution/retry/no-output/cleanup controls. Partial participant controls over accepted Consent PR8: explicit exact review/unchecked acknowledgement/decline/own-consent withdrawal and immutable uncertain replay; six actual pinned-handler/restricted-migration JSDOM groups pass locally AND through freshly packed installed compiled public exports, with byte-matched controls. All75 ordinary local tests/typecheck/build/registry pass; source e4428b02ed4fed06b40d6c03b56ac324344a8005 initial CI40677289017/check122778830558 passed74ordinary, logs inspected; final-head CI required. Single mounted owner guards shared mutable review state. Host session/purpose/logout, reload recovery and browser/assistive technology acceptance remain pending."
+      "implementationStatus": "Partial: PR12 adds explicit private Processing reconciliation client/controls over accepted DMP-005 HTTP adapter, fresh CSRF and immutable pending-request replay with uncertainty locks. Current authenticated hosting/Identity wiring, task navigation, reload recovery, real browser/accessibility and deployment qualification remain pending. No execution/retry/no-output/cleanup controls. Partial participant controls over accepted Consent PR8: explicit exact review/unchecked acknowledgement/decline/own-consent withdrawal and immutable uncertain replay; six actual pinned-handler/restricted-migration JSDOM groups pass locally AND through freshly packed installed compiled public exports, with byte-matched controls. All75 ordinary local tests/typecheck/build/registry pass; source e4428b02ed4fed06b40d6c03b56ac324344a8005 initial CI40677289017/check122778830558 passed74ordinary, logs inspected; final-head CI required. Single mounted owner guards shared mutable review state. Host session/purpose/logout, reload recovery and browser/assistive technology acceptance remain pending.",
+      "correspondenceDeadlineCompatibility": {
+        "docs": "docs/CORRESPONDENCE_DEADLINE_COMPATIBILITY.md",
+        "status": "Explicitly incomplete checkpoint: accepted Correspondence PR6 pin upgrade; three handler/client regressions pass locally; broader/installed/source review/current-head CI pending. No new UI behavior or deployed acceptance."
+      }
     },
     {
       "id": "VWA-006",
