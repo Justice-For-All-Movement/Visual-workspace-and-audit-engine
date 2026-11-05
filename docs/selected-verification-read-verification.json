@@ -1,0 +1,25 @@
+{
+  "status": "partial; final-head CI and installed rerun pending",
+  "localFocusedGroups": 15,
+  "priorFullLocalAndCI": 131,
+  "full132LocalInstalledClaim": false,
+  "browserATLive": "pending",
+  "sha256": {
+    "src/selected-verification.ts": "7785ad4a572704924226cfa4b9a33259d170605057c7039e9f1f72dca1d93444",
+    "src/verification-client.ts": "0920848b5bf7f50da622447a292b68ff738077369386e8cea52a782944d73336",
+    "src/verification-controls.ts": "b07da4c621381de7ca702a6b49ec4dbf459c5efab2963f253ae9355ede6d98a3",
+    "tests/selected-verification.test.ts": "545e76cb1f63d4f8669fc2d62c0342df5cc73373142cdc6c85e254976f7830ec",
+    "tests/selected-verification-fixture.ts": "89c2536f65014c2bb7d7500ed487867b98070110365fb5e1d96517654392d93d",
+    "tests/verification-client.test.ts": "9d17b26f1facc4f94bf2fc24e95b7584dd8e72d889f70ad6d76b0cabcce74e13",
+    "tests/verification-http-fixture.ts": "5619b60cdef2d0fd498d745578a0067bb71b89964de4189150ba35bd77752e86",
+    "tests/verification-http-client.test.ts": "f020ced2e2652d94962bd4dad217151665cfbb70c1db6f9263baaf52be2cdfab",
+    "scripts/render-selected-verification-example.mjs": "cbdfc3873d2559e1bcdff46bdcb0081af4cb01bffc529149a92cdc72c934bf21",
+    "scripts/validate-pr-registry.mjs": "5f9b6e1681f13f286eac8331cc5b0a7949c9f89c1e2b3c48a1fedd49db3946c8",
+    "docs/examples/private-selected-verification-read.html": "b13c892c703c19b3421eccea8527e1aa78a5bbc0a4c7924d90ba63a93f4839ad",
+    "docs/SELECTED_VERIFICATION_READ.md": "c8fd34f8f02a98cd5148a0796081217dcded28161b1b7fe46087b1c281cf18aa",
+    "registry/prs.json": "9fff72bc17fb8cf825dc2fdc77e0022f7543e8b23cea9a588f74c9d8590203ea",
+    "docs/ARCHITECTURE.md": "27d69e3f3b0a063a2a6ae2eee108c19e7b2bf8de64c48b7a13d29489e8c78d43",
+    "package.json": "26e9269ea6231702d12c8f3558b8c6d91640c13e5ffd5ccfe0df04fc938833f8",
+    "package-lock.json": "452ee86fb5cd561424b71a27b58e051b4fdea0e687bcbfb585df3aac015b0a13"
+  }
+}

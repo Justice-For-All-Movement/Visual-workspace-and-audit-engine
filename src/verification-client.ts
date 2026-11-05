@@ -37,11 +37,15 @@ export class VerificationReadClient {
   ) {
     try {
       const url = new URL(origin);
+      const fixedScope = {
+        tenantId: scope.tenantId,
+        projectId: scope.projectId,
+      };
       if (
         url.protocol !== "https:" ||
         url.origin !== origin ||
-        !word(scope.tenantId, 128) ||
-        !word(scope.projectId, 128) ||
+        !word(fixedScope.tenantId, 128) ||
+        !word(fixedScope.projectId, 128) ||
         !word(purpose, 200) ||
         typeof transport !== "function" ||
         !Number.isSafeInteger(timeoutMs) ||
@@ -50,7 +54,7 @@ export class VerificationReadClient {
       )
         throw Error();
       this.#origin = origin;
-      this.#scope = { tenantId: scope.tenantId, projectId: scope.projectId };
+      this.#scope = fixedScope;
       this.#purpose = purpose;
       this.#transport = transport;
       this.#timeout = timeoutMs;
@@ -138,13 +142,15 @@ export class VerificationReadClient {
         ...(body === undefined ? {} : { body }),
       });
       // A noncooperative transport may settle after timeout/disposal. Never expose that result or retain its body.
-      void pending.then(
-        (response) => {
-          if (controller.signal.aborted)
-            void response.body?.cancel().catch(() => {});
-        },
-        () => {},
-      );
+      void pending
+        .then(
+          (response) => {
+            if (controller.signal.aborted)
+              void response.body?.cancel().catch(() => {});
+          },
+          () => {},
+        )
+        .catch(() => {});
       let response: Response | undefined,
         reader: ReadableStreamDefaultReader<Uint8Array> | undefined;
       try {

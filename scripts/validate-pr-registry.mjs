@@ -29,3 +29,6 @@ if(pkg.dependencies['@accountability/correspondence']!==correspondencePin ||
    !lock.packages['node_modules/@accountability/correspondence'].resolved.endsWith('#e6555140adefdab37c9140ef8362dcfb0e10fcf5'))
   throw new Error('Accepted hardened Correspondence operator SDK pin/lock required');
 console.log('Accepted hardened Correspondence operator SDK pinned');
+
+if (!knowledge.resolved.endsWith('#31211e545f73dd99318d2960be3212a511b7cffd'))
+  throw new Error('Accepted selected-verification Knowledge SDK lock pin required');

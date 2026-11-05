@@ -261,21 +261,76 @@ test("cancellation and disposal fence responses and busy calls cannot overlap", 
 });
 
 test("aggregate deadline covers session plus review; incorrect host origin and session authority are denied", async () => {
-  const f = setup(); let calls = 0;
-  const client = new VerificationReadClient(origin, f.scope, f.scope.purpose, async input => {
-    calls++; const until = performance.now() + 35; while (performance.now() < until) {}
-    return String(input).endsWith("/session") ? response({ actorId: "human", csrfToken: "x" }) : response(f.frame);
-  }, 55);
+  const f = setup();
+  let calls = 0;
+  const client = new VerificationReadClient(
+    origin,
+    f.scope,
+    f.scope.purpose,
+    async (input) => {
+      calls++;
+      const until = performance.now() + 35;
+      while (performance.now() < until) {}
+      return String(input).endsWith("/session")
+        ? response({ actorId: "human", csrfToken: "x" })
+        : response(f.frame);
+    },
+    55,
+  );
   await assert.rejects(client.read(f.selected), { code: "read_unavailable" });
   assert.equal(calls, 2);
-  for (const session of [{ actorId: "human", csrfToken: "x", roles: ["owner"] }, { actorId: "human", csrfToken: "\u00e9".repeat(200) }, { actorId: "human", csrfToken: "" }]) {
+  for (const session of [
+    { actorId: "human", csrfToken: "x", roles: ["owner"] },
+    { actorId: "human", csrfToken: "\u00e9".repeat(200) },
+    { actorId: "human", csrfToken: "" },
+  ]) {
     let posts = 0;
-    const invalid = new VerificationReadClient(origin, f.scope, f.scope.purpose, async (_input, init) => {
-      if (init!.method === "POST") posts++; return response(session);
-    });
-    await assert.rejects(invalid.read(f.selected)); assert.equal(posts, 0);
+    const invalid = new VerificationReadClient(
+      origin,
+      f.scope,
+      f.scope.purpose,
+      async (_input, init) => {
+        if (init!.method === "POST") posts++;
+        return response(session);
+      },
+    );
+    await assert.rejects(invalid.read(f.selected));
+    assert.equal(posts, 0);
   }
-  const dom = new JSDOM("<body><main></main></body>", { url: "https://other.invalid" });
-  assert.throws(() => mountVerificationRead(dom.window.document.querySelector("main")!, f.client, f.selected));
+  const dom = new JSDOM("<body><main></main></body>", {
+    url: "https://other.invalid",
+  });
+  assert.throws(() =>
+    mountVerificationRead(
+      dom.window.document.querySelector("main")!,
+      f.client,
+      f.selected,
+    ),
+  );
   assert.equal(f.calls.length, 0);
+});
+
+test("selection getters are rejected before I/O and captured configuration cannot be changed by the caller", async () => {
+  const f = setup();
+  let reads = 0;
+  const selected = { ...f.selected };
+  Object.defineProperty(selected, "projectId", {
+    enumerable: true,
+    get() {
+      reads++;
+      return reads === 1 ? f.scope.projectId : "foreign";
+    },
+  });
+  await assert.rejects(f.client.read(selected));
+  assert.equal(reads, 0);
+  assert.equal(f.calls.length, 0);
+  const scope = { ...f.scope },
+    client = new VerificationReadClient(
+      origin,
+      scope,
+      f.scope.purpose,
+      f.transport,
+    );
+  scope.projectId = "foreign";
+  assert.deepEqual(await client.read(f.selected), f.frame);
 });

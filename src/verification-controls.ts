@@ -16,6 +16,7 @@ export function mountVerificationRead(
     !(client instanceof VerificationReadClient) ||
     root.ownerDocument.location.origin !== client.origin ||
     !root.isConnected ||
+    !root.ownerDocument.defaultView?.MutationObserver ||
     client.closed ||
     client.busy ||
     owners.has(client)
@@ -34,7 +35,9 @@ export function mountVerificationRead(
   status.setAttribute("aria-live", "polite");
   status.textContent =
     "No request made. Selected observations remain unresolved.";
-  section.append(button, status, content);
+  const selection = document.createElement("p");
+  selection.textContent = "Exact selected review: " + JSON.stringify(choice);
+  section.append(selection, button, status, content);
   root.replaceChildren(section);
   owners.add(client);
   let disposed = false,

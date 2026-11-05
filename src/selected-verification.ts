@@ -63,8 +63,17 @@ export function captureVerificationSelection(
   scope: VerificationScope,
   selected: VerificationRef,
 ): VerificationRef {
-  // Copy only known primitives; no runtime dependency on Node or another engine's authority.
-  return { ...ref(selected, scope, "knowledge-verification-review") };
+  // Capture only plain own data fields. A getter must not change the selected scope between checks and POST.
+  require(selected && Object.getPrototypeOf(selected) === Object.prototype);
+  const keys = ["tenantId", "projectId", "kind", "id", "revision"];
+  require(Reflect.ownKeys(selected).length === keys.length);
+  const captured: Record<string, unknown> = {};
+  for (const key of keys) {
+    const field = Object.getOwnPropertyDescriptor(selected, key);
+    require(field && "value" in field && field.enumerable);
+    captured[key] = field.value;
+  }
+  return { ...ref(captured, scope, "knowledge-verification-review") };
 }
 function same(a: VerificationRef, b: VerificationRef) {
   return (

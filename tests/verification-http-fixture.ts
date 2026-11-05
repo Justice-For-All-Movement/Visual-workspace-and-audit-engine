@@ -1,5 +1,4 @@
 // Restricted own-DB fixture adapted from accepted Knowledge PR24 tests. Synthetic scanner/session proof only.
-import { createVerificationReadHandler } from "@accountability/knowledge-verification/verification-http";
 import { CurrentVerificationReviewReader } from "@accountability/knowledge-verification/verification-reader";
 import { randomBytes } from "node:crypto";
 import { mkdtemp, rm } from "node:fs/promises";
@@ -16,9 +15,7 @@ type Identity = {
 };
 
 import { createHash } from "node:crypto";
-import { CurrentEvidenceKnowledgeReview } from "@accountability/knowledge-verification/current-evidence";
 import type { EvidenceState } from "@accountability/evidence";
-import { createEvidenceState } from "@accountability/evidence";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
@@ -26,11 +23,7 @@ import { PGlite } from "@electric-sql/pglite";
 import { scoped } from "@accountability/evidence-sql/database";
 import type { Database } from "@accountability/evidence-sql/database";
 import { MembershipRegistry } from "@accountability/identity-policy/membership";
-import {
-  KnowledgeRepository,
-  KNOWLEDGE_KIND,
-  KNOWLEDGE_KEY,
-} from "@accountability/knowledge-verification/repository";
+import { KnowledgeRepository } from "@accountability/knowledge-verification/repository";
 import {
   IdentityKnowledgeRepository,
   KNOWLEDGE_RESOURCE_ID,
@@ -61,7 +54,6 @@ const { PermissionRegistry } = await import(
 );
 import {
   CurrentEvidenceUse,
-  ConsentEvidenceLinksWriter,
   HumanConsentEvidenceKnowledgeReview,
   evidenceUseResourceId,
 } from "@accountability/knowledge-verification/consent-links";
@@ -343,11 +335,6 @@ export async function verificationFixture(
       () => time.now,
       timeoutMs,
     );
-  const makeWriter = (
-    guard = makeGuard(),
-    evidence = f.service,
-    facade = f.facade,
-  ) => new ConsentEvidenceLinksWriter(facade, evidence, f.credential, guard);
   return {
     ...f,
     consentDb,
@@ -359,7 +346,6 @@ export async function verificationFixture(
     config,
     time,
     makeGuard,
-    makeWriter,
   };
 }
 

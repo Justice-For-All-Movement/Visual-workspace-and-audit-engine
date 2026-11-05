@@ -129,7 +129,8 @@
       "selectedVerificationRead": {
         "docs": "docs/SELECTED_VERIFICATION_READ.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
-        "status": "Incomplete qualification WIP: minimal-frame wire admission, explicit fresh-session current verification read client and inert fixed-selection controls implemented;10 focused synthetic/owning-pure/JSDOM groups and3 actual four-restricted-DB HTTP groups pass. Additional aggregate-deadline group, full regression/installed qualification/current-head CI/review pending. Unit remains partial; host identity/rights/browser/AT/live remain required."
+        "status": "Partial read-only implementation; final qualification incomplete.12 final local wire/client/JSDOM and3 actual4restrictedDB HTTP groups pass; prior full131 local+CI41959341817 pass. Final current-head CI and complete installed15-group rerun still required; declarations/3runtime bytes match. No132 full local/installed or browser/AT/live claim. Source review clear; protected writes/full correction impact/host/current rights remain pending.",
+        "example": "docs/examples/private-selected-verification-read.html"
       }
     },
     {
@@ -223,7 +224,8 @@
       "selectedVerificationRead": {
         "docs": "docs/SELECTED_VERIFICATION_READ.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
-        "status": "Incomplete qualification WIP: minimal-frame wire admission, explicit fresh-session current verification read client and inert fixed-selection controls implemented;10 focused synthetic/owning-pure/JSDOM groups and3 actual four-restricted-DB HTTP groups pass. Additional aggregate-deadline group, full regression/installed qualification/current-head CI/review pending. Unit remains partial; host identity/rights/browser/AT/live remain required."
+        "status": "Partial read-only implementation; final qualification incomplete.12 final local wire/client/JSDOM and3 actual4restrictedDB HTTP groups pass; prior full131 local+CI41959341817 pass. Final current-head CI and complete installed15-group rerun still required; declarations/3runtime bytes match. No132 full local/installed or browser/AT/live claim. Source review clear; protected writes/full correction impact/host/current rights remain pending.",
+        "example": "docs/examples/private-selected-verification-read.html"
       }
     },
     {
@@ -257,7 +259,8 @@
       "selectedVerificationRead": {
         "docs": "docs/SELECTED_VERIFICATION_READ.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
-        "status": "Incomplete qualification WIP: minimal-frame wire admission, explicit fresh-session current verification read client and inert fixed-selection controls implemented;10 focused synthetic/owning-pure/JSDOM groups and3 actual four-restricted-DB HTTP groups pass. Additional aggregate-deadline group, full regression/installed qualification/current-head CI/review pending. Unit remains partial; host identity/rights/browser/AT/live remain required."
+        "status": "Partial read-only implementation; final qualification incomplete.12 final local wire/client/JSDOM and3 actual4restrictedDB HTTP groups pass; prior full131 local+CI41959341817 pass. Final current-head CI and complete installed15-group rerun still required; declarations/3runtime bytes match. No132 full local/installed or browser/AT/live claim. Source review clear; protected writes/full correction impact/host/current rights remain pending.",
+        "example": "docs/examples/private-selected-verification-read.html"
       }
     },
     {
