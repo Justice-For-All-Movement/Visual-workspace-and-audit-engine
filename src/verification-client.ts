@@ -65,6 +65,10 @@ export class VerificationReadClient {
   get closed(): boolean {
     return this.#closed;
   }
+  /** Last observed server session actor, not independent proofing or a grant. */
+  get actorId(): string | null {
+    return this.#actor;
+  }
   get origin(): string {
     return this.#origin;
   }

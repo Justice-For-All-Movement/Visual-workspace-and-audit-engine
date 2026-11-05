@@ -226,6 +226,10 @@
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
         "status": "Partial read-only profile implemented/reviewed:12 focused wire/client/JSDOM plus3 actual4restrictedDB encrypted-Evidence/HTTP groups pass locally AND installed compiled public exports; declarations/3runtime bytes match. Prior full131 local+CI41959341817 passed; final current-head CI required. No132 full local/installed or real browser/AT/live claim. Protected writes/full correction impact/host identity/current rights remain pending.",
         "example": "docs/examples/private-selected-verification-read.html"
+      },
+      "verificationWriteClient": {
+        "docs": "docs/VERIFICATION_WRITE_CLIENT.md",
+        "status": "Explicitly incomplete WIP: four synthetic owning-profile browser client groups pass; real handler/restricted-DB integration, mounted controls, installed/current-head CI/source review pending. Unit remains partial."
       }
     },
     {
@@ -261,6 +265,10 @@
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
         "status": "Partial read-only profile implemented/reviewed:12 focused wire/client/JSDOM plus3 actual4restrictedDB encrypted-Evidence/HTTP groups pass locally AND installed compiled public exports; declarations/3runtime bytes match. Prior full131 local+CI41959341817 passed; final current-head CI required. No132 full local/installed or real browser/AT/live claim. Protected writes/full correction impact/host identity/current rights remain pending.",
         "example": "docs/examples/private-selected-verification-read.html"
+      },
+      "verificationWriteClient": {
+        "docs": "docs/VERIFICATION_WRITE_CLIENT.md",
+        "status": "Explicitly incomplete WIP: four synthetic owning-profile browser client groups pass; real handler/restricted-DB integration, mounted controls, installed/current-head CI/source review pending. Unit remains partial."
       }
     },
     {
