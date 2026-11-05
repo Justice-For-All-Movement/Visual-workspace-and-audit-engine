@@ -23,3 +23,9 @@ const knowledge=lock.packages['node_modules/@accountability/knowledge-verificati
 if (knowledge.dependencies['@accountability/evidence'] !== 'git+https://github.com/neophilism/Evidence-Storage-and-Provenance-Engine.git#d240403c39934ab781178efea8cf4922c94d88a4' ||
     knowledge.dependencies['@accountability/evidence-sql'] !== 'git+https://github.com/neophilism/Evidence-Storage-and-Provenance-Engine.git#dce7105a70b42d77afe4cd48d34723331447037c')
   throw new Error('Current Knowledge source SDK and separate stable persistence lock metadata required');
+
+const correspondencePin='git+https://github.com/neophilism/Correspondence-and-Outreach-Engine.git#e6555140adefdab37c9140ef8362dcfb0e10fcf5';
+if(pkg.dependencies['@accountability/correspondence']!==correspondencePin ||
+   !lock.packages['node_modules/@accountability/correspondence'].resolved.endsWith('#e6555140adefdab37c9140ef8362dcfb0e10fcf5'))
+  throw new Error('Accepted hardened Correspondence operator SDK pin/lock required');
+console.log('Accepted hardened Correspondence operator SDK pinned');

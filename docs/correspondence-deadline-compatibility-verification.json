@@ -1,0 +1,49 @@
+{
+  "status": "Partial VWA-004/005 dependency integration qualified; final current-head CI required",
+  "focusedLocal": {
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0
+  },
+  "broader": "117 local tests/typecheck/build/registry passed",
+  "installed": {
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0,
+    "declarations": "passed",
+    "clientJs": "byte-matches installed compiled export",
+    "fullSuite": "not claimed"
+  },
+  "ci": {
+    "source": "f6e21ea8eadc741a668f80159d0259a87a318621",
+    "run": 41955741137,
+    "check": 127010079308,
+    "pass": 117,
+    "fail": 0,
+    "skipped": 0,
+    "rawLogs": "Exact source/head and footers inspected",
+    "finalDocumentationHead": "required before merge"
+  },
+  "fixture": "Actual pinned handler/client/pure Correspondence domain transitions; synthetic repository port, not SQL/network/provider/browser proof",
+  "sourceSha256": {
+    "package.json": "c16dc196bafa59189890f5d1ed28492b067585cde9c6ad3c29b078ff16ec54a9",
+    "package-lock.json": "a43b64bd539575c855e2c223ef478d43cd77d164a1fbd3f972a1ef05f7f12f8e",
+    "scripts/validate-pr-registry.mjs": "a9c756502a2f9ca5651db912b0f9c5ac9ecf297d90a2c95e5edd1b563c1fa1cd",
+    "tests/operator-deadline-compatibility.test.ts": "ca5fa094875231942480e70f7768351cf0478738a025114102ef722ceca9688c",
+    "docs/CORRESPONDENCE_DEADLINE_COMPATIBILITY.md": "569be4914a6520bae5456defb0cd7dbf53296d0701d82ea02ec65dcc29e33802",
+    "docs/ARCHITECTURE.md": "1e06aef0d82361c97f826bbdf2361134957472b90ce11caf018fc74548aab731",
+    "registry/prs.json": "4714eb5f3f5d07662211084e39b3b1fa973e574c2d36e4a969b181bcd0327055"
+  },
+  "reproduction": {
+    "oldPin": "97778c1212a02194e61a27f53b928f098af81b88",
+    "tests": 3,
+    "oldFail": 3,
+    "newPass": 3,
+    "scope": "Actual handler/client/pure transition; controlled synthetic repository port"
+  },
+  "sourceReview": "Two-entry lock delta only; explicit pin validation; unchanged definitive4xx versus unknown-outcome behavior; no unresolved runtime finding",
+  "remaining": [
+    "final current-head CI/actual rules",
+    "host current authentication/purpose/session/logout/private reload controls/browserATlive"
+  ]
+}
