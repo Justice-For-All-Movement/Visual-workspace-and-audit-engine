@@ -1,5 +1,5 @@
 {
-  "status": "Incomplete WIP; first tested implementation checkpoint",
+  "status": "PR22 qualification checkpoint; final documentation-head checks required",
   "local": {
     "focusedGroups": 6,
     "pass": 6,
@@ -9,10 +9,33 @@
     "typecheck": "passed",
     "build": "passed",
     "registry": "passed",
-    "fullSuite": "pending"
+    "fullSuite": {
+      "tests": 114,
+      "pass": 114,
+      "fail": 0,
+      "skipped": 0
+    }
   },
-  "installed": "pending",
-  "ci": "pending",
+  "installed": {
+    "fullSuite": 114,
+    "focusedGroups": 6,
+    "fail": 0,
+    "skipped": 0,
+    "normalInstall": "passed",
+    "declarations": "passed",
+    "runtimeModuleByteMatch": true,
+    "owningExampleByteMatch": true
+  },
+  "ci": {
+    "source": "bb032e382514907175ff4448171de0fe5e60cd95",
+    "run": 41938464678,
+    "check": 126952845117,
+    "tests": 114,
+    "fail": 0,
+    "skipped": 0,
+    "rawLogs": "inspected",
+    "finalDocumentationHead": "required"
+  },
   "review": [
     "Exact owning profile and containing revisions; expected latest metadata from owning validator",
     "Observed aggregate is not an individual record creation edition; legacy pure path unchanged",
@@ -31,7 +54,9 @@
     "package-lock.json": "40f5e43591a320bc72c316178c408b65673bbdba46fee3d6839f0f60b8d69ddb",
     "scripts/validate-pr-registry.mjs": "06fccc19613ab3f17f82bdd9d52ff22d4f76f293e9ace1d79233b4bb5731c404",
     "docs/ARCHITECTURE.md": "e408f79e78ea8b45293e6b57837c04b8d31cfdf24b25a7ccc038bac6a96120ba",
-    "docs/STORED_VERIFICATION_REVIEW.md": "f0060b6c863dd36b8193d5ce7318d7bd297b0e16192b721335927d59143959a8",
-    "registry/prs.json": "924cd145624f490592884b5a645df6cb1155aef3e27b0b1363606644e619974a"
+    "docs/STORED_VERIFICATION_REVIEW.md": "515746a52b2c29e7c0264d509f56244b228c43968ca1f41057bacd08fe8ec7eb",
+    "registry/prs.json": "25c1f444a93e518a4080e3c1ef7b187ddb2907808138c7f11cc08cc15b52c6fe",
+    "scripts/render-stored-verification-example.mjs": "05de0411d88adecec6258009e55922de39bc7b225906aa1481a3735ec83330c5",
+    "docs/examples/private-stored-verification-review.html": "3b9a48560413bb149dd263bc41796e9a0430a6e3109136b338805efa369eaa4d"
   }
 }

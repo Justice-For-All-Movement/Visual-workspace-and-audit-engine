@@ -67,7 +67,8 @@
         18,
         19,
         20,
-        21
+        21,
+        22
       ],
       "dependsOn": [
         "VWA-001"
@@ -120,7 +121,9 @@
       "storedVerificationReview": {
         "docs": "docs/STORED_VERIFICATION_REVIEW.md",
         "verification": "docs/stored-verification-review-verification.json",
-        "status": "Incomplete WIP: six new groups (five actual restricted-owning-snapshot groups plus complete-output budget boundary), normal resolved-lock npm ci/typecheck/build/registry pass. Installed/full CI qualification pending. Unit remains partial."
+        "status": "All114 local+installed compiled-public-export tests/typecheck/build/registry pass; six new groups/declarations/module+actual owning example match. Initial CI41938464678/check126952845117 passed114; final documentation-head CI required; unit remains partial.",
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/22",
+        "example": "docs/examples/private-stored-verification-review.html"
       }
     },
     {
@@ -142,7 +145,8 @@
         18,
         19,
         20,
-        21
+        21,
+        22
       ],
       "dependsOn": [
         "VWA-001"
@@ -199,7 +203,9 @@
       "storedVerificationReview": {
         "docs": "docs/STORED_VERIFICATION_REVIEW.md",
         "verification": "docs/stored-verification-review-verification.json",
-        "status": "Incomplete WIP: six new groups (five actual restricted-owning-snapshot groups plus complete-output budget boundary), normal resolved-lock npm ci/typecheck/build/registry pass. Installed/full CI qualification pending. Unit remains partial."
+        "status": "All114 local+installed compiled-public-export tests/typecheck/build/registry pass; six new groups/declarations/module+actual owning example match. Initial CI41938464678/check126952845117 passed114; final documentation-head CI required; unit remains partial.",
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/22",
+        "example": "docs/examples/private-stored-verification-review.html"
       }
     },
     {
