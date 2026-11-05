@@ -14,6 +14,12 @@ if (pkg.dependencies['@accountability/factual-investigation'] !==
     'git+https://github.com/neophilism/Factual-investigation-engine.git#48e02a6568f09e1d091eb24d6f161a6bcb7a8de5')
   throw new Error('Accepted Factual pin required');
 if (pkg.dependencies['@accountability/knowledge-verification'] !==
-    'git+https://github.com/neophilism/Knowledge-and-verification-engine.git#eda0e7ba7ed3337902b8c04d58ae37bd71b2421e')
+    'git+https://github.com/neophilism/Knowledge-and-verification-engine.git#a6d50806af49160ca786d77e1477532cd5840e2c')
   throw new Error('Accepted Knowledge runtime pin required');
 console.log('Accepted Factual snapshot and Knowledge runtime SDKs pinned');
+
+const lock=JSON.parse(await readFile(new URL('../package-lock.json',import.meta.url),'utf8'));
+const knowledge=lock.packages['node_modules/@accountability/knowledge-verification'];
+if (knowledge.dependencies['@accountability/evidence'] !== 'git+https://github.com/neophilism/Evidence-Storage-and-Provenance-Engine.git#d240403c39934ab781178efea8cf4922c94d88a4' ||
+    knowledge.dependencies['@accountability/evidence-sql'] !== 'git+https://github.com/neophilism/Evidence-Storage-and-Provenance-Engine.git#dce7105a70b42d77afe4cd48d34723331447037c')
+  throw new Error('Current Knowledge source SDK and separate stable persistence lock metadata required');

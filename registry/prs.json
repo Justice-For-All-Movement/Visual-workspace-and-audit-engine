@@ -116,6 +116,11 @@
         "status": "Full107 local+installed suites, seventh local budget group/all seven installed focused groups, declarations/module/example pass; expanded sourcecacb553 CI41931605195 passed108. Final documentation-head CI required; no full108 single local/installed invocation claim. Unit remains partial.",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/21",
         "example": "docs/examples/private-verification-review.html"
+      },
+      "storedVerificationReview": {
+        "docs": "docs/STORED_VERIFICATION_REVIEW.md",
+        "verification": "docs/stored-verification-review-verification.json",
+        "status": "Incomplete WIP: six new groups (five actual restricted-owning-snapshot groups plus complete-output budget boundary), normal resolved-lock npm ci/typecheck/build/registry pass. Installed/full CI qualification pending. Unit remains partial."
       }
     },
     {
@@ -190,6 +195,11 @@
         "status": "Full107 local+installed suites, seventh local budget group/all seven installed focused groups, declarations/module/example pass; expanded sourcecacb553 CI41931605195 passed108. Final documentation-head CI required; no full108 single local/installed invocation claim. Unit remains partial.",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/21",
         "example": "docs/examples/private-verification-review.html"
+      },
+      "storedVerificationReview": {
+        "docs": "docs/STORED_VERIFICATION_REVIEW.md",
+        "verification": "docs/stored-verification-review-verification.json",
+        "status": "Incomplete WIP: six new groups (five actual restricted-owning-snapshot groups plus complete-output budget boundary), normal resolved-lock npm ci/typecheck/build/registry pass. Installed/full CI qualification pending. Unit remains partial."
       }
     },
     {

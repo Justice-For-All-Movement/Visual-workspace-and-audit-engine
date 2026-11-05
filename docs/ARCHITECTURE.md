@@ -67,3 +67,5 @@ EVIDENCE_LINK_REVIEW.md documents captured citation-set inspectors; unloaded Evi
 PROPOSAL_REVIEW.md describes captured unassessed proposal cards and exact citation inspectors. No source service observation or acceptance is inferred.
 
 VERIFICATION_REVIEW.md documents captured unresolved human review observations, exact historical/citation metadata and current-capture staleness without current service authentication or findings.
+
+STORED_VERIFICATION_REVIEW.md documents the explicit owning verification snapshot profile with actual containing aggregate revisions; the pure profile retains its earlier limits. Neither formatter authenticates supplied captures or current permission.

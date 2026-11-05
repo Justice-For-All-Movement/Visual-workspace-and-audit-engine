@@ -1,0 +1,37 @@
+{
+  "status": "Incomplete WIP; first tested implementation checkpoint",
+  "local": {
+    "focusedGroups": 6,
+    "pass": 6,
+    "fail": 0,
+    "skipped": 0,
+    "normalNpmCi": "passed after explicit transitive lock refresh",
+    "typecheck": "passed",
+    "build": "passed",
+    "registry": "passed",
+    "fullSuite": "pending"
+  },
+  "installed": "pending",
+  "ci": "pending",
+  "review": [
+    "Exact owning profile and containing revisions; expected latest metadata from owning validator",
+    "Observed aggregate is not an individual record creation edition; legacy pure path unchanged",
+    "Whole completed input/output/HTML budgets; no partial projections",
+    "Direct accepted Knowledge pin and its transitive Evidence entry refreshed; all other direct pins/nested Factual/contracts unchanged"
+  ],
+  "remaining": [
+    "Installed compiled-public-export/full suite/source review/current-head CI/branch rules",
+    "Host authentication/current source-Consent/private export and CPU/heap/driver limits",
+    "Full verification/correction workflow/original cross-engine/shared E07-E08/browser/AT/live acceptance"
+  ],
+  "sourceSha256": {
+    "src/verification-review.ts": "9203a62a56eb870175b1e005f3a0b88308c4cfdbe40f8262fca363966128a943",
+    "tests/verification-review.test.ts": "a8eba25f62383638cce1dfd86bb495ad67b1b200665e0c520beb50f052ffd468",
+    "package.json": "95a07f2ee243b65e2053295193a41d2ca15710174858341555e9cdca82b473f4",
+    "package-lock.json": "40f5e43591a320bc72c316178c408b65673bbdba46fee3d6839f0f60b8d69ddb",
+    "scripts/validate-pr-registry.mjs": "06fccc19613ab3f17f82bdd9d52ff22d4f76f293e9ace1d79233b4bb5731c404",
+    "docs/ARCHITECTURE.md": "e408f79e78ea8b45293e6b57837c04b8d31cfdf24b25a7ccc038bac6a96120ba",
+    "docs/STORED_VERIFICATION_REVIEW.md": "f0060b6c863dd36b8193d5ce7318d7bd297b0e16192b721335927d59143959a8",
+    "registry/prs.json": "924cd145624f490592884b5a645df6cb1155aef3e27b0b1363606644e619974a"
+  }
+}
