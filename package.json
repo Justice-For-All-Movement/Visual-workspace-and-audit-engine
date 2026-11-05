@@ -79,6 +79,14 @@
     "./selected-verification": {
       "types": "./dist/selected-verification.d.ts",
       "default": "./dist/selected-verification.js"
+    },
+    "./verification-client": {
+      "types": "./dist/verification-client.d.ts",
+      "default": "./dist/verification-client.js"
+    },
+    "./verification-controls": {
+      "types": "./dist/verification-controls.d.ts",
+      "default": "./dist/verification-controls.js"
     }
   },
   "engines": {

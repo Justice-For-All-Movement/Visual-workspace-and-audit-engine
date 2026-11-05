@@ -68,7 +68,8 @@
         19,
         20,
         21,
-        22
+        22,
+        24
       ],
       "dependsOn": [
         "VWA-001"
@@ -127,7 +128,8 @@
       },
       "selectedVerificationRead": {
         "docs": "docs/SELECTED_VERIFICATION_READ.md",
-        "status": "Explicitly incomplete WIP: browser-safe selected-frame wire admission and inert DOM renderer;4 focused local groups pass. Browser authenticated client/controls and expanded qualification still pending; existing whole-history renderers unchanged. Host/current authorization/browser/AT/live acceptance remain pending."
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
+        "status": "Incomplete qualification WIP: minimal-frame wire admission, explicit fresh-session current verification read client and inert fixed-selection controls implemented;10 focused synthetic/owning-pure/JSDOM groups and3 actual four-restricted-DB HTTP groups pass. Additional aggregate-deadline group, full regression/installed qualification/current-head CI/review pending. Unit remains partial; host identity/rights/browser/AT/live remain required."
       }
     },
     {
@@ -151,7 +153,8 @@
         20,
         21,
         22,
-        23
+        23,
+        24
       ],
       "dependsOn": [
         "VWA-001"
@@ -219,7 +222,8 @@
       },
       "selectedVerificationRead": {
         "docs": "docs/SELECTED_VERIFICATION_READ.md",
-        "status": "Explicitly incomplete WIP: browser-safe selected-frame wire admission and inert DOM renderer;4 focused local groups pass. Browser authenticated client/controls and expanded qualification still pending; existing whole-history renderers unchanged. Host/current authorization/browser/AT/live acceptance remain pending."
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
+        "status": "Incomplete qualification WIP: minimal-frame wire admission, explicit fresh-session current verification read client and inert fixed-selection controls implemented;10 focused synthetic/owning-pure/JSDOM groups and3 actual four-restricted-DB HTTP groups pass. Additional aggregate-deadline group, full regression/installed qualification/current-head CI/review pending. Unit remains partial; host identity/rights/browser/AT/live remain required."
       }
     },
     {
@@ -230,7 +234,8 @@
       "contributingPrs": [
         12,
         14,
-        23
+        23,
+        24
       ],
       "dependsOn": [
         "VWA-002",
@@ -248,6 +253,11 @@
         "docs": "docs/CORRESPONDENCE_DEADLINE_COMPATIBILITY.md",
         "status": "Partial integration: accepted Correspondence PR6 pin adopted explicitly;3 actual-handler/client regressions reproduce3 failures on old pin and pass on new pin;117 local tests and3 installed groups/declarations/client JS match. Only2 lock entries changed; other pins/contracts unchanged. Source review clear; final current-head CI required; host/browser/live remain pending.",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/23"
+      },
+      "selectedVerificationRead": {
+        "docs": "docs/SELECTED_VERIFICATION_READ.md",
+        "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
+        "status": "Incomplete qualification WIP: minimal-frame wire admission, explicit fresh-session current verification read client and inert fixed-selection controls implemented;10 focused synthetic/owning-pure/JSDOM groups and3 actual four-restricted-DB HTTP groups pass. Additional aggregate-deadline group, full regression/installed qualification/current-head CI/review pending. Unit remains partial; host identity/rights/browser/AT/live remain required."
       }
     },
     {

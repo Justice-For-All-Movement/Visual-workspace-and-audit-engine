@@ -115,4 +115,17 @@ export function selectedFixture() {
   return { knowledge, evidence, state, command, value, checks, reviews };
 }
 
-export function frameFixture() { const f = selectedFixture(); return { scope:c, selected:f.reviews.records[0]!.ref, frame:{knowledgeRevision:f.knowledge.records.length,linksRevision:f.state.records.length,revision:f.state.records[0]!,reviewRevision:f.reviews.records.length,record:f.reviews.records[0]!} }; }
+export function frameFixture() {
+  const f = selectedFixture();
+  return {
+    scope: c,
+    selected: f.reviews.records[0]!.ref,
+    frame: {
+      knowledgeRevision: f.knowledge.records.length,
+      linksRevision: f.state.records.length,
+      revision: f.state.records[0]!,
+      reviewRevision: f.reviews.records.length,
+      record: f.reviews.records[0]!,
+    },
+  };
+}
