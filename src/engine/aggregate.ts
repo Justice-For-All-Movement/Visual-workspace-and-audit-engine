@@ -346,8 +346,24 @@ export function createAggregator(registry: EngineRegistry, self: EnginePort, con
       const chain: ChainStatus = out.status === 'ok' && verify ? await chainStatus(ctx, p) : 'not_checked';
       return { info: { engine: id, name: nameOf(id), status: out.status, ...(out.reason === undefined ? {} : { reason: out.reason }), count: 0, chain, exhausted: out.exhausted }, kept, pre };
     });
-    const merged = perEngine.flatMap((e) => e.kept).sort(compareAudit);
-    if (order === 'desc') merged.reverse();
+    let merged: TimelineRecord[];
+    if (order === 'desc') merged = perEngine.flatMap((e) => e.kept).sort(compareAudit).reverse();
+    else {
+      // K-way merge that never reorders one engine's own feed, so per-engine cursors stay exact even when an engine
+      // recorded a timestamp out of sequence.
+      merged = [];
+      const heads = perEngine.map(() => 0);
+      for (;;) {
+        let best = -1;
+        perEngine.forEach((e, i) => {
+          const head = e.kept[heads[i] as number];
+          if (head !== undefined && (best < 0 || compareAudit(head, perEngine[best]!.kept[heads[best] as number] as TimelineRecord) < 0)) best = i;
+        });
+        if (best < 0) break;
+        merged.push(perEngine[best]!.kept[heads[best] as number] as TimelineRecord);
+        heads[best] = (heads[best] as number) + 1;
+      }
+    }
     const records = merged.slice(0, limit);
     const cursors: Record<string, string> = {};
     const counts = new Map<string, number>();
