@@ -1,0 +1,46 @@
+// Types for web/model.js (the pure view-model shared by the service layer and the browser components).
+export type DisplayState = 'ok' | 'stale' | 'blocked' | 'failed' | 'unavailable' | 'forbidden_or_missing';
+export type GraphNode = {
+  ref: string; engine: string; kind: string; title: string; state: DisplayState; engineState: string;
+  stale: boolean; blocked: boolean; staleReasons: string[];
+  versionCount: number; permissionCount: number; decisionCount: number; depth: number;
+};
+export type GraphEdge = { from: string; to: string; relation: 'source' | 'dependent' };
+export type Graph = { root?: string | null; nodes: GraphNode[]; edges: GraphEdge[]; truncated?: boolean; unavailableEngines?: string[] };
+export type TableColumn = { key: string; label: string };
+export type TableModel = { caption: string; columns: TableColumn[]; rows: Record<string, string | number | boolean>[] };
+export type OutlineLine = { level: number; relation: 'root' | 'source' | 'dependent' | 'heading'; ref: string | null; parent: string | null; repeated: boolean; text: string };
+export type Outline = { lines: OutlineLine[]; text: string };
+export type LayoutNode = { ref: string; layer: number; index: number; x: number; y: number; width: number; height: number };
+export type Layout = { width: number; height: number; nodes: LayoutNode[]; edges: { key: string; upstream: string; downstream: string }[] };
+export type AuditRow = { engine: string; id: string; at: string; actorId: string; actorKind: string; action: string; subject: string; requestId: string; purpose: string };
+
+export const STATES: DisplayState[];
+export const STATE_LABELS: Record<DisplayState, string>;
+export const STATE_SHAPES: Record<DisplayState, string>;
+export const STATE_DESCRIPTIONS: Record<DisplayState, string>;
+export const RELATION_LABELS: Record<'root' | 'source' | 'dependent', string>;
+export const AUDIT_CSV_COLUMNS: string[];
+export const TASK_COLUMNS: { id: string; label: string; states: string[] }[];
+export function stateLabel(state: string): string;
+export function deriveState(inspection: { state?: string; stale?: boolean; blocked?: boolean } | null | undefined): DisplayState;
+export function parseRef(value: unknown): { engine: string; kind: string; id: string; revision?: number } | null;
+export function canonicalEdge(edge: GraphEdge): { upstream: string; downstream: string };
+export function edgeKey(edge: GraphEdge): string;
+export function rootOf(graph: Graph): string | null;
+export function neighbors(graph: Graph, ref: string, direction: 'upstream' | 'downstream'): string[];
+export function describeNode(node: GraphNode): string;
+export function relationTable(graph: Graph): TableModel;
+export function nodeTable(graph: Graph): TableModel;
+export function textOutline(graph: Graph): Outline;
+export function layoutLayers(graph: Graph, options?: { nodeWidth?: number; nodeHeight?: number; gapX?: number; gapY?: number }): Layout;
+export function moveFocus(graph: Graph, layout: Layout, ref: string, key: string): string | null;
+export function compareAudit(a: AuditRow, b: AuditRow): number;
+export function filterAudit<T extends AuditRow>(records: readonly T[], filter?: { engine?: string; actor?: string; action?: string; text?: string }): T[];
+export function distinct(records: readonly object[], key: string): string[];
+export function csvCell(value: unknown): string;
+export function toCsv(columns: readonly string[], rows: readonly object[]): string;
+export function auditCsv(records: readonly AuditRow[]): string;
+export function taskColumn(item: { state?: string; engineState?: string; blocked?: boolean }): string;
+export function groupTasks<T extends { ref: string; state?: string; engineState?: string; blocked?: boolean }>(items: readonly T[], edges?: readonly GraphEdge[]): { id: string; label: string; items: (T & { dependsOn: string[]; unfinished: string[] })[] }[];
+export function compareCells(a: unknown, b: unknown): number;

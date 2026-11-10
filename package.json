@@ -87,7 +87,16 @@
     "./verification-controls": {
       "types": "./dist/verification-controls.d.ts",
       "default": "./dist/verification-controls.js"
-    }
+    },
+    "./engine": {
+      "types": "./dist/engine/index.d.ts",
+      "default": "./dist/engine/index.js"
+    },
+    "./serve": {
+      "types": "./dist/engine/serve.d.ts",
+      "default": "./dist/engine/serve.js"
+    },
+    "./web/*": "./web/*"
   },
   "engines": {
     "node": ">=24 <25"
@@ -102,28 +111,34 @@
     "example:acquisition": "npm run build && node scripts/render-acquisition-example.mjs",
     "example:captions": "npm run build && node scripts/render-caption-example.mjs",
     "example:consents": "npm run build && node scripts/render-consent-example.mjs",
-    "example:factual": "npm run build && node scripts/render-factual-example.mjs"
+    "example:factual": "npm run build && node scripts/render-factual-example.mjs",
+    "serve": "node src/engine/serve.ts",
+    "test:browser": "node --test --test-concurrency=1 tests/browser/*.test.mjs"
   },
   "devDependencies": {
     "@electric-sql/pglite": "0.5.12",
     "@types/jsdom": "21.1.7",
     "@types/node": "26.6.5",
+    "@types/pg": "8.20.0",
+    "axe-core": "4.11.0",
     "jsdom": "26.1.0",
     "typescript": "7.0.2"
   },
   "files": [
     "dist",
+    "web",
     "README.md",
     "docs"
   ],
   "dependencies": {
-    "@accountability/consent-rights": "github:neophilism/Consent-rights-and-use-decisions-engine#43c4d786be774ee61c03c8ec599c4ee3521046e9",
-    "@accountability/correspondence": "git+https://github.com/neophilism/Correspondence-and-Outreach-Engine.git#e6555140adefdab37c9140ef8362dcfb0e10fcf5",
-    "@accountability/discovery-acquisition": "git+https://github.com/neophilism/Discovery-and-Acquisition-Engine.git#f87ba8cba1bde7d47c90dd7375f501728ffc40e0",
-    "@accountability/packaging-release": "git+https://github.com/neophilism/Packaging-release-and-correction-engine.git#b3ddcaeba1bef27310ff2113d6abca9a249b40a7",
-    "@accountability/processing": "github:neophilism/Document-and-Media-Processing-Engine#44d76aefb8701852398182a158248c1b6b7a8fda",
-    "@accountability/resources": "git+https://github.com/neophilism/Resources-and-commercial-operations-engine.git#5a1ed825fef938702c333066935afea4c42f9b21",
-    "@accountability/factual-investigation": "git+https://github.com/neophilism/Factual-investigation-engine.git#48e02a6568f09e1d091eb24d6f161a6bcb7a8de5",
-    "@accountability/knowledge-verification": "git+https://github.com/neophilism/Knowledge-and-verification-engine.git#31211e545f73dd99318d2960be3212a511b7cffd"
+    "@accountability/consent-rights": "github:Justice-For-All-Movement/Consent-rights-and-use-decisions-engine#43c4d786be774ee61c03c8ec599c4ee3521046e9",
+    "@accountability/correspondence": "git+https://github.com/Justice-For-All-Movement/Correspondence-and-Outreach-Engine.git#e6555140adefdab37c9140ef8362dcfb0e10fcf5",
+    "@accountability/discovery-acquisition": "git+https://github.com/Justice-For-All-Movement/Discovery-and-Acquisition-Engine.git#f87ba8cba1bde7d47c90dd7375f501728ffc40e0",
+    "@accountability/factual-investigation": "git+https://github.com/Justice-For-All-Movement/Factual-investigation-engine.git#48e02a6568f09e1d091eb24d6f161a6bcb7a8de5",
+    "@accountability/knowledge-verification": "git+https://github.com/Justice-For-All-Movement/Knowledge-and-verification-engine.git#31211e545f73dd99318d2960be3212a511b7cffd",
+    "@accountability/packaging-release": "git+https://github.com/Justice-For-All-Movement/Packaging-release-and-correction-engine.git#b3ddcaeba1bef27310ff2113d6abca9a249b40a7",
+    "@accountability/processing": "github:Justice-For-All-Movement/Document-and-Media-Processing-Engine#44d76aefb8701852398182a158248c1b6b7a8fda",
+    "@accountability/resources": "git+https://github.com/Justice-For-All-Movement/Resources-and-commercial-operations-engine.git#5a1ed825fef938702c333066935afea4c42f9b21",
+    "pg": "8.23.1"
   }
 }
