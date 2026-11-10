@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workspace components — demonstration with fictional data</title>
+<link rel="stylesheet" href="workspace.css">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body class="ws-root">
+<a class="demo-skip" href="#main">Skip to content</a>
+<header class="demo-header">
+  <h1>Workspace components</h1>
+  <p>Demonstration driven by recorded, fictional service responses. Nothing is sent anywhere: actions replay the outcome the engine actually returned when the fixture was recorded.</p>
+</header>
+<main id="main">
+  <p id="announce" class="ws-visually-hidden" role="status" aria-live="polite"></p>
+  <section aria-labelledby="h-overview"><h2 id="h-overview">Engines</h2><div id="overview"></div></section>
+  <section aria-labelledby="h-search"><h2 id="h-search">Search</h2>
+    <form id="search-form" role="search" class="demo-search"><div class="ws-field ws-field--inline"><label for="q">Search all engines</label><input id="q" name="q" type="search" autocomplete="off"></div><button class="ws-button" type="submit">Search</button></form>
+    <div id="search"></div></section>
+  <div class="demo-split">
+    <section aria-labelledby="h-linked"><h2 id="h-linked">Linked view</h2><div id="graph"></div></section>
+    <section aria-labelledby="h-inspector"><h2 id="h-inspector">Inspector</h2><div id="inspector"></div><h3>Actions</h3><div id="controls"></div><p><button id="recentre" class="ws-button" type="button">Centre the linked view on this object</button></p></section>
+  </div>
+  <section aria-labelledby="h-board"><h2 id="h-board">Task board</h2><div id="board"></div></section>
+  <section aria-labelledby="h-audit"><h2 id="h-audit">Audit history</h2><div id="timeline"></div><div id="export"></div></section>
+  <section aria-labelledby="h-states"><h2 id="h-states">States</h2><div id="badges" class="demo-row"></div><div id="states" class="demo-states"></div></section>
+</main>
+<script type="module" src="demo.js"></script>
+</body>
+</html>
