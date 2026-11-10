@@ -175,7 +175,7 @@
 .ws-timeline__table { min-width: 46rem; }
 .ws-timeline__head { position: sticky; top: 0; z-index: 1; }
 .ws-timeline__rows { box-sizing: border-box; }
-.ws-trow { display: grid; grid-template-columns: 12.5rem 3.5rem 8rem 11rem minmax(12rem, 1fr) 8rem; align-items: center; height: 2.25rem; box-sizing: border-box; border-bottom: 1px solid var(--ws-border); }
+.ws-trow { display: grid; grid-template-columns: 12.5rem 4.75rem 8rem 11rem minmax(12rem, 1fr) 8rem; align-items: center; height: 2.25rem; box-sizing: border-box; border-bottom: 1px solid var(--ws-border); }
 .ws-trow--head { background: var(--ws-surface); font-weight: 700; border-bottom: 2px solid var(--ws-border-strong); }
 .ws-tcell { padding: 0 0.5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .ws-tcell .ws-link { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block; vertical-align: bottom; }
