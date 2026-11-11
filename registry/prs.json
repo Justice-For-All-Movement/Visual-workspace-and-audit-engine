@@ -71,7 +71,8 @@
         22,
         24,
         26,
-        27
+        27,
+        28
       ],
       "dependsOn": [
         "VWA-001"
@@ -147,6 +148,11 @@
       "acceptanceWriteControls": {
         "docs": "docs/ACCEPTANCE_WRITE_CONTROLS.md",
         "status": "Partial fixed captured unassessed intent with unchecked confirmation/noinitialIO/exclusive ownership/busy-detach guards/unknown locks/manual identical replay/separate exactACK read. No live truth/permission claim."
+      },
+      "selectedCoverageRead": {
+        "docs": "docs/SELECTED_COVERAGE_READ.md",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/28",
+        "status": "Seven final typed/synthetic/JSDOM + three actual restricted two-DB accepted handler local groups; ALL10 final packed compiled public-export groups/strict declarations/three runtime bytes PASS. Full/current-head CI pending; source review clear, private captured syntax NOTauth/workproof/closure/browserATlive."
       }
     },
     {
@@ -174,7 +180,8 @@
         24,
         25,
         26,
-        27
+        27,
+        28
       ],
       "dependsOn": [
         "VWA-001"
@@ -269,6 +276,11 @@
       "acceptanceWriteControls": {
         "docs": "docs/ACCEPTANCE_WRITE_CONTROLS.md",
         "status": "Partial fixed captured unassessed intent with unchecked confirmation/noinitialIO/exclusive ownership/busy-detach guards/unknown locks/manual identical replay/separate exactACK read. No live truth/permission claim."
+      },
+      "selectedCoverageRead": {
+        "docs": "docs/SELECTED_COVERAGE_READ.md",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/28",
+        "status": "Seven final typed/synthetic/JSDOM + three actual restricted two-DB accepted handler local groups; ALL10 final packed compiled public-export groups/strict declarations/three runtime bytes PASS. Full/current-head CI pending; source review clear, private captured syntax NOTauth/workproof/closure/browserATlive."
       }
     },
     {
@@ -283,7 +295,8 @@
         24,
         25,
         26,
-        27
+        27,
+        28
       ],
       "dependsOn": [
         "VWA-002",
@@ -331,6 +344,11 @@
       "acceptanceWriteControls": {
         "docs": "docs/ACCEPTANCE_WRITE_CONTROLS.md",
         "status": "Partial fixed captured unassessed intent with unchecked confirmation/noinitialIO/exclusive ownership/busy-detach guards/unknown locks/manual identical replay/separate exactACK read. No live truth/permission claim."
+      },
+      "selectedCoverageRead": {
+        "docs": "docs/SELECTED_COVERAGE_READ.md",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/28",
+        "status": "Seven final typed/synthetic/JSDOM + three actual restricted two-DB accepted handler local groups; ALL10 final packed compiled public-export groups/strict declarations/three runtime bytes PASS. Full/current-head CI pending; source review clear, private captured syntax NOTauth/workproof/closure/browserATlive."
       }
     },
     {
