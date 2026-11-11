@@ -71,7 +71,8 @@
         22,
         24,
         26,
-        27
+        27,
+        28
       ],
       "dependsOn": [
         "VWA-001"
@@ -150,7 +151,8 @@
       },
       "selectedCoverageRead": {
         "docs": "docs/SELECTED_COVERAGE_READ.md",
-        "status": "Incomplete bounded parser/inert table/explicit client-controls; six focused actual pure SDK/syntheticFetch/JSDOM groups/typecheck/build/registry pass. Actual protected handler/compiled/full/current-head CI/review pending; no authentication/truth/closure/browserATlive claim."
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/28",
+        "status": "Seven final typed/synthetic/JSDOM + three actual restricted two-DB accepted handler local groups; ALL10 final packed compiled public-export groups/strict declarations/three runtime bytes PASS. Full/current-head CI pending; source review clear, private captured syntax NOTauth/workproof/closure/browserATlive."
       }
     },
     {
@@ -178,7 +180,8 @@
         24,
         25,
         26,
-        27
+        27,
+        28
       ],
       "dependsOn": [
         "VWA-001"
@@ -276,7 +279,8 @@
       },
       "selectedCoverageRead": {
         "docs": "docs/SELECTED_COVERAGE_READ.md",
-        "status": "Incomplete bounded parser/inert table/explicit client-controls; six focused actual pure SDK/syntheticFetch/JSDOM groups/typecheck/build/registry pass. Actual protected handler/compiled/full/current-head CI/review pending; no authentication/truth/closure/browserATlive claim."
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/28",
+        "status": "Seven final typed/synthetic/JSDOM + three actual restricted two-DB accepted handler local groups; ALL10 final packed compiled public-export groups/strict declarations/three runtime bytes PASS. Full/current-head CI pending; source review clear, private captured syntax NOTauth/workproof/closure/browserATlive."
       }
     },
     {
@@ -291,7 +295,8 @@
         24,
         25,
         26,
-        27
+        27,
+        28
       ],
       "dependsOn": [
         "VWA-002",
@@ -342,7 +347,8 @@
       },
       "selectedCoverageRead": {
         "docs": "docs/SELECTED_COVERAGE_READ.md",
-        "status": "Incomplete bounded parser/inert table/explicit client-controls; six focused actual pure SDK/syntheticFetch/JSDOM groups/typecheck/build/registry pass. Actual protected handler/compiled/full/current-head CI/review pending; no authentication/truth/closure/browserATlive claim."
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/28",
+        "status": "Seven final typed/synthetic/JSDOM + three actual restricted two-DB accepted handler local groups; ALL10 final packed compiled public-export groups/strict declarations/three runtime bytes PASS. Full/current-head CI pending; source review clear, private captured syntax NOTauth/workproof/closure/browserATlive."
       }
     },
     {

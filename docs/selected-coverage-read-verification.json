@@ -1,17 +1,20 @@
 {
   "profile": "selected-coverage-read-v1",
-  "qualification": "Six focused local actual pure FactualSDK/syntheticFetch/JSDOM groups/typecheck/build/registry passed. Actual protected handler, compiled/full/current-head CI pending.",
-  "limits": "Browser-safe types-only SDK imports; captured syntax not authentication/workproof/closure. Host proofing/rights/browserAT/live separate.",
+  "qualification": "Seven final typed/synthetic/JSDOM + three actual accepted protected handler/client/control LOCAL groups; ALL10 final PACKED compiled public-export groups/declarations/three runtime module byte matches pass. Unpacked npm artifact+COPIED normal-prepared deps, NOT fresh consumer install. Full/current-head CI pending; source review clear.",
+  "limits": "Synthetic proofing/PGlite bridge NOT HTTP TCP/browserAT/live qualification; captured syntax not auth/workproof/closure.",
   "sha256": {
     "src/selected-coverage.ts": "02248333141fba038614bf60b69d074a477afca37e595b8c8fc165aa1aa060de",
     "src/coverage-client.ts": "183f817276e84b3a720d4f597bc9df0a702bb70840c2ab49d85af52ed0ada290",
     "src/coverage-controls.ts": "932982e95136ea647b271977fbddec8fde20c72fa9e4d279f833cd6042130926",
-    "tests/coverage-read.test.ts": "93382fc755e4f2e3ec77ce1f58a9ed1dbe08c2c3f520da9c2a4a587fad34f26e",
+    "tests/coverage-read.test.ts": "798cfdc250718fa38d09d6dfcff6f4dc097cbe38ece5c0d2f57dba36419511eb",
+    "tests/coverage-http-fixture.ts": "2c42d5b852a661e0c139804b35e425c76f94a7df85be6e56697fc3f2dca359a6",
+    "tests/coverage-http-integration.test.ts": "18086b279eae691efb074a4c713cafd0b299779af98d734e8a3af4db0b7529f8",
     "package.json": "89724c19fdd34c09482e3e4e44f9b6735f06853e196c2e07efcbf2bd316bc749",
     "package-lock.json": "0c9763edf146dce98296a4714f4f0d889b8ce6482629ea49d3e528d4cd99747a",
     "scripts/validate-pr-registry.mjs": "d721c58d561ea72e91449c2420d1ec99bc0baded6b34aa0880ebe6ab1058e54c",
-    "registry/prs.json": "3e33c244f4c444566d5ecb65161e4d301d6b3a23e8322509b6aff4a2fa49ea58",
-    "docs/SELECTED_COVERAGE_READ.md": "c2d374cfcc1a55f660028508dbdb14f8d81066b16411d1f8faaa42d8bb11fe1a",
-    "docs/ARCHITECTURE.md": "7e5e1bfe95f8ad62beb310cf54c8884c15ade346f4260616f25089edeceb6d44"
+    "registry/prs.json": "b791994a40b58a1ba06299e104004e2a8bc3c9aba0afd6d9e692856ad4ad7783",
+    "docs/SELECTED_COVERAGE_READ.md": "2c093ecb48e2a7669d0fe329a3ffcbc2ed0e0861a793d25e2b08b185a48fa733",
+    "docs/ARCHITECTURE.md": "7e5e1bfe95f8ad62beb310cf54c8884c15ade346f4260616f25089edeceb6d44",
+    "docs/examples/private-selected-coverage.html": "feae40343acfc9c3c619dc6f02d647239c8cd69147450b460ad6a283e008e5fd"
   }
 }

@@ -246,3 +246,53 @@ test("mounted controls are exclusive, make no initial request and dispose detach
   assert.equal(c.closed, true);
   dom.window.close();
 });
+
+test("getter selection fails before transport and disposal fences a noncooperative late response", async () => {
+  const f = fixture();
+  let calls = 0;
+  const client = new CoverageReadClient(origin, scope, "review", async () => {
+    calls++;
+    return response(f.frame);
+  });
+  const bad = { ...f.selected };
+  Object.defineProperty(bad, "id", {
+    get() {
+      throw Error("getter must not run");
+    },
+  });
+  await assert.rejects(client.read(bad));
+  assert.equal(calls, 0);
+  client.dispose();
+  let release!: (r: Response) => void,
+    cancelled = false;
+  const late = new CoverageReadClient(
+    origin,
+    scope,
+    "review",
+    () =>
+      new Promise<Response>((r) => {
+        release = r;
+      }),
+  );
+  const pending = late.read(f.selected);
+  late.dispose();
+  await assert.rejects(pending);
+  release(
+    new Response(
+      new ReadableStream({
+        cancel() {
+          cancelled = true;
+        },
+      }),
+      {
+        headers: {
+          "content-type": "application/json",
+          "cache-control": "no-store",
+        },
+      },
+    ),
+  );
+  await new Promise((r) => setTimeout(r, 0));
+  assert.equal(cancelled, true);
+  assert.equal(late.closed, true);
+});
