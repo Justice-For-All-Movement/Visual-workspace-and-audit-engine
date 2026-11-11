@@ -149,6 +149,10 @@ test("getters extra fields and foreign captured bundles fail before session tran
   await assert.rejects(
     client.accept("x", { ...f.bundle, ["x".repeat(257)]: true }, f.command),
   );
+  const sparse: any[] = [f.bundle.proposals[0]];
+  sparse.length = 2;
+  Object.defineProperty(sparse, "4294967296", {value: f.bundle.proposals[0], enumerable: true});
+  await assert.rejects(client.accept("x", {...f.bundle, proposals:sparse}, f.command));
   assert.equal(calls, 0);
   assert.equal(getters, 0);
   assert.equal(client.pending, null);

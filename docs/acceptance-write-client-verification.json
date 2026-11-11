@@ -1,18 +1,21 @@
 {
-  "status": "explicitly incomplete draft;11focused local groups/typecheckbuildregistry pass; full/compiled/current-headCI pending",
+  "status": "explicitly incomplete WIP; strict-array capture fix requires final current-head qualification",
   "sourceReview": "clear bounded captured intent/command/replay/explicit receipt read; host/fullworkflow qualification separate",
   "sha256": {
-    "docs/ACCEPTANCE_WRITE_CLIENT.md": "48645f75e91e3237d5311acb2bd1781847c9cfe0635156b8ee6fcdefe53ce545",
+    "docs/ACCEPTANCE_WRITE_CLIENT.md": "a9747f41025b7cec700359f1e471e4013ede2c59cba27488575de45250a81ac2",
     "docs/ACCEPTANCE_WRITE_CONTROLS.md": "86a5e23633cac6ed0495df3ab708342eeb1325746be06e350d2dacc23321322c",
     "docs/ARCHITECTURE.md": "e8f7cafe21ba7460c52758f50807795cda970f02af1f739a65161b2bfa9aa26c",
     "package.json": "cc95da9cb73304342f78e96da68919260359759e9d0e6d148d2e17de3f3b2bff",
-    "registry/prs.json": "9e3ab8436b447ba3afbaf9a6918d6e92b8b8ba0a64bd13ca568b56876cc60383",
+    "registry/prs.json": "0dfa435c88c1eccdc66cd914daf2c90dc8230b3a6033c757c388294ed80ac2a5",
     "src/acceptance-client.ts": "2abca603ef63e51f2fff3b7dad133598c47ad8ac3d524b434146a9c791d1850a",
-    "src/acceptance-write-client.ts": "da180bba2de795335bd01773a16651c30f47ae26f51d35edbb3ff724ecd17904",
+    "src/acceptance-write-client.ts": "c322625d7063ad77a4f7c170abc2ffa51333567196ea0be76a0dfc135ce631ec",
     "src/acceptance-write-controls.ts": "c365a1fe32a8daa0049018ef8616d6d50a34e397850c5fdfdfa1ff1233e75922",
-    "tests/acceptance-write-client.test.ts": "fbf9b8441352f2282561a8e62a04bc108b1c54ae97d20838149e2a1dcd7bb629",
+    "tests/acceptance-write-client.test.ts": "b4b75e6a5576d00f17e93a1bc4ab8a60ead54c73ad8d0bc1c3564190da16a246",
     "tests/acceptance-write-controls.test.ts": "aed29711112f3d10fd184aecab6c08b56347ea1bb50d27b70784e7141ac5d72f",
     "tests/acceptance-write-fixture.ts": "0dfea8238172edf72cec57d3d98d2345c0ae904739f35505971ae88e097fc004",
     "tests/acceptance-write-integration.test.ts": "3a322d288f85eb8b42bcd1c613b290648b9074a36cd2f61ff0a7e6150a8b5a72"
-  }
+  },
+  "previousRuntime": "73275f9 full175local+11packed/groups/types/bytes pass",
+  "reproduction": "old compiled array-hole/out-of-range numeric key reached session transport: calls1 vs expected0; fixed focused local pass",
+  "current": "typecheck/build/focused regression pass; fresh packed and full CI pending"
 }

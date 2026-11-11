@@ -59,6 +59,7 @@ function captureJson(input: unknown): any {
     const array = Array.isArray(v);
     if (!array && Object.getPrototypeOf(v) !== Object.prototype)
       fail("invalid_command");
+    if (array && (v.length > 8192 || Object.getPrototypeOf(v) !== Array.prototype)) fail("invalid_command");
     const keys = Reflect.ownKeys(v);
     if (keys.length > 8192) fail("invalid_command");
     if (array && (v.length > 8192 || keys.length !== v.length + 1))
@@ -70,7 +71,7 @@ function captureJson(input: unknown): any {
         fail("invalid_command");
       units += key.length;
       if (units > 272 * 1024) fail("invalid_command");
-      if (array && !/^(0|[1-9][0-9]*)$/.test(key)) fail("invalid_command");
+      if (array && (!/^(0|[1-9][0-9]*)$/.test(key) || Number(key) >= v.length)) fail("invalid_command");
       const d = Object.getOwnPropertyDescriptor(v, key);
       if (!d || !d.enumerable || !("value" in d)) fail("invalid_command");
       out[key] = copy(d.value, depth + 1);
