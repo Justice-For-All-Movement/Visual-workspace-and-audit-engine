@@ -1,0 +1,17 @@
+{
+  "profile": "selected-coverage-read-v1",
+  "qualification": "Six focused local actual pure FactualSDK/syntheticFetch/JSDOM groups/typecheck/build/registry passed. Actual protected handler, compiled/full/current-head CI pending.",
+  "limits": "Browser-safe types-only SDK imports; captured syntax not authentication/workproof/closure. Host proofing/rights/browserAT/live separate.",
+  "sha256": {
+    "src/selected-coverage.ts": "02248333141fba038614bf60b69d074a477afca37e595b8c8fc165aa1aa060de",
+    "src/coverage-client.ts": "183f817276e84b3a720d4f597bc9df0a702bb70840c2ab49d85af52ed0ada290",
+    "src/coverage-controls.ts": "932982e95136ea647b271977fbddec8fde20c72fa9e4d279f833cd6042130926",
+    "tests/coverage-read.test.ts": "93382fc755e4f2e3ec77ce1f58a9ed1dbe08c2c3f520da9c2a4a587fad34f26e",
+    "package.json": "89724c19fdd34c09482e3e4e44f9b6735f06853e196c2e07efcbf2bd316bc749",
+    "package-lock.json": "0c9763edf146dce98296a4714f4f0d889b8ce6482629ea49d3e528d4cd99747a",
+    "scripts/validate-pr-registry.mjs": "d721c58d561ea72e91449c2420d1ec99bc0baded6b34aa0880ebe6ab1058e54c",
+    "registry/prs.json": "3e33c244f4c444566d5ecb65161e4d301d6b3a23e8322509b6aff4a2fa49ea58",
+    "docs/SELECTED_COVERAGE_READ.md": "c2d374cfcc1a55f660028508dbdb14f8d81066b16411d1f8faaa42d8bb11fe1a",
+    "docs/ARCHITECTURE.md": "7e5e1bfe95f8ad62beb310cf54c8884c15ade346f4260616f25089edeceb6d44"
+  }
+}

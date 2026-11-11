@@ -147,6 +147,10 @@
       "acceptanceWriteControls": {
         "docs": "docs/ACCEPTANCE_WRITE_CONTROLS.md",
         "status": "Partial fixed captured unassessed intent with unchecked confirmation/noinitialIO/exclusive ownership/busy-detach guards/unknown locks/manual identical replay/separate exactACK read. No live truth/permission claim."
+      },
+      "selectedCoverageRead": {
+        "docs": "docs/SELECTED_COVERAGE_READ.md",
+        "status": "Incomplete bounded parser/inert table/explicit client-controls; six focused actual pure SDK/syntheticFetch/JSDOM groups/typecheck/build/registry pass. Actual protected handler/compiled/full/current-head CI/review pending; no authentication/truth/closure/browserATlive claim."
       }
     },
     {
@@ -269,6 +273,10 @@
       "acceptanceWriteControls": {
         "docs": "docs/ACCEPTANCE_WRITE_CONTROLS.md",
         "status": "Partial fixed captured unassessed intent with unchecked confirmation/noinitialIO/exclusive ownership/busy-detach guards/unknown locks/manual identical replay/separate exactACK read. No live truth/permission claim."
+      },
+      "selectedCoverageRead": {
+        "docs": "docs/SELECTED_COVERAGE_READ.md",
+        "status": "Incomplete bounded parser/inert table/explicit client-controls; six focused actual pure SDK/syntheticFetch/JSDOM groups/typecheck/build/registry pass. Actual protected handler/compiled/full/current-head CI/review pending; no authentication/truth/closure/browserATlive claim."
       }
     },
     {
@@ -331,6 +339,10 @@
       "acceptanceWriteControls": {
         "docs": "docs/ACCEPTANCE_WRITE_CONTROLS.md",
         "status": "Partial fixed captured unassessed intent with unchecked confirmation/noinitialIO/exclusive ownership/busy-detach guards/unknown locks/manual identical replay/separate exactACK read. No live truth/permission claim."
+      },
+      "selectedCoverageRead": {
+        "docs": "docs/SELECTED_COVERAGE_READ.md",
+        "status": "Incomplete bounded parser/inert table/explicit client-controls; six focused actual pure SDK/syntheticFetch/JSDOM groups/typecheck/build/registry pass. Actual protected handler/compiled/full/current-head CI/review pending; no authentication/truth/closure/browserATlive claim."
       }
     },
     {
