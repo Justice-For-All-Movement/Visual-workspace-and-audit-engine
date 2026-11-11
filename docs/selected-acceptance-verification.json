@@ -1,16 +1,21 @@
 {
-  "status": "explicit incomplete WIP;6focused local/typecheckbuildregistry pass; full/compiled/real-handler/finalCI pending",
+  "status": "explicitly incomplete draft;8synthetic+3actualHTTP groups local pass; full regression/packed/final CI running",
+  "normalPreparedInstall": "npm install completed, explicit git URL profile restored in package+lock root; no unrelated pin changes",
+  "sourceReview": "clear for bounded read-only syntax/client/controls; no host/browser/live claim",
   "sha256": {
     "docs/ARCHITECTURE.md": "882fd5868708c5c44e964801ab0868ea1d5d9ca923bf3f59ab2bd3ba3852f82a",
+    "docs/SELECTED_ACCEPTANCE_READ.md": "68d7b38ad54fd09b4e5883419ce8e6669e863e3ce630cba1df6d6f772e2493b4",
+    "docs/examples/private-selected-acceptance.html": "233f5489c7a730d23aa45d3330f669d1230e30c45f4479b942d47c019042d396",
     "package-lock.json": "d0e025a654e647a4ab516daee9fadedf3e3b5f497fdf890e3467c226e66712f4",
     "package.json": "4f31d515e10de42d3bab64b9c872ad8d4a7253e91596d34ad9637c5bbae98885",
-    "registry/prs.json": "bef054a1421a73399715f9365abd52f3231aacfe9a1478bc4594a42bf931ac07",
+    "registry/prs.json": "a7ae096856be9d2e67ec847296f3a7320dd651e4ce73bcc94ff5d5dcdccce3d6",
     "scripts/validate-pr-registry.mjs": "ae8d44d5610e0a2d52b4fa25fcf8c6faf2d40a6ad841e3dc52b2d04fad898da6",
-    "docs/SELECTED_ACCEPTANCE_READ.md": "53b39eb0d78a0e9ac978cada36eca4eece19536df9a4bdaa048f29dd40f73373",
     "src/acceptance-client.ts": "cd4b36fca1ce9950eb17bf73a2fa44245387c8249890d3dad5d509eedbb55908",
     "src/acceptance-controls.ts": "ede9334efd2cc9e2b360f28e6d059b5854e98ece4d80c8afa119fe1a6c89c5e8",
     "src/selected-acceptance.ts": "222799e7fb26f81544a9805bffb2e74b53b677fd6ca3feae08a4514d42ac4f4b",
+    "tests/acceptance-http-fixture.ts": "530409dbd67496a0c4bc87d39c36d4c803b5b08a7a193f355eed846759f43a7f",
+    "tests/acceptance-integration.test.ts": "cdbbe573d6442c35e3bebdd15979d350231867cb81530f0d514793dc3948f817",
     "tests/selected-acceptance-fixture.ts": "63ac0147a6502f922691fc3d49778d4ce3b7f721d37a66b5384caac1ec527721",
-    "tests/selected-acceptance.test.ts": "c1203878cd3dfab9319a947694dbbe28be550616056679a1811c4e2091280b49"
+    "tests/selected-acceptance.test.ts": "737e1aad3ed3f621599aa9117821767974343fcbcbdfdd9dc7181f5264f333fa"
   }
 }

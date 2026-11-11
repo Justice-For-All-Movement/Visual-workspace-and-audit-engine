@@ -54,3 +54,20 @@ test('mounted acceptance read is explicit, exclusive and clears literal views on
  root.querySelector('button')!.click();for(let n=0;n<20&&!root.querySelector('blockquote');n++)await new Promise(r=>setTimeout(r,5));
  assert(root.querySelector('blockquote'));assert.equal(calls,2);controls.dispose();assert.equal(root.children.length,0);assert(client.closed);
 });
+test('client withholds malformed, wrong-purpose and over-budget private replies',async()=>{
+ const {scope,selected,frame}=acceptanceFrameFixture();
+ const altered:any=structuredClone(frame);altered.record.purpose='other';altered.claim.purpose='other';altered.citation.purpose='other';
+ const replies=[()=>json({...frame,permit:true}),()=>json(altered),()=>new Response(new Uint8Array([0xff]),{headers:{'content-type':'application/json','cache-control':'no-store'}}),()=>new Response('x'.repeat(512*1024+1),{headers:{'content-type':'application/json','cache-control':'no-store'}})];
+ for(const reply of replies){const client=new AcceptanceReadClient(origin,scope,'review',(async(url)=>String(url).endsWith('/session')?json({actorId:'human',csrfToken:'s'.repeat(32)}):reply()) as typeof fetch);await assert.rejects(client.read(selected));client.dispose();}
+});
+test('disposal fences a noncooperative late read and cancels its response body',async()=>{
+ const {scope,selected,frame}=acceptanceFrameFixture();let release!:(r:Response)=>void,started=false,cancelled=false;
+ const client=new AcceptanceReadClient(origin,scope,'review',(async(url)=>{
+  if(String(url).endsWith('/session'))return json({actorId:'human',csrfToken:'s'.repeat(32)});
+  started=true;return new Promise<Response>(resolve=>{release=resolve;});
+ }) as typeof fetch);
+ const pending=client.read(selected);for(let n=0;n<30&&!started;n++)await new Promise(r=>setTimeout(r,1));assert(started);
+ client.dispose();await assert.rejects(pending);
+ release(new Response(new ReadableStream({start(s){s.enqueue(Buffer.from(JSON.stringify(frame)));},cancel(){cancelled=true;}}),{headers:{'content-type':'application/json','cache-control':'no-store'}}));
+ await new Promise(r=>setTimeout(r,1));assert(cancelled);assert(client.closed);
+});
