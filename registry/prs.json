@@ -69,7 +69,8 @@
         20,
         21,
         22,
-        24
+        24,
+        26
       ],
       "dependsOn": [
         "VWA-001"
@@ -131,6 +132,11 @@
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
         "status": "Partial read-only profile implemented/reviewed:12 focused wire/client/JSDOM plus3 actual4restrictedDB encrypted-Evidence/HTTP groups pass locally AND installed compiled public exports; declarations/3runtime bytes match. Prior full131 local+CI41959341817 passed; final current-head CI required. No132 full local/installed or real browser/AT/live claim. Protected writes/full correction impact/host identity/current rights remain pending.",
         "example": "docs/examples/private-selected-verification-read.html"
+      },
+      "selectedAcceptanceRead": {
+        "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
+        "status": "Explicitly incomplete draft;8synthetic typed/JSDOM local groups plus3 actual four-restricted-DB/encryptedEvidence owningHTTP groups pass. Full regression/compiled public exports/finalhead CI pending. No browserAT/live, host authentication or acceptance write/replay qualification.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/26"
       }
     },
     {
@@ -156,7 +162,8 @@
         22,
         23,
         24,
-        25
+        25,
+        26
       ],
       "dependsOn": [
         "VWA-001"
@@ -237,6 +244,11 @@
         "docs": "docs/VERIFICATION_WRITE_CONTROLS.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25",
         "status": "Partial bounded implementation complete: explicit actual protected read/edit/write and immutable pending manual replay; current viewer coherence, dirty/busy/detach guards, ACK-only next selection. Source review clear. Verification manifest records exact test/CI evidence. Host proofing/rights/session lifecycle, protected reload recovery, browser/AT/live and complete workflow/correction impact remain pending."
+      },
+      "selectedAcceptanceRead": {
+        "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
+        "status": "Explicitly incomplete draft;8synthetic typed/JSDOM local groups plus3 actual four-restricted-DB/encryptedEvidence owningHTTP groups pass. Full regression/compiled public exports/finalhead CI pending. No browserAT/live, host authentication or acceptance write/replay qualification.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/26"
       }
     },
     {
@@ -249,7 +261,8 @@
         14,
         23,
         24,
-        25
+        25,
+        26
       ],
       "dependsOn": [
         "VWA-002",
@@ -283,6 +296,11 @@
         "docs": "docs/VERIFICATION_WRITE_CONTROLS.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25",
         "status": "Partial bounded implementation complete: explicit actual protected read/edit/write and immutable pending manual replay; current viewer coherence, dirty/busy/detach guards, ACK-only next selection. Source review clear. Verification manifest records exact test/CI evidence. Host proofing/rights/session lifecycle, protected reload recovery, browser/AT/live and complete workflow/correction impact remain pending."
+      },
+      "selectedAcceptanceRead": {
+        "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
+        "status": "Explicitly incomplete draft;8synthetic typed/JSDOM local groups plus3 actual four-restricted-DB/encryptedEvidence owningHTTP groups pass. Full regression/compiled public exports/finalhead CI pending. No browserAT/live, host authentication or acceptance write/replay qualification.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/26"
       }
     },
     {
