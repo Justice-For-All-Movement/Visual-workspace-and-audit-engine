@@ -79,3 +79,5 @@ VERIFICATION_WRITE_CLIENT.md records incomplete explicit selected-review write/r
 VERIFICATION_WRITE_CONTROLS.md documents the explicit private unresolved editor, actual protected read/write client ownership, dirty/pending guards and manual exact replay; qualification remains partial.
 
 SELECTED_ACCEPTANCE_READ.md describes incomplete minimal acceptance metadata, current-session read client and exclusive inert controls on the explicitly upgraded accepted Knowledge SDK. No reconstructed histories, source truth, permission, writes or publication are inferred.
+
+PR26 selected acceptance reads accepted5f90f099/final164pass; older pending notes are historical. ACCEPTANCE_WRITE_CLIENT.md describes incomplete explicit private acceptance and immutable manual replay, distinct from permissions/findings or host/live acceptance.

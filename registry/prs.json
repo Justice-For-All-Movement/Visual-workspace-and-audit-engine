@@ -135,8 +135,12 @@
       },
       "selectedAcceptanceRead": {
         "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
-        "status": "Explicitly incomplete draft;8synthetic typed/JSDOM local groups plus3 actual four-restricted-DB/encryptedEvidence owningHTTP groups pass. Full regression/compiled public exports/finalhead CI pending. No browserAT/live, host authentication or acceptance write/replay qualification.",
+        "status": "Accepted PR26 merge5f90f099a83172536467bd505a29f7343a531cf6/source6242dbdb; finalCI43034850679/check130570872919 andpush both164PASS0fail0skip; full164local/11packed/types/3modulebytes qualified. Host/live/fullworkflow separate.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/26"
+      },
+      "acceptanceWriteClient": {
+        "docs": "docs/ACCEPTANCE_WRITE_CLIENT.md",
+        "status": "Explicitly incomplete WIP;6focused local/typecheckbuildregistry pass; mounted/compiled/adversarial/full/currentCI pending."
       }
     },
     {
@@ -247,8 +251,12 @@
       },
       "selectedAcceptanceRead": {
         "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
-        "status": "Explicitly incomplete draft;8synthetic typed/JSDOM local groups plus3 actual four-restricted-DB/encryptedEvidence owningHTTP groups pass. Full regression/compiled public exports/finalhead CI pending. No browserAT/live, host authentication or acceptance write/replay qualification.",
+        "status": "Accepted PR26 merge5f90f099a83172536467bd505a29f7343a531cf6/source6242dbdb; finalCI43034850679/check130570872919 andpush both164PASS0fail0skip; full164local/11packed/types/3modulebytes qualified. Host/live/fullworkflow separate.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/26"
+      },
+      "acceptanceWriteClient": {
+        "docs": "docs/ACCEPTANCE_WRITE_CLIENT.md",
+        "status": "Explicitly incomplete WIP;6focused local/typecheckbuildregistry pass; mounted/compiled/adversarial/full/currentCI pending."
       }
     },
     {
@@ -299,8 +307,12 @@
       },
       "selectedAcceptanceRead": {
         "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
-        "status": "Explicitly incomplete draft;8synthetic typed/JSDOM local groups plus3 actual four-restricted-DB/encryptedEvidence owningHTTP groups pass. Full regression/compiled public exports/finalhead CI pending. No browserAT/live, host authentication or acceptance write/replay qualification.",
+        "status": "Accepted PR26 merge5f90f099a83172536467bd505a29f7343a531cf6/source6242dbdb; finalCI43034850679/check130570872919 andpush both164PASS0fail0skip; full164local/11packed/types/3modulebytes qualified. Host/live/fullworkflow separate.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/26"
+      },
+      "acceptanceWriteClient": {
+        "docs": "docs/ACCEPTANCE_WRITE_CLIENT.md",
+        "status": "Explicitly incomplete WIP;6focused local/typecheckbuildregistry pass; mounted/compiled/adversarial/full/currentCI pending."
       }
     },
     {

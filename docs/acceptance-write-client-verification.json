@@ -1,0 +1,12 @@
+{
+  "status": "explicitly incomplete client WIP;6focused local/typecheckbuildregistry pass; expanded/full/compiled/finalCI pending",
+  "sha256": {
+    "docs/ARCHITECTURE.md": "e8f7cafe21ba7460c52758f50807795cda970f02af1f739a65161b2bfa9aa26c",
+    "package.json": "93fc6f130f28a8a85e1ff6861cb7a213267f50fa37c2c57c6ab3c3a1fa3b79be",
+    "registry/prs.json": "5bb0890cf450ec30663805afbe6e399a905ef20bddc626d7d0803c7b462880e7",
+    "docs/ACCEPTANCE_WRITE_CLIENT.md": "71d917113f8d8564f9fe29b5a128777c390c1fd5ff205449f0cfd65f9a58acfa",
+    "src/acceptance-write-client.ts": "6156059fe8bd0284e4e688810596770477c09edd4b703fbf449e5d0816bcd61f",
+    "tests/acceptance-write-client.test.ts": "b236e10903e774bf724c11da87cb50fc3059ccd6290a06b1ebebc59c18560fd3",
+    "tests/acceptance-write-integration.test.ts": "c5ad4b936c4b517642eb2e778ffdd2095e830ebc7266eedf2f4edf77ef2bb29b"
+  }
+}
