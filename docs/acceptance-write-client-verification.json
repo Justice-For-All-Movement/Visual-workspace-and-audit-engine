@@ -1,12 +1,18 @@
 {
-  "status": "explicitly incomplete client WIP;6focused local/typecheckbuildregistry pass; expanded/full/compiled/finalCI pending",
+  "status": "explicitly incomplete draft;11focused local groups/typecheckbuildregistry pass; full/compiled/current-headCI pending",
+  "sourceReview": "clear bounded captured intent/command/replay/explicit receipt read; host/fullworkflow qualification separate",
   "sha256": {
+    "docs/ACCEPTANCE_WRITE_CLIENT.md": "48645f75e91e3237d5311acb2bd1781847c9cfe0635156b8ee6fcdefe53ce545",
+    "docs/ACCEPTANCE_WRITE_CONTROLS.md": "86a5e23633cac6ed0495df3ab708342eeb1325746be06e350d2dacc23321322c",
     "docs/ARCHITECTURE.md": "e8f7cafe21ba7460c52758f50807795cda970f02af1f739a65161b2bfa9aa26c",
-    "package.json": "93fc6f130f28a8a85e1ff6861cb7a213267f50fa37c2c57c6ab3c3a1fa3b79be",
-    "registry/prs.json": "5bb0890cf450ec30663805afbe6e399a905ef20bddc626d7d0803c7b462880e7",
-    "docs/ACCEPTANCE_WRITE_CLIENT.md": "71d917113f8d8564f9fe29b5a128777c390c1fd5ff205449f0cfd65f9a58acfa",
-    "src/acceptance-write-client.ts": "6156059fe8bd0284e4e688810596770477c09edd4b703fbf449e5d0816bcd61f",
-    "tests/acceptance-write-client.test.ts": "b236e10903e774bf724c11da87cb50fc3059ccd6290a06b1ebebc59c18560fd3",
-    "tests/acceptance-write-integration.test.ts": "c5ad4b936c4b517642eb2e778ffdd2095e830ebc7266eedf2f4edf77ef2bb29b"
+    "package.json": "cc95da9cb73304342f78e96da68919260359759e9d0e6d148d2e17de3f3b2bff",
+    "registry/prs.json": "9e3ab8436b447ba3afbaf9a6918d6e92b8b8ba0a64bd13ca568b56876cc60383",
+    "src/acceptance-client.ts": "2abca603ef63e51f2fff3b7dad133598c47ad8ac3d524b434146a9c791d1850a",
+    "src/acceptance-write-client.ts": "da180bba2de795335bd01773a16651c30f47ae26f51d35edbb3ff724ecd17904",
+    "src/acceptance-write-controls.ts": "c365a1fe32a8daa0049018ef8616d6d50a34e397850c5fdfdfa1ff1233e75922",
+    "tests/acceptance-write-client.test.ts": "fbf9b8441352f2282561a8e62a04bc108b1c54ae97d20838149e2a1dcd7bb629",
+    "tests/acceptance-write-controls.test.ts": "aed29711112f3d10fd184aecab6c08b56347ea1bb50d27b70784e7141ac5d72f",
+    "tests/acceptance-write-fixture.ts": "0dfea8238172edf72cec57d3d98d2345c0ae904739f35505971ae88e097fc004",
+    "tests/acceptance-write-integration.test.ts": "3a322d288f85eb8b42bcd1c613b290648b9074a36cd2f61ff0a7e6150a8b5a72"
   }
 }

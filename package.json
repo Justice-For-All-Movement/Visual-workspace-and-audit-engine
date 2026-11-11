@@ -111,6 +111,10 @@
     "./acceptance-write-client": {
       "types": "./dist/acceptance-write-client.d.ts",
       "default": "./dist/acceptance-write-client.js"
+    },
+    "./acceptance-write-controls": {
+      "types": "./dist/acceptance-write-controls.d.ts",
+      "default": "./dist/acceptance-write-controls.js"
     }
   },
   "engines": {

@@ -25,6 +25,7 @@ export class AcceptanceReadClient {
   readonly #transport: typeof fetch;
   readonly #timeout: number;
   #actor: string | null = null;
+  readonly #expectedActor: string | null;
   #busy = false;
   #closed = false;
   #controller: AbortController | null = null;
@@ -34,6 +35,7 @@ export class AcceptanceReadClient {
     purpose: string,
     transport: typeof fetch,
     timeoutMs = 10000,
+    expectedActorId?: string,
   ) {
     try {
       const url = new URL(origin);
@@ -50,7 +52,8 @@ export class AcceptanceReadClient {
         typeof transport !== "function" ||
         !Number.isSafeInteger(timeoutMs) ||
         timeoutMs < 1 ||
-        timeoutMs > 30000
+        timeoutMs > 30000 ||
+        (expectedActorId !== undefined && !word(expectedActorId, 128))
       )
         throw Error();
       this.#origin = origin;
@@ -58,6 +61,7 @@ export class AcceptanceReadClient {
       this.#purpose = purpose;
       this.#transport = transport;
       this.#timeout = timeoutMs;
+      this.#expectedActor = expectedActorId ?? null;
     } catch {
       throw new AcceptanceReadError("invalid_configuration");
     }
@@ -225,7 +229,11 @@ export class AcceptanceReadClient {
         new TextEncoder().encode(session.csrfToken).length > 256
       )
         throw new AcceptanceReadError("invalid_response");
-      if (this.#actor !== null && this.#actor !== session.actorId) {
+      if (
+        (this.#actor !== null && this.#actor !== session.actorId) ||
+        (this.#expectedActor !== null &&
+          this.#expectedActor !== session.actorId)
+      ) {
         this.dispose();
         throw new AcceptanceReadError("actor_changed");
       }

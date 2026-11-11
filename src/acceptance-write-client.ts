@@ -1,15 +1,20 @@
 import { AcceptanceReadClient } from "./acceptance-client.ts";
-import {
-  AcceptanceReadError,
-} from "./selected-acceptance.ts";
-import type {
-  AcceptanceRef,
-  AcceptanceScope,
-} from "./selected-acceptance.ts";
+import { AcceptanceReadError } from "./selected-acceptance.ts";
+import type { AcceptanceRef, AcceptanceScope } from "./selected-acceptance.ts";
 import type { ProposalAcceptanceInput } from "@accountability/knowledge-verification/proposal-acceptance";
 
-export type AcceptanceAcknowledgement = Readonly<{knowledgeStorage: AcceptanceRef; linksStorage: AcceptanceRef; acceptance: AcceptanceRef; claim: AcceptanceRef; links: AcceptanceRef}>;
-export type AcceptanceWriteCommand = Readonly<{commandId: string; bundle: unknown; input: ProposalAcceptanceInput}>;
+export type AcceptanceAcknowledgement = Readonly<{
+  knowledgeStorage: AcceptanceRef;
+  linksStorage: AcceptanceRef;
+  acceptance: AcceptanceRef;
+  claim: AcceptanceRef;
+  links: AcceptanceRef;
+}>;
+export type AcceptanceWriteCommand = Readonly<{
+  commandId: string;
+  bundle: unknown;
+  input: ProposalAcceptanceInput;
+}>;
 function fail(code: string): never {
   throw new AcceptanceReadError(code);
 }
@@ -35,28 +40,132 @@ function fields(
   }
   return result;
 }
-function captureJson(input:unknown):any {
-  let count=0, units=0;
-  const copy=(v:unknown,depth:number):any=>{
-    if(++count>8192||depth>32)fail("invalid_command");
-    if(v===null||typeof v==="boolean")return v;
-    if(typeof v==="number"){if(!Number.isFinite(v))fail("invalid_command");return v;}
-    if(typeof v==="string"){units+=v.length;if(units>272*1024)fail("invalid_command");return v;}
-    if(!v||typeof v!=="object")fail("invalid_command");
-    const array=Array.isArray(v);if(!array&&Object.getPrototypeOf(v)!==Object.prototype)fail("invalid_command");
-    const keys=Reflect.ownKeys(v);if(keys.length>8192)fail("invalid_command");
-    if(array&&(v.length>8192||keys.length!==v.length+1))fail("invalid_command");
-    const out:any=array?[]:{};
-    for(const key of keys){if(array&&key==="length")continue;
-      if(typeof key!=="string"||key==="__proto__")fail("invalid_command");
-      if(array&&!/^(0|[1-9][0-9]*)$/.test(key))fail("invalid_command");
-      const d=Object.getOwnPropertyDescriptor(v,key);if(!d||!d.enumerable||!("value" in d))fail("invalid_command");
-      out[key]=copy(d.value,depth+1);
-    }return out;
-  };return copy(input,0);
+function captureJson(input: unknown): any {
+  let count = 0,
+    units = 0;
+  const copy = (v: unknown, depth: number): any => {
+    if (++count > 8192 || depth > 32) fail("invalid_command");
+    if (v === null || typeof v === "boolean") return v;
+    if (typeof v === "number") {
+      if (!Number.isFinite(v)) fail("invalid_command");
+      return v;
+    }
+    if (typeof v === "string") {
+      units += v.length;
+      if (units > 272 * 1024) fail("invalid_command");
+      return v;
+    }
+    if (!v || typeof v !== "object") fail("invalid_command");
+    const array = Array.isArray(v);
+    if (!array && Object.getPrototypeOf(v) !== Object.prototype)
+      fail("invalid_command");
+    const keys = Reflect.ownKeys(v);
+    if (keys.length > 8192) fail("invalid_command");
+    if (array && (v.length > 8192 || keys.length !== v.length + 1))
+      fail("invalid_command");
+    const out: any = array ? [] : {};
+    for (const key of keys) {
+      if (array && key === "length") continue;
+      if (typeof key !== "string" || key === "__proto__" || key.length > 256)
+        fail("invalid_command");
+      units += key.length;
+      if (units > 272 * 1024) fail("invalid_command");
+      if (array && !/^(0|[1-9][0-9]*)$/.test(key)) fail("invalid_command");
+      const d = Object.getOwnPropertyDescriptor(v, key);
+      if (!d || !d.enumerable || !("value" in d)) fail("invalid_command");
+      out[key] = copy(d.value, depth + 1);
+    }
+    return out;
+  };
+  return copy(input, 0);
 }
-function canonical(v:any):string {if(v===null||typeof v!=="object")return JSON.stringify(v);if(Array.isArray(v))return "["+v.map(canonical).join(",")+"]";return "{"+Object.keys(v).sort().map(k=>JSON.stringify(k)+":"+canonical(v[k])).join(",")+"}";}
-async function hash(v:unknown):Promise<string>{const bytes=new TextEncoder().encode(canonical(v));const h=await globalThis.crypto.subtle.digest("SHA-256",bytes);return Array.from(new Uint8Array(h),b=>b.toString(16).padStart(2,"0")).join("");}
+function canonical(v: any): string {
+  if (v === null || typeof v !== "object") return JSON.stringify(v);
+  if (Array.isArray(v)) return "[" + v.map(canonical).join(",") + "]";
+  return (
+    "{" +
+    Object.keys(v)
+      .sort()
+      .map((k) => JSON.stringify(k) + ":" + canonical(v[k]))
+      .join(",") +
+    "}"
+  );
+}
+async function hash(v: unknown): Promise<string> {
+  const bytes = new TextEncoder().encode(canonical(v));
+  const h = await globalThis.crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(h), (b) =>
+    b.toString(16).padStart(2, "0"),
+  ).join("");
+}
+export function captureAcceptanceWriteCommand(
+  scope: AcceptanceScope,
+  purpose: string,
+  commandId: string,
+  bundle: unknown,
+  input: ProposalAcceptanceInput,
+): AcceptanceWriteCommand {
+  if (!word(commandId, 128)) fail("invalid_command");
+  const b = captureJson(bundle),
+    q = fields(captureJson(input), [
+      "proposalId",
+      "claimId",
+      "expectedKnowledgeRevision",
+      "expectedLinksRevision",
+    ]);
+  if (!word(q.proposalId, 128) || !word(q.claimId, 128))
+    fail("invalid_command");
+  for (const n of [q.expectedKnowledgeRevision, q.expectedLinksRevision])
+    if (
+      !Number.isSafeInteger(n) ||
+      (n as number) < 1 ||
+      (n as number) >= Number.MAX_SAFE_INTEGER
+    )
+      fail("invalid_command");
+  const root = fields(b, [
+    "schemaVersion",
+    "visibility",
+    "tenantId",
+    "projectId",
+    "purpose",
+    "basis",
+    "proposals",
+    "digest",
+  ]);
+  if (
+    root.schemaVersion !== 1 ||
+    root.visibility !== "private" ||
+    root.tenantId !== scope.tenantId ||
+    root.projectId !== scope.projectId ||
+    root.purpose !== purpose
+  )
+    fail("invalid_command");
+  const basis = fields(root.basis, [
+    "knowledgeRevision",
+    "linksRevision",
+    "evidenceRevision",
+    "linkRef",
+    "claimRef",
+  ]);
+  if (
+    basis.knowledgeRevision !== q.expectedKnowledgeRevision ||
+    basis.linksRevision !== q.expectedLinksRevision ||
+    !Array.isArray(root.proposals) ||
+    root.proposals.length < 1 ||
+    root.proposals.length > 32 ||
+    !root.proposals.some((p) => (p as any)?.id === q.proposalId)
+  )
+    fail("invalid_command");
+  const command: AcceptanceWriteCommand = {
+    commandId,
+    bundle: b,
+    input: q as AcceptanceWriteCommand["input"],
+  };
+  const body = JSON.stringify(command);
+  if (new TextEncoder().encode(body).length > 280 * 1024)
+    fail("invalid_command");
+  return command;
+}
 /** Explicit untrusted intent acceptance. Backend authenticates every use; pending commands are memory-only and never rebased. */
 export class AcceptanceWriteClient {
   readonly #reader: AcceptanceReadClient;
@@ -64,7 +173,7 @@ export class AcceptanceWriteClient {
   readonly #scope: AcceptanceScope;
   readonly #fetch: typeof fetch;
   readonly #timeout: number;
-  readonly #purpose:string;
+  readonly #purpose: string;
   #actor: string | null = null;
   #pending: {
     body: string;
@@ -88,8 +197,9 @@ export class AcceptanceWriteClient {
       purpose,
       transport,
       timeoutMs,
+      expectedActorId,
     );
-    if (!word(expectedActorId,128)) fail("invalid_command");
+    if (!word(expectedActorId, 128)) fail("invalid_command");
     this.#actor = expectedActorId;
     this.#origin = this.#reader.origin;
     this.#scope = this.#reader.scope;
@@ -106,6 +216,9 @@ export class AcceptanceWriteClient {
   get origin() {
     return this.#origin;
   }
+  get purpose(): string {
+    return this.#purpose;
+  }
   get scope(): AcceptanceScope {
     return { ...this.#scope };
   }
@@ -118,38 +231,78 @@ export class AcceptanceWriteClient {
     this.#controller?.abort();
   }
   async readAcceptance(selected: AcceptanceRef, signal?: AbortSignal) {
-    if (this.closed) fail("closed"); if(this.#busy) fail("busy"); if(this.#pending) fail("pending_write");
-    this.#busy=true;
-    try { const result=await this.#reader.read(selected,signal); if(this.closed) fail("closed");
-      if(this.#reader.actorId!==this.#actor){this.dispose();fail("actor_changed");} return result;
-    } finally {this.#busy=false;}
-  }
-  async accept(commandId:string, bundle:unknown, input:ProposalAcceptanceInput, signal?:AbortSignal):Promise<AcceptanceAcknowledgement> {
-    const started=performance.now();
-    if(this.closed) fail("closed"); if(this.#busy) fail("busy"); if(this.#pending) fail("pending_write");
-    this.#busy=true;
+    if (this.closed) fail("closed");
+    if (this.#busy) fail("busy");
+    if (this.#pending) fail("pending_write");
+    this.#busy = true;
     try {
-      if(!word(commandId,128)) fail("invalid_command");
-      const b=captureJson(bundle), q=fields(captureJson(input),["proposalId","claimId","expectedKnowledgeRevision","expectedLinksRevision"]);
-      if(!word(q.proposalId,128)||!word(q.claimId,128)) fail("invalid_command");
-      for(const n of [q.expectedKnowledgeRevision,q.expectedLinksRevision]) if(!Number.isSafeInteger(n)||(n as number)<1||(n as number)>=Number.MAX_SAFE_INTEGER) fail("invalid_command");
-      const root=fields(b,["schemaVersion","visibility","tenantId","projectId","purpose","basis","proposals","digest"]);
-      if(root.schemaVersion!==1||root.visibility!=="private"||root.tenantId!==this.#scope.tenantId||root.projectId!==this.#scope.projectId||root.purpose!==this.#purpose) fail("invalid_command");
-      const basis=fields(root.basis,["knowledgeRevision","linksRevision","evidenceRevision","linkRef","claimRef"]);
-      if(basis.knowledgeRevision!==q.expectedKnowledgeRevision||basis.linksRevision!==q.expectedLinksRevision||!Array.isArray(root.proposals)||root.proposals.length<1||root.proposals.length>32||!root.proposals.some(p=>(p as any)?.id===q.proposalId)) fail("invalid_command");
-      const command:AcceptanceWriteCommand={commandId,bundle:b,input:q as AcceptanceWriteCommand["input"]};
-      const body=JSON.stringify(command); if(new TextEncoder().encode(body).length>280*1024) fail("invalid_command");
-      const ref=(kind:string,id:string,revision:number):AcceptanceRef=>({...this.#scope,kind,id,revision});
-      const claim=ref("claim",q.claimId as string,1);
-      const expected={knowledgeStorage:ref("knowledge-history",await hash({aggregate:"knowledge-history"}),(q.expectedKnowledgeRevision as number)+1),
-        linksStorage:ref("knowledge-evidence-links-history",await hash({aggregate:"knowledge-evidence-links-history"}),(q.expectedLinksRevision as number)+1),
-        acceptance:ref("knowledge-proposal-acceptance",await hash({claim}),1),claim,links:ref("knowledge-evidence-links",claim.id,1)};
-      return await this.#send({body,actor:this.#actor!,expected},signal,started);
-    } finally {this.#busy=false;}
+      const result = await this.#reader.read(selected, signal);
+      if (this.closed) fail("closed");
+      if (this.#reader.actorId !== this.#actor) {
+        this.dispose();
+        fail("actor_changed");
+      }
+      return result;
+    } finally {
+      this.#busy = false;
+    }
   }
-  async retryPending(
+  async accept(
+    commandId: string,
+    bundle: unknown,
+    input: ProposalAcceptanceInput,
     signal?: AbortSignal,
   ): Promise<AcceptanceAcknowledgement> {
+    const started = performance.now();
+    if (this.closed) fail("closed");
+    if (this.#busy) fail("busy");
+    if (this.#pending) fail("pending_write");
+    this.#busy = true;
+    try {
+      const command = captureAcceptanceWriteCommand(
+          this.#scope,
+          this.#purpose,
+          commandId,
+          bundle,
+          input,
+        ),
+        q = command.input,
+        body = JSON.stringify(command);
+      const ref = (
+        kind: string,
+        id: string,
+        revision: number,
+      ): AcceptanceRef => ({ ...this.#scope, kind, id, revision });
+      const claim = ref("claim", q.claimId as string, 1);
+      const expected = {
+        knowledgeStorage: ref(
+          "knowledge-history",
+          await hash({ aggregate: "knowledge-history" }),
+          (q.expectedKnowledgeRevision as number) + 1,
+        ),
+        linksStorage: ref(
+          "knowledge-evidence-links-history",
+          await hash({ aggregate: "knowledge-evidence-links-history" }),
+          (q.expectedLinksRevision as number) + 1,
+        ),
+        acceptance: ref(
+          "knowledge-proposal-acceptance",
+          await hash({ claim }),
+          1,
+        ),
+        claim,
+        links: ref("knowledge-evidence-links", claim.id, 1),
+      };
+      return await this.#send(
+        { body, actor: this.#actor!, expected },
+        signal,
+        started,
+      );
+    } finally {
+      this.#busy = false;
+    }
+  }
+  async retryPending(signal?: AbortSignal): Promise<AcceptanceAcknowledgement> {
     if (this.closed) fail("closed");
     if (this.#busy) fail("busy");
     if (!this.#pending) fail("no_pending_write");
@@ -300,12 +453,18 @@ export class AcceptanceWriteClient {
       }
       // Commit exact immutable pending input before invoking any POST transport. Fresh CSRF is separate.
       this.#pending = command;
-        const ack = fields(
+      const ack = fields(
         JSON.parse(await exchange("accept", command.body, session.csrfToken)),
         ["knowledgeStorage", "linksStorage", "acceptance", "claim", "links"],
       );
       gate();
-      for (const key of ["knowledgeStorage", "linksStorage", "acceptance", "claim", "links"] as const) {
+      for (const key of [
+        "knowledgeStorage",
+        "linksStorage",
+        "acceptance",
+        "claim",
+        "links",
+      ] as const) {
         const r = fields(ack[key], [
             "tenantId",
             "projectId",
