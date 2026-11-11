@@ -14,7 +14,7 @@ if (pkg.dependencies['@accountability/factual-investigation'] !==
     'git+https://github.com/neophilism/Factual-investigation-engine.git#48e02a6568f09e1d091eb24d6f161a6bcb7a8de5')
   throw new Error('Accepted Factual pin required');
 if (pkg.dependencies['@accountability/knowledge-verification'] !==
-    'git+https://github.com/neophilism/Knowledge-and-verification-engine.git#7361681b60353f1dbed78c2506ab4e27d1657c37')
+    'git+https://github.com/neophilism/Knowledge-and-verification-engine.git#a99e5757f0649049a223042ff44d786f871608f9')
   throw new Error('Accepted Knowledge runtime pin required');
 console.log('Accepted Factual snapshot and Knowledge runtime SDKs pinned');
 
@@ -30,5 +30,5 @@ if(pkg.dependencies['@accountability/correspondence']!==correspondencePin ||
   throw new Error('Accepted hardened Correspondence operator SDK pin/lock required');
 console.log('Accepted hardened Correspondence operator SDK pinned');
 
-if (!knowledge.resolved.endsWith('#7361681b60353f1dbed78c2506ab4e27d1657c37'))
+if (!knowledge.resolved.endsWith('#a99e5757f0649049a223042ff44d786f871608f9'))
   throw new Error('Accepted selected-verification Knowledge SDK lock pin required');

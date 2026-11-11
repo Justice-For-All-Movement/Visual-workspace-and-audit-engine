@@ -131,6 +131,10 @@
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/24",
         "status": "Partial read-only profile implemented/reviewed:12 focused wire/client/JSDOM plus3 actual4restrictedDB encrypted-Evidence/HTTP groups pass locally AND installed compiled public exports; declarations/3runtime bytes match. Prior full131 local+CI41959341817 passed; final current-head CI required. No132 full local/installed or real browser/AT/live claim. Protected writes/full correction impact/host identity/current rights remain pending.",
         "example": "docs/examples/private-selected-verification-read.html"
+      },
+      "selectedAcceptanceRead": {
+        "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
+        "status": "Explicitly incomplete WIP;6focused typed-domain/syntheticFetch/JSDOM groups pass; real handler integration/compiled/full/finalCI pending. Read-only; acceptance write/replay/browserATlive remain separate."
       }
     },
     {
@@ -237,6 +241,10 @@
         "docs": "docs/VERIFICATION_WRITE_CONTROLS.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25",
         "status": "Partial bounded implementation complete: explicit actual protected read/edit/write and immutable pending manual replay; current viewer coherence, dirty/busy/detach guards, ACK-only next selection. Source review clear. Verification manifest records exact test/CI evidence. Host proofing/rights/session lifecycle, protected reload recovery, browser/AT/live and complete workflow/correction impact remain pending."
+      },
+      "selectedAcceptanceRead": {
+        "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
+        "status": "Explicitly incomplete WIP;6focused typed-domain/syntheticFetch/JSDOM groups pass; real handler integration/compiled/full/finalCI pending. Read-only; acceptance write/replay/browserATlive remain separate."
       }
     },
     {
@@ -283,6 +291,10 @@
         "docs": "docs/VERIFICATION_WRITE_CONTROLS.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25",
         "status": "Partial bounded implementation complete: explicit actual protected read/edit/write and immutable pending manual replay; current viewer coherence, dirty/busy/detach guards, ACK-only next selection. Source review clear. Verification manifest records exact test/CI evidence. Host proofing/rights/session lifecycle, protected reload recovery, browser/AT/live and complete workflow/correction impact remain pending."
+      },
+      "selectedAcceptanceRead": {
+        "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
+        "status": "Explicitly incomplete WIP;6focused typed-domain/syntheticFetch/JSDOM groups pass; real handler integration/compiled/full/finalCI pending. Read-only; acceptance write/replay/browserATlive remain separate."
       }
     },
     {

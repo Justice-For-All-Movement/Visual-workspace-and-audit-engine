@@ -77,3 +77,5 @@ SELECTED_VERIFICATION_READ.md describes the separate minimal selected-response v
 VERIFICATION_WRITE_CLIENT.md records incomplete explicit selected-review write/replay browser integration; existing read-only controls retain their contracts.
 
 VERIFICATION_WRITE_CONTROLS.md documents the explicit private unresolved editor, actual protected read/write client ownership, dirty/pending guards and manual exact replay; qualification remains partial.
+
+SELECTED_ACCEPTANCE_READ.md describes incomplete minimal acceptance metadata, current-session read client and exclusive inert controls on the explicitly upgraded accepted Knowledge SDK. No reconstructed histories, source truth, permission, writes or publication are inferred.
