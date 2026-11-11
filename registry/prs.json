@@ -70,7 +70,8 @@
         21,
         22,
         24,
-        26
+        26,
+        27
       ],
       "dependsOn": [
         "VWA-001"
@@ -135,8 +136,17 @@
       },
       "selectedAcceptanceRead": {
         "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
-        "status": "Explicitly incomplete draft;8synthetic typed/JSDOM local groups plus3 actual four-restricted-DB/encryptedEvidence owningHTTP groups pass. Full regression/compiled public exports/finalhead CI pending. No browserAT/live, host authentication or acceptance write/replay qualification.",
+        "status": "Accepted PR26 merge5f90f099a83172536467bd505a29f7343a531cf6/source6242dbdb; finalCI43034850679/check130570872919 andpush both164PASS0fail0skip; full164local/11packed/types/3modulebytes qualified. Host/live/fullworkflow separate.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/26"
+      },
+      "acceptanceWriteClient": {
+        "docs": "docs/ACCEPTANCE_WRITE_CLIENT.md",
+        "status": "Explicitly incomplete draft. Previous73275f9 full175local+11packed/types/bytes pass; source review reproduced sparse-array/out-of-range key copy reaching session transport. Strict range/prototype/early length fix passes focused local/typecheck/build; fresh fixed-runtime packed/final CI required. No full175final-runtime-local claim.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/27"
+      },
+      "acceptanceWriteControls": {
+        "docs": "docs/ACCEPTANCE_WRITE_CONTROLS.md",
+        "status": "Partial fixed captured unassessed intent with unchecked confirmation/noinitialIO/exclusive ownership/busy-detach guards/unknown locks/manual identical replay/separate exactACK read. No live truth/permission claim."
       }
     },
     {
@@ -163,7 +173,8 @@
         23,
         24,
         25,
-        26
+        26,
+        27
       ],
       "dependsOn": [
         "VWA-001"
@@ -247,8 +258,17 @@
       },
       "selectedAcceptanceRead": {
         "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
-        "status": "Explicitly incomplete draft;8synthetic typed/JSDOM local groups plus3 actual four-restricted-DB/encryptedEvidence owningHTTP groups pass. Full regression/compiled public exports/finalhead CI pending. No browserAT/live, host authentication or acceptance write/replay qualification.",
+        "status": "Accepted PR26 merge5f90f099a83172536467bd505a29f7343a531cf6/source6242dbdb; finalCI43034850679/check130570872919 andpush both164PASS0fail0skip; full164local/11packed/types/3modulebytes qualified. Host/live/fullworkflow separate.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/26"
+      },
+      "acceptanceWriteClient": {
+        "docs": "docs/ACCEPTANCE_WRITE_CLIENT.md",
+        "status": "Explicitly incomplete draft. Previous73275f9 full175local+11packed/types/bytes pass; source review reproduced sparse-array/out-of-range key copy reaching session transport. Strict range/prototype/early length fix passes focused local/typecheck/build; fresh fixed-runtime packed/final CI required. No full175final-runtime-local claim.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/27"
+      },
+      "acceptanceWriteControls": {
+        "docs": "docs/ACCEPTANCE_WRITE_CONTROLS.md",
+        "status": "Partial fixed captured unassessed intent with unchecked confirmation/noinitialIO/exclusive ownership/busy-detach guards/unknown locks/manual identical replay/separate exactACK read. No live truth/permission claim."
       }
     },
     {
@@ -262,7 +282,8 @@
         23,
         24,
         25,
-        26
+        26,
+        27
       ],
       "dependsOn": [
         "VWA-002",
@@ -299,8 +320,17 @@
       },
       "selectedAcceptanceRead": {
         "docs": "docs/SELECTED_ACCEPTANCE_READ.md",
-        "status": "Explicitly incomplete draft;8synthetic typed/JSDOM local groups plus3 actual four-restricted-DB/encryptedEvidence owningHTTP groups pass. Full regression/compiled public exports/finalhead CI pending. No browserAT/live, host authentication or acceptance write/replay qualification.",
+        "status": "Accepted PR26 merge5f90f099a83172536467bd505a29f7343a531cf6/source6242dbdb; finalCI43034850679/check130570872919 andpush both164PASS0fail0skip; full164local/11packed/types/3modulebytes qualified. Host/live/fullworkflow separate.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/26"
+      },
+      "acceptanceWriteClient": {
+        "docs": "docs/ACCEPTANCE_WRITE_CLIENT.md",
+        "status": "Explicitly incomplete draft. Previous73275f9 full175local+11packed/types/bytes pass; source review reproduced sparse-array/out-of-range key copy reaching session transport. Strict range/prototype/early length fix passes focused local/typecheck/build; fresh fixed-runtime packed/final CI required. No full175final-runtime-local claim.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/27"
+      },
+      "acceptanceWriteControls": {
+        "docs": "docs/ACCEPTANCE_WRITE_CONTROLS.md",
+        "status": "Partial fixed captured unassessed intent with unchecked confirmation/noinitialIO/exclusive ownership/busy-detach guards/unknown locks/manual identical replay/separate exactACK read. No live truth/permission claim."
       }
     },
     {
