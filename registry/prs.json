@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "repository": "neophilism/Visual-workspace-and-audit-engine",
+  "repository": "Justice-For-All-Movement/Visual-workspace-and-audit-engine",
   "roadmapVersion": 1,
   "planVerified": true,
   "plannedPrCount": 6,
@@ -230,13 +230,13 @@
       },
       "verificationWriteClient": {
         "docs": "docs/VERIFICATION_WRITE_CLIENT.md",
-        "status": "Explicitly incomplete WIP: final8 local synthetic +3 prior local actual4DB HTTP; ALL11 final installed in separate8+3 runs/zero failures/skips, strict declarations/2runtime bytes match. Full141local before preflight fixes/two new groups; no143 full-local-installed claim. Mounted controls/broader wire/source review/final current-head CI/browser-live still pending.",
+        "status": "Partial bounded implementation complete: explicit actual protected read/edit/write and immutable pending manual replay; current viewer coherence, dirty/busy/detach guards, ACK-only next selection. Source review clear. Verification manifest records exact test/CI evidence. Host proofing/rights/session lifecycle, protected reload recovery, browser/AT/live and complete workflow/correction impact remain pending.",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25"
       },
       "verificationWriteControls": {
         "docs": "docs/VERIFICATION_WRITE_CONTROLS.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25",
-        "status": "Explicitly incomplete WIP: mounted editor/dirty/pending/replay/lifecycle implementation; six focused local groups passed, including three owning four-DB encrypted-Evidence HTTP groups. Typecheck/build/registry passed; installed/full regression/source review/final-head CI pending. Host/browser/AT/live qualification separate."
+        "status": "Partial bounded implementation complete: explicit actual protected read/edit/write and immutable pending manual replay; current viewer coherence, dirty/busy/detach guards, ACK-only next selection. Source review clear. Verification manifest records exact test/CI evidence. Host proofing/rights/session lifecycle, protected reload recovery, browser/AT/live and complete workflow/correction impact remain pending."
       }
     },
     {
@@ -276,13 +276,13 @@
       },
       "verificationWriteClient": {
         "docs": "docs/VERIFICATION_WRITE_CLIENT.md",
-        "status": "Explicitly incomplete WIP: final8 local synthetic +3 prior local actual4DB HTTP; ALL11 final installed in separate8+3 runs/zero failures/skips, strict declarations/2runtime bytes match. Full141local before preflight fixes/two new groups; no143 full-local-installed claim. Mounted controls/broader wire/source review/final current-head CI/browser-live still pending.",
+        "status": "Partial bounded implementation complete: explicit actual protected read/edit/write and immutable pending manual replay; current viewer coherence, dirty/busy/detach guards, ACK-only next selection. Source review clear. Verification manifest records exact test/CI evidence. Host proofing/rights/session lifecycle, protected reload recovery, browser/AT/live and complete workflow/correction impact remain pending.",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25"
       },
       "verificationWriteControls": {
         "docs": "docs/VERIFICATION_WRITE_CONTROLS.md",
         "pullRequest": "https://github.com/neophilism/Visual-workspace-and-audit-engine/pull/25",
-        "status": "Explicitly incomplete WIP: mounted editor/dirty/pending/replay/lifecycle implementation; six focused local groups passed, including three owning four-DB encrypted-Evidence HTTP groups. Typecheck/build/registry passed; installed/full regression/source review/final-head CI pending. Host/browser/AT/live qualification separate."
+        "status": "Partial bounded implementation complete: explicit actual protected read/edit/write and immutable pending manual replay; current viewer coherence, dirty/busy/detach guards, ACK-only next selection. Source review clear. Verification manifest records exact test/CI evidence. Host proofing/rights/session lifecycle, protected reload recovery, browser/AT/live and complete workflow/correction impact remain pending."
       }
     },
     {

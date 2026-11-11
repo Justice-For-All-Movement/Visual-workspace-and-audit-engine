@@ -16,3 +16,7 @@ Latest qualification supersedes earlier counts: full141 local check passed befor
 
 
 Final installed checkpoint: the final capture-lock runtime passes8 synthetic groups and3 real owning HTTP groups in separate installed runs, both complete footers/zero failures/skips. Strict installed declarations pass; both runtime modules match the source build. A preceding combined run printed11 passes but lacked a footer; that run alone is not relied upon. The final installed separate runs provide the qualification. Final8 local synthetic groups/typecheck/build/registry pass; full141 local passed before the last two fixes/tests, so no143 full-local/installed claim. CI on source0777d705 is running/uninspected at this checkpoint. This remains an explicitly incomplete draft: mounted controls and broader browser wire/deadline/source-review/current-head CI qualification still pending. Do not restart or duplicate the client.
+
+## Mounted editor qualification supersedes the earlier WIP boundary
+
+VERIFICATION_WRITE_CONTROLS.md now documents the exclusive mounted editor and explicit identical replay controls. Client source and public scope metadata remain bounded; metadata is not authentication. The final verification manifest records actual regression/packed-export evidence. Full workflow/correction impact, protected reload recovery, real browser/AT and deployed host acceptance remain pending.

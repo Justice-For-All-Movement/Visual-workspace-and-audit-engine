@@ -1,18 +1,38 @@
 {
-  "status": "explicitly incomplete WIP",
-  "localFocused": 6,
-  "typecheckBuildRegistry": "pass",
-  "installed": "pending",
-  "currentHeadCI": "required",
+  "status": "bounded implementation reviewed; final current-head CI required",
+  "sourceDependencyInstall": "normal prepared npm ci pass",
+  "freshConsumerInstall": "stalled and stopped; no success claim",
+  "packedConsumer": "unpacked compiled npm pack artifact with copied normal-prepared dependencies",
+  "fullLocal": "152 pass/0 fail/0 skip before transfer-only metadata/test; separate transfer group and final typecheck pass",
+  "focusedPacked": {
+    "tests": 20,
+    "failures": 0,
+    "skipped": 0,
+    "mode": "compiled packed exports with separately normal-prepared pinned dependencies"
+  },
+  "runtimeModulesByteMatched": 3,
+  "sourceReview": "clear; lifecycle/deadline/wire/authority boundaries reviewed",
+  "realBrowserATLive": "unqualified",
   "sha256": {
-    "src/verification-write-controls.ts": "54882623a797c8a41521c2008943ff48720e264c925fb34847d2358978434911",
+    "src/verification-client.ts": "02daefb023eebe5f9a9b45731374605103a44f5d6f5fa7911153749db4ed7e8b",
     "src/verification-write-client.ts": "cac62775fb37fd9cb5062919fa3ba83b29a36846dabc6a0fff8590f791f6131e",
+    "src/verification-write-controls.ts": "54882623a797c8a41521c2008943ff48720e264c925fb34847d2358978434911",
+    "tests/verification-write-client.test.ts": "391905a18f92247d1f5ee6328f39135f0bfd0bcedcc86ef51a59d5bc96a51e33",
     "tests/verification-write-controls.test.ts": "f11750211446e4caed20541b99856207bacea5343d9b226d818def402d01c8c8",
     "tests/verification-write-integration.test.ts": "02d08b44b2965609966cf8b51fe02ec4b2c22508bc80fe4b157b5d2fb9f88cfc",
     "tests/verification-write-fixture.ts": "1ac994ac3e9a42a86cfc7625f84408d775907e89b7ff8017b5e7d5e640bf780d",
+    "tests/verification-write-wire.test.ts": "137d0c0c0ea5f9f556addb15c9426ff35a048768dc06f15a713e44cafb190860",
     "package.json": "067fb2334bfac32af28230fc1189b39ce8688623f16787ac81833a7bf590fb0a",
-    "docs/VERIFICATION_WRITE_CONTROLS.md": "27710513d00aa747d38ecc688a926db082b584cc677d11da3d535f86415f1150",
+    "package-lock.json": "a1d03b0824851afd66d9f0b1b2a2240abd06c725bd4b00023ee9707fc619c98f",
+    "scripts/validate-pr-registry.mjs": "23fb9c013ef736810ede19e7197d8fca9d16d4055a1b56be83563b8fca76b611",
+    "docs/VERIFICATION_WRITE_CLIENT.md": "296673563ba0de2fc64dc261ccdee78913910b32518528b0b492eccf506501e2",
+    "docs/VERIFICATION_WRITE_CONTROLS.md": "eefc9ee9317bbda2c4c5aab113691c3e5ad44a229e384eba51c3a1d0a87b8da2",
     "docs/ARCHITECTURE.md": "01e277fc1b5ac3b4dbfaa733c262d502dc691a6f0d9211cf4245e3ddba428725",
-    "registry/prs.json": "10c487a4471ceb54f369d6d41ed71dfb3e41a8be4b82de9cb499661344ab3138"
-  }
+    "registry/prs.json": "2020866c3a1efa4a7f51f188ac17427c9e20d269e6f7acb329939c3eccee59f4",
+    "registry/roadmap.json": "bc49f474beb250a022777792af1be3c19c45a06416b32889ac1a8a0beb59f351",
+    "tests/registry-transfer.test.ts": "f8f038ce87f8ce02336071f0a5ac6dd9d930938cd6ec49c6d9ef669a6997b84a"
+  },
+  "publicDeclarations": "strict pass",
+  "additionalLocalTransferGroup": "pass",
+  "transferRegression": "exact canonical repository accepted; stale/unrelated rejected"
 }
