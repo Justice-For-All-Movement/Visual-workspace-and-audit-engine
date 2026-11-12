@@ -72,7 +72,8 @@
         24,
         26,
         27,
-        28
+        28,
+        29
       ],
       "dependsOn": [
         "VWA-001"
@@ -153,6 +154,11 @@
         "docs": "docs/SELECTED_COVERAGE_READ.md",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/28",
         "status": "Seven final typed/synthetic/JSDOM + three actual restricted two-DB accepted handler local groups; ALL10 final packed compiled public-export groups/strict declarations/three runtime bytes PASS. Full/current-head CI pending; source review clear, private captured syntax NOTauth/workproof/closure/browserATlive."
+      },
+      "selectedDispositionRead": {
+        "docs": "docs/SELECTED_DISPOSITIONS.md",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/29",
+        "status": "Incomplete;7typed/synthetic/JSDOM+3actual protected-handler twoDB groups pass locally and all10PACKEDpublicexports/declarations/three runtime modules match. Source-review clear limited read profile. Full/current-head CI pending; not browserAT/live/fullworkflow acceptance."
       }
     },
     {
@@ -181,7 +187,8 @@
         25,
         26,
         27,
-        28
+        28,
+        29
       ],
       "dependsOn": [
         "VWA-001"
@@ -281,6 +288,11 @@
         "docs": "docs/SELECTED_COVERAGE_READ.md",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/28",
         "status": "Seven final typed/synthetic/JSDOM + three actual restricted two-DB accepted handler local groups; ALL10 final packed compiled public-export groups/strict declarations/three runtime bytes PASS. Full/current-head CI pending; source review clear, private captured syntax NOTauth/workproof/closure/browserATlive."
+      },
+      "selectedDispositionRead": {
+        "docs": "docs/SELECTED_DISPOSITIONS.md",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/29",
+        "status": "Incomplete;7typed/synthetic/JSDOM+3actual protected-handler twoDB groups pass locally and all10PACKEDpublicexports/declarations/three runtime modules match. Source-review clear limited read profile. Full/current-head CI pending; not browserAT/live/fullworkflow acceptance."
       }
     },
     {
@@ -296,7 +308,8 @@
         25,
         26,
         27,
-        28
+        28,
+        29
       ],
       "dependsOn": [
         "VWA-002",
@@ -349,6 +362,11 @@
         "docs": "docs/SELECTED_COVERAGE_READ.md",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/28",
         "status": "Seven final typed/synthetic/JSDOM + three actual restricted two-DB accepted handler local groups; ALL10 final packed compiled public-export groups/strict declarations/three runtime bytes PASS. Full/current-head CI pending; source review clear, private captured syntax NOTauth/workproof/closure/browserATlive."
+      },
+      "selectedDispositionRead": {
+        "docs": "docs/SELECTED_DISPOSITIONS.md",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/29",
+        "status": "Incomplete;7typed/synthetic/JSDOM+3actual protected-handler twoDB groups pass locally and all10PACKEDpublicexports/declarations/three runtime modules match. Source-review clear limited read profile. Full/current-head CI pending; not browserAT/live/fullworkflow acceptance."
       }
     },
     {

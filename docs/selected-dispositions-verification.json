@@ -1,0 +1,27 @@
+{
+  "status": "incomplete;full/current-head CI pending",
+  "focusedLocal": "7 pure-Fetch-JSDOM plus3 actual protectedHTTP/two restrictedDB groups",
+  "packedCompiledPublicExportGroups": 10,
+  "publicDeclarations": "pass",
+  "runtimeByteMatch": [
+    "selected-dispositions.js",
+    "disposition-client.js",
+    "disposition-controls.js"
+  ],
+  "consumerSetup": "unpacked pack plus copied normal-prepared dependencies; not fresh install",
+  "sha256": {
+    "docs/ARCHITECTURE.md": "4aa6e8851f333bb5869c0a3be5facab7fc6645dce540886f8fbe6a55d68e0a7a",
+    "package-lock.json": "407f34c8caa29f9a5b8ba18b0aa38ef4966a20679ac6febf114eaaef1014c5ca",
+    "package.json": "bad6d60464953fe67ec295b64ae1ad10a269e5983f34a2dd459da1de052500a9",
+    "registry/prs.json": "1bb686dbcaf2d96c64703a609dd68adf2fc2da7530866bb72edfe757d2621404",
+    "scripts/validate-pr-registry.mjs": "718efb22c6502df7b8d8d0d82ea0b56e2b4877c25358f39cb80685c750b6a469",
+    "docs/SELECTED_DISPOSITIONS.md": "56d6f80299a2d67187a8e4aefc607d849dde9fcd1860b8470ac8cf137a782ccd",
+    "docs/examples/private-selected-dispositions.html": "f3141af8f821043a79960bf26f12244ae9038afdcf20f83c049563b747e30693",
+    "src/disposition-client.ts": "73f46e002f2d5bb066ef611c4ec0af30fb073c38fc47ed3aba0fc3c2ef7d21a5",
+    "src/disposition-controls.ts": "c548a39e530a508b37c81191f3157e1e388636fb160255835318eca6a74a324a",
+    "src/selected-dispositions.ts": "addfa0e07377ea08e211ca790b9d1bcdd3b0d8737c713f3701140df985c379e9",
+    "tests/disposition-http-fixture.ts": "eb4b2df67c34625243fd4f2333f25b6871ac641e447bf84109daa735b0f6f77a",
+    "tests/disposition-http-integration.test.ts": "097047efa1aab1d6d696c98b786b10b3c0f9256f688121b56561e94e5a74f051",
+    "tests/disposition-read.test.ts": "29878dfe9f477ba847663659cdb68e0c8f5e6fcadf19a8512263cab9682fd3c7"
+  }
+}
