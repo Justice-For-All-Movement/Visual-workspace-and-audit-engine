@@ -251,6 +251,8 @@ export function parseSelectedDispositionFrame(
           : t.reviewRequired === null || t.reviewRequired === "review-due",
       );
     }
+    if (t.reviewRequired === "review-due")
+      check(previous.questions.some((q: any) => q.reviewAt !== null));
     list(t.questions, 64);
     check(t.questions.length === covered.coverage.questions.length);
     for (const [i, v] of t.questions.entries()) {

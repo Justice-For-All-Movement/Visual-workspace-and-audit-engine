@@ -151,13 +151,17 @@ export function fixture(
   };
   return { selected, frame, text: JSON.stringify(frame) };
 }
-const responseHeaders = {"content-type":"application/json", "cache-control":"no-store"};
+const responseHeaders = {
+  "content-type": "application/json",
+  "cache-control": "no-store",
+};
 const session = (actor = "human") =>
   new Response(
     JSON.stringify({
       actorId: actor,
       csrfToken: "fixture-session-csrf-token-00000000000000",
-    }), {headers:responseHeaders}
+    }),
+    { headers: responseHeaders },
   );
 function transport(
   text: string,
@@ -168,7 +172,7 @@ function transport(
     calls.push({ url: String(url), init });
     return String(url).endsWith("/session")
       ? session(actor)
-      : new Response(text,{headers:responseHeaders});
+      : new Response(text, { headers: responseHeaders });
   }) as typeof fetch;
 }
 
@@ -208,6 +212,12 @@ test("corrupt refs, invented authority, false current statuses, forked history a
       parseSelectedDispositionFrame(scope, x.selected, JSON.stringify(f)),
     );
   }
+  const impossibleDue=JSON.parse(x.text);
+  for(const row of impossibleDue.table.history[0].questions){row.status='unresolved';row.assigneeId=null;row.reviewAt=null;}
+  impossibleDue.table.latestReview=structuredClone(impossibleDue.table.history[0]);
+  impossibleDue.table.reviewRequired='review-due';
+  for(const row of impossibleDue.table.questions)row.disposition={questionId:row.questionId,status:'unresolved',reason:'Explicit current review required',assigneeId:null,reviewAt:null};
+  assert.throws(()=>parseSelectedDispositionFrame(scope,x.selected,JSON.stringify(impossibleDue)));
   const changed = fixture("changed"),
     f = JSON.parse(changed.text);
   f.table.questions[2].disposition = f.table.latestReview.questions[2];
@@ -268,7 +278,8 @@ test("actor changes close before POST and wrong-purpose or malformed frames are 
   const wire = (async (url) =>
     String(url).endsWith("/session")
       ? session(actor)
-      : (posts++, new Response(x.text,{headers:responseHeaders}))) as typeof fetch;
+      : (posts++,
+        new Response(x.text, { headers: responseHeaders }))) as typeof fetch;
   const client = new DispositionReadClient(origin, scope, "review", wire);
   await client.read(x.selected);
   actor = "other";
@@ -305,4 +316,59 @@ test("exclusive controls request only on explicit action and disposal clears cop
   mounted.dispose();
   assert.equal(root.textContent, "");
   assert(client.closed);
+});
+
+test("getter selection fails before transport and disposal fences a noncooperative late response", async () => {
+  const f = fixture();
+  let calls = 0;
+  const client = new DispositionReadClient(
+    origin,
+    scope,
+    "review",
+    async () => {
+      calls++;
+      return new Response(f.text, { headers: responseHeaders });
+    },
+  );
+  const bad = { ...f.selected };
+  Object.defineProperty(bad, "id", {
+    get() {
+      throw Error("getter must not run");
+    },
+  });
+  await assert.rejects(client.read(bad));
+  assert.equal(calls, 0);
+  client.dispose();
+  let release!: (r: Response) => void,
+    cancelled = false;
+  const late = new DispositionReadClient(
+    origin,
+    scope,
+    "review",
+    () =>
+      new Promise<Response>((r) => {
+        release = r;
+      }),
+  );
+  const pending = late.read(f.selected);
+  late.dispose();
+  await assert.rejects(pending);
+  release(
+    new Response(
+      new ReadableStream({
+        cancel() {
+          cancelled = true;
+        },
+      }),
+      {
+        headers: {
+          "content-type": "application/json",
+          "cache-control": "no-store",
+        },
+      },
+    ),
+  );
+  await new Promise((r) => setTimeout(r, 0));
+  assert.equal(cancelled, true);
+  assert.equal(late.closed, true);
 });
