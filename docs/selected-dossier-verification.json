@@ -1,0 +1,23 @@
+{
+  "profile": "private-selected-dossier-v1",
+  "limits": [
+    "All13focused LOCAL groups pass; earlier7parserPACKED/types/runtime pass. Final13packed/full/headCI pending; no223full-final-local-installed claim.",
+    "Normal directSDKprepare; only root/resolvedKnowledge lock changed.",
+    "Wire snapshots not auth/sourceworktruth/closure/browserATlive."
+  ],
+  "sha256": {
+    "src/selected-dossier.ts": "46d8e75d52c04e6246123595fb3a3493d16313709993122f5f193a2f1d7269fd",
+    "src/dossier-client.ts": "c482498903aa518f8f56f356f66f2c5b12005c2a6b6711c42e3cc07beef8d881",
+    "src/dossier-controls.ts": "d44871a08ed19d12a47072c03b8b222578e614e02a6b939ee76f1edb9fc00175",
+    "tests/selected-dossier-fixture.ts": "ae54c44600beccd4049e99dc09bf03941c3b42f45c5b5b19a7915023ca64694e",
+    "tests/selected-dossier.test.ts": "38e3af0b1590b8b079826dd3358c4959702d2b9e043f41c3d910d507ddce43c5",
+    "tests/dossier-client.test.ts": "c9fd177f421b4e82caa74819847ddc139df2edd8aba177e2639c6e4d7f35209e",
+    "tests/dossier-integration.test.ts": "06b2b3762479de8c4e6acc7f708aa6eff61004d0874f639894e9faf740c10ea9",
+    "package.json": "993384637bb958f40563c18bff3ec6fbd74e179cfbbad73c3ee7cc210a379765",
+    "package-lock.json": "aad7c90d13454b4bdc58368f3481801f600eec56da9e80c0c21de92a7d82d693",
+    "scripts/validate-pr-registry.mjs": "6cf4f84bd005eda709539c8441fab8c2fb17eea0191a3338861990ab41c544de",
+    "registry/prs.json": "a0a7fda5cc5ef7da15b5d482f689ffab7cd186d85d1f7a693025031a5aeb7907",
+    "docs/ARCHITECTURE.md": "e130cd0b60020208da623f088bd2dbf71a284735e680dae663f1eab0987431eb",
+    "docs/SELECTED_DOSSIER.md": "711db4059a19dcce157c48e14ffaf8882505bf3c746283580f286bd5b5db35df"
+  }
+}

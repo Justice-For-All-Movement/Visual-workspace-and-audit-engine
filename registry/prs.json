@@ -75,7 +75,8 @@
         28,
         29,
         30,
-        31
+        31,
+        32
       ],
       "dependsOn": [
         "VWA-001"
@@ -171,6 +172,11 @@
         "docs": "docs/DISPOSITION_WRITE_CONTROLS.md",
         "status": "WIP;6focused local+6PACKEDpublicexport groups/types/compiled control bytes match. Source-review clear bounded editor; full/current-head CI pending. BrowserAT/live/protected reload/fullworkflow remain pending.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/31"
+      },
+      "selectedDossier": {
+        "docs": "docs/SELECTED_DOSSIER.md",
+        "status": "WIP PR32;all13focused local groups pass:7parser/4client-controls/2actual fourDB protectedhandler integration. Parser7packed/types/runtime earlier pass; final13packed/full/currentheadCI pending. Host/protectedreload/browserAT/live/full task separate.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/32"
       }
     },
     {
@@ -202,7 +208,8 @@
         28,
         29,
         30,
-        31
+        31,
+        32
       ],
       "dependsOn": [
         "VWA-001"
@@ -317,6 +324,11 @@
         "docs": "docs/DISPOSITION_WRITE_CONTROLS.md",
         "status": "WIP;6focused local+6PACKEDpublicexport groups/types/compiled control bytes match. Source-review clear bounded editor; full/current-head CI pending. BrowserAT/live/protected reload/fullworkflow remain pending.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/31"
+      },
+      "selectedDossier": {
+        "docs": "docs/SELECTED_DOSSIER.md",
+        "status": "WIP PR32;all13focused local groups pass:7parser/4client-controls/2actual fourDB protectedhandler integration. Parser7packed/types/runtime earlier pass; final13packed/full/currentheadCI pending. Host/protectedreload/browserAT/live/full task separate.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/32"
       }
     },
     {
