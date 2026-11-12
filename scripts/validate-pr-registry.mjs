@@ -11,7 +11,7 @@ console.log(`Valid PR registry: ${repository}, ${document.units.length} approved
 
 const pkg = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'));
 if (pkg.dependencies['@accountability/factual-investigation'] !==
-    'git+https://github.com/neophilism/Factual-investigation-engine.git#837ee4de0d885d3afd865aabfa8bb6171a899f49')
+    'git+https://github.com/neophilism/Factual-investigation-engine.git#def6d757d8cc3910bde6fdf1e8b67bf8b3794fa9')
   throw new Error('Accepted Factual pin required');
 if (pkg.dependencies['@accountability/knowledge-verification'] !==
     'git+https://github.com/neophilism/Knowledge-and-verification-engine.git#321e27f499783ea9d7792b8e19735c824dfc6736')

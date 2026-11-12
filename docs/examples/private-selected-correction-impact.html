@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Fictional private correction impact</title></head><body><h1>Fictional private example</h1><p>Offline neutral fixture; no authentication, service observation, export authorization or live workflow qualification.</p><main><section aria-label="Private plan correction impact"><h2>Private plan correction impact</h2><p>All captured plan editions are retained. Review required and indeterminate are not findings, assignments, work proof or closure. No captured dependency is not proof of no impact. Current source permissions, findings, drafts and raw audits are not loaded.</p><p>Exact corrected editions: {"before":{"tenantId":"fiction","projectId":"review","kind":"event","id":"event","revision":1},"after":{"tenantId":"fiction","projectId":"review","kind":"event","id":"event","revision":2}}</p><p>Observed containing revisions: Knowledge 5; planning 3. These are not creation editions.</p><table><caption>All captured plan editions and dependency review</caption><thead><tr><th scope="col">Plan edition</th><th scope="col">Latest observed plan</th><th scope="col">Impact</th><th scope="col">Affected exact references</th><th scope="col">Missing dependencies</th></tr></thead><tbody><tr><td>{"tenantId":"fiction","projectId":"review","kind":"investigation-plan","id":"plan","revision":1}</td><td>{"tenantId":"fiction","projectId":"review","kind":"investigation-plan","id":"plan","revision":2}</td><td>review-required</td><td>[{"tenantId":"fiction","projectId":"review","kind":"event","id":"event","revision":1}]</td><td>[]</td></tr><tr><td>{"tenantId":"fiction","projectId":"review","kind":"investigation-plan","id":"unrelated","revision":1}</td><td>{"tenantId":"fiction","projectId":"review","kind":"investigation-plan","id":"unrelated","revision":1}</td><td>no-captured-dependency</td><td>[]</td><td>[]</td></tr><tr><td>{"tenantId":"fiction","projectId":"review","kind":"investigation-plan","id":"plan","revision":2}</td><td>{"tenantId":"fiction","projectId":"review","kind":"investigation-plan","id":"plan","revision":2}</td><td>no-captured-dependency</td><td>[]</td><td>[]</td></tr></tbody></table><pre>{
+  "profile": "current-plan-correction-impact-v1",
+  "knowledgeStorage": {
+    "tenantId": "fiction",
+    "projectId": "review",
+    "kind": "knowledge-history",
+    "id": "d97c9fd3ece7bae9bb5f49b2cb969e18ee8aa4b1b28820dcbb945a10c8eb2521",
+    "revision": 5
+  },
+  "planningStorage": {
+    "tenantId": "fiction",
+    "projectId": "review",
+    "kind": "factual-planning-history",
+    "id": "a498f73aab7439871077027d71ccee9bb4b8d44cc0ea25736e1970445819c82b",
+    "revision": 3
+  },
+  "impact": {
+    "profile": "captured-plan-correction-impact-v1",
+    "visibility": "private",
+    "tenantId": "fiction",
+    "projectId": "review",
+    "purpose": "private-review",
+    "before": {
+      "tenantId": "fiction",
+      "projectId": "review",
+      "kind": "event",
+      "id": "event",
+      "revision": 1
+    },
+    "after": {
+      "tenantId": "fiction",
+      "projectId": "review",
+      "kind": "event",
+      "id": "event",
+      "revision": 2
+    },
+    "planningRecordCount": 3,
+    "knowledgeRecordCount": 5,
+    "plans": [
+      {
+        "plan": {
+          "tenantId": "fiction",
+          "projectId": "review",
+          "kind": "investigation-plan",
+          "id": "plan",
+          "revision": 1
+        },
+        "latestPlan": {
+          "tenantId": "fiction",
+          "projectId": "review",
+          "kind": "investigation-plan",
+          "id": "plan",
+          "revision": 2
+        },
+        "status": "review-required",
+        "affectedRefs": [
+          {
+            "tenantId": "fiction",
+            "projectId": "review",
+            "kind": "event",
+            "id": "event",
+            "revision": 1
+          }
+        ],
+        "review": {
+          "schemaVersion": 1,
+          "visibility": "private",
+          "tenantId": "fiction",
+          "projectId": "review",
+          "plan": {
+            "tenantId": "fiction",
+            "projectId": "review",
+            "kind": "investigation-plan",
+            "id": "plan",
+            "revision": 1
+          },
+          "latestPlan": {
+            "tenantId": "fiction",
+            "projectId": "review",
+            "kind": "investigation-plan",
+            "id": "plan",
+            "revision": 2
+          },
+          "roots": [
+            {
+              "tenantId": "fiction",
+              "projectId": "review",
+              "kind": "claim",
+              "id": "claim",
+              "revision": 1
+            }
+          ],
+          "nodes": [
+            {
+              "ref": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "claim",
+                "id": "claim",
+                "revision": 1
+              },
+              "latestRef": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "claim",
+                "id": "claim",
+                "revision": 1
+              },
+              "status": "current-edition"
+            },
+            {
+              "ref": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "relationship",
+                "id": "role",
+                "revision": 1
+              },
+              "latestRef": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "relationship",
+                "id": "role",
+                "revision": 1
+              },
+              "status": "current-edition"
+            },
+            {
+              "ref": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "entity",
+                "id": "person",
+                "revision": 1
+              },
+              "latestRef": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "entity",
+                "id": "person",
+                "revision": 1
+              },
+              "status": "current-edition"
+            },
+            {
+              "ref": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "event",
+                "id": "event",
+                "revision": 1
+              },
+              "latestRef": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "event",
+                "id": "event",
+                "revision": 2
+              },
+              "status": "changed-edition"
+            }
+          ],
+          "edges": [
+            {
+              "from": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "claim",
+                "id": "claim",
+                "revision": 1
+              },
+              "to": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "relationship",
+                "id": "role",
+                "revision": 1
+              },
+              "kind": "claim-subject"
+            },
+            {
+              "from": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "relationship",
+                "id": "role",
+                "revision": 1
+              },
+              "to": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "entity",
+                "id": "person",
+                "revision": 1
+              },
+              "kind": "relationship-from"
+            },
+            {
+              "from": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "relationship",
+                "id": "role",
+                "revision": 1
+              },
+              "to": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "event",
+                "id": "event",
+                "revision": 1
+              },
+              "kind": "relationship-to"
+            },
+            {
+              "from": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "event",
+                "id": "event",
+                "revision": 1
+              },
+              "to": {
+                "tenantId": "fiction",
+                "projectId": "review",
+                "kind": "entity",
+                "id": "person",
+                "revision": 1
+              },
+              "kind": "event-entity"
+            }
+          ]
+        }
+      },
+      {
+        "plan": {
+          "tenantId": "fiction",
+          "projectId": "review",
+          "kind": "investigation-plan",
+          "id": "unrelated",
+          "revision": 1
+        },
+        "latestPlan": {
+          "tenantId": "fiction",
+          "projectId": "review",
+          "kind": "investigation-plan",
+          "id": "unrelated",
+          "revision": 1
+        },
+        "status": "no-captured-dependency",
+        "affectedRefs": [],
+        "review": {
+          "schemaVersion": 1,
+          "visibility": "private",
+          "tenantId": "fiction",
+          "projectId": "review",
+          "plan": {
+            "tenantId": "fiction",
+            "projectId": "review",
+            "kind": "investigation-plan",
+            "id": "unrelated",
+            "revision": 1
+          },
+          "latestPlan": {
+            "tenantId": "fiction",
+            "projectId": "review",
+            "kind": "investigation-plan",
+            "id": "unrelated",
+            "revision": 1
+          },
+          "roots": [],
+          "nodes": [],
+          "edges": []
+        }
+      },
+      {
+        "plan": {
+          "tenantId": "fiction",
+          "projectId": "review",
+          "kind": "investigation-plan",
+          "id": "plan",
+          "revision": 2
+        },
+        "latestPlan": {
+          "tenantId": "fiction",
+          "projectId": "review",
+          "kind": "investigation-plan",
+          "id": "plan",
+          "revision": 2
+        },
+        "status": "no-captured-dependency",
+        "affectedRefs": [],
+        "review": {
+          "schemaVersion": 1,
+          "visibility": "private",
+          "tenantId": "fiction",
+          "projectId": "review",
+          "plan": {
+            "tenantId": "fiction",
+            "projectId": "review",
+            "kind": "investigation-plan",
+            "id": "plan",
+            "revision": 2
+          },
+          "latestPlan": {
+            "tenantId": "fiction",
+            "projectId": "review",
+            "kind": "investigation-plan",
+            "id": "plan",
+            "revision": 2
+          },
+          "roots": [],
+          "nodes": [],
+          "edges": []
+        }
+      }
+    ],
+    "unloaded": [
+      "current-source-permissions",
+      "findings",
+      "draft-outputs",
+      "raw-audit-events"
+    ]
+  }
+}</pre></section></main></body></html>

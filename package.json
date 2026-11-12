@@ -159,6 +159,18 @@
     "./dossier-controls": {
       "types": "./dist/dossier-controls.d.ts",
       "default": "./dist/dossier-controls.js"
+    },
+    "./selected-correction-impact": {
+      "types": "./dist/selected-correction-impact.d.ts",
+      "default": "./dist/selected-correction-impact.js"
+    },
+    "./correction-impact-client": {
+      "types": "./dist/correction-impact-client.d.ts",
+      "default": "./dist/correction-impact-client.js"
+    },
+    "./correction-impact-controls": {
+      "types": "./dist/correction-impact-controls.d.ts",
+      "default": "./dist/correction-impact-controls.js"
     }
   },
   "engines": {
@@ -195,7 +207,7 @@
     "@accountability/packaging-release": "git+https://github.com/neophilism/Packaging-release-and-correction-engine.git#b3ddcaeba1bef27310ff2113d6abca9a249b40a7",
     "@accountability/processing": "github:neophilism/Document-and-Media-Processing-Engine#44d76aefb8701852398182a158248c1b6b7a8fda",
     "@accountability/resources": "git+https://github.com/neophilism/Resources-and-commercial-operations-engine.git#5a1ed825fef938702c333066935afea4c42f9b21",
-    "@accountability/factual-investigation": "git+https://github.com/neophilism/Factual-investigation-engine.git#837ee4de0d885d3afd865aabfa8bb6171a899f49",
+    "@accountability/factual-investigation": "git+https://github.com/neophilism/Factual-investigation-engine.git#def6d757d8cc3910bde6fdf1e8b67bf8b3794fa9",
     "@accountability/knowledge-verification": "git+https://github.com/neophilism/Knowledge-and-verification-engine.git#321e27f499783ea9d7792b8e19735c824dfc6736"
   }
 }

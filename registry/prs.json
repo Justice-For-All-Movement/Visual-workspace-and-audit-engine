@@ -76,7 +76,8 @@
         29,
         30,
         31,
-        32
+        32,
+        33
       ],
       "dependsOn": [
         "VWA-001"
@@ -175,8 +176,15 @@
       },
       "selectedDossier": {
         "docs": "docs/SELECTED_DOSSIER.md",
-        "status": "WIP PR32;all13focused local groups pass:7parser/4client-controls/2actual fourDB protectedhandler integration. Parser7packed/types/runtime earlier pass; final13packed/full/currentheadCI pending. Host/protectedreload/browserAT/live/full task separate.",
+        "status": "Accepted PR32 sourcea7550312 mergecd0fa395 after bothfinalhead223PASS;full223local/13local-packed/types3runtime qualified. Older pending notes historical;hostbrowserATlive/fullworkflow pending.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/32"
+      },
+      "selectedCorrectionImpact": {
+        "docs": "docs/SELECTED_CORRECTION_IMPACT.md",
+        "status": "WIP PR33;ALL14final focused local+14PACKEDpublic-export groups/types/3runtimebytes PASS0fail0skip. Actual3restrictedDB NativeFetch/JSDOM; copiedprepareddepsNOTfreshinstall. FullfinalLOCAL/headCI pending. Originaltask/fullworkflow/browserATlive separate.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/33",
+        "verification": "docs/selected-correction-impact-verification.json",
+        "example": "docs/examples/private-selected-correction-impact.html"
       }
     },
     {
@@ -209,7 +217,8 @@
         29,
         30,
         31,
-        32
+        32,
+        33
       ],
       "dependsOn": [
         "VWA-001"
@@ -327,8 +336,15 @@
       },
       "selectedDossier": {
         "docs": "docs/SELECTED_DOSSIER.md",
-        "status": "WIP PR32;all13focused local groups pass:7parser/4client-controls/2actual fourDB protectedhandler integration. Parser7packed/types/runtime earlier pass; final13packed/full/currentheadCI pending. Host/protectedreload/browserAT/live/full task separate.",
+        "status": "Accepted PR32 sourcea7550312 mergecd0fa395 after bothfinalhead223PASS;full223local/13local-packed/types3runtime qualified. Older pending notes historical;hostbrowserATlive/fullworkflow pending.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/32"
+      },
+      "selectedCorrectionImpact": {
+        "docs": "docs/SELECTED_CORRECTION_IMPACT.md",
+        "status": "WIP PR33;ALL14final focused local+14PACKEDpublic-export groups/types/3runtimebytes PASS0fail0skip. Actual3restrictedDB NativeFetch/JSDOM; copiedprepareddepsNOTfreshinstall. FullfinalLOCAL/headCI pending. Originaltask/fullworkflow/browserATlive separate.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/33",
+        "verification": "docs/selected-correction-impact-verification.json",
+        "example": "docs/examples/private-selected-correction-impact.html"
       }
     },
     {
