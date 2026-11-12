@@ -175,8 +175,12 @@
       },
       "selectedDossier": {
         "docs": "docs/SELECTED_DOSSIER.md",
-        "status": "WIP PR32;all13focused local groups pass:7parser/4client-controls/2actual fourDB protectedhandler integration. Parser7packed/types/runtime earlier pass; final13packed/full/currentheadCI pending. Host/protectedreload/browserAT/live/full task separate.",
+        "status": "Accepted PR32 sourcea7550312 mergecd0fa395 after bothfinalhead223PASS;full223local/13local-packed/types3runtime qualified. Older pending notes historical;hostbrowserATlive/fullworkflow pending.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/32"
+      },
+      "selectedCorrectionImpact": {
+        "docs": "docs/SELECTED_CORRECTION_IMPACT.md",
+        "status": "Explicitly incomplete WIP;6owningSDK/parser/JSDOM local groups/typecheck pass; client-controls actualHTTP/packed/full/headCI pending. Full workflow/browserAT/live/SourceConsent separate."
       }
     },
     {
@@ -327,8 +331,12 @@
       },
       "selectedDossier": {
         "docs": "docs/SELECTED_DOSSIER.md",
-        "status": "WIP PR32;all13focused local groups pass:7parser/4client-controls/2actual fourDB protectedhandler integration. Parser7packed/types/runtime earlier pass; final13packed/full/currentheadCI pending. Host/protectedreload/browserAT/live/full task separate.",
+        "status": "Accepted PR32 sourcea7550312 mergecd0fa395 after bothfinalhead223PASS;full223local/13local-packed/types3runtime qualified. Older pending notes historical;hostbrowserATlive/fullworkflow pending.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/32"
+      },
+      "selectedCorrectionImpact": {
+        "docs": "docs/SELECTED_CORRECTION_IMPACT.md",
+        "status": "Explicitly incomplete WIP;6owningSDK/parser/JSDOM local groups/typecheck pass; client-controls actualHTTP/packed/full/headCI pending. Full workflow/browserAT/live/SourceConsent separate."
       }
     },
     {
