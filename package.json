@@ -151,6 +151,14 @@
     "./selected-dossier": {
       "types": "./dist/selected-dossier.d.ts",
       "default": "./dist/selected-dossier.js"
+    },
+    "./dossier-client": {
+      "types": "./dist/dossier-client.d.ts",
+      "default": "./dist/dossier-client.js"
+    },
+    "./dossier-controls": {
+      "types": "./dist/dossier-controls.d.ts",
+      "default": "./dist/dossier-controls.js"
     }
   },
   "engines": {

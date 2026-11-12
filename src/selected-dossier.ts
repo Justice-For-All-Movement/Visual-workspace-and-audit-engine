@@ -3,7 +3,7 @@ export type SelectedDossierFrame = Awaited<ReturnType<CurrentClaimDossierReader[
 export type DossierScope=Readonly<{tenantId:string;projectId:string;purpose:string}>;
 export type DossierRef=Readonly<{tenantId:string;projectId:string;kind:string;id:string;revision:number}>;
 export type DossierSelection=Readonly<{claim:DossierRef;links:DossierRef}>;
-export class DossierReadError extends Error { readonly code="invalid_response"; constructor(){super("invalid_response");this.name="DossierReadError";} }
+export class DossierReadError extends Error { readonly code:string; constructor(code="invalid_response"){super(code);this.code=code;this.name="DossierReadError";} }
 function require(value: unknown): asserts value {
   if (!value) throw new DossierReadError();
 }
@@ -160,7 +160,21 @@ export function parseSelectedDossierFrame(scope:DossierScope,selected:DossierSel
  const l=exact(d.citations,['ref','supersedes','claim','visibility','actorId','actorKind','createdAt','requestId','purpose','links']);
  require(same(ref(l.ref,scope,'knowledge-evidence-links'),choice.links)&&same(ref(l.claim,scope,'claim'),choice.claim)&&l.ref.revision<=ls.revision&&l.visibility==='private'&&l.purpose===scope.purpose&&['human','agent','service'].includes(l.actorKind));stamp(l);predecessor(l.supersedes,l.ref,scope);list(l.links,64);
  const ids=new Set<string>(),selectors=new Set<string>();for(const item of l.links){const x=link(item,scope),key=stable([x.relation,x.selector]);require(!ids.has(x.id)&&!selectors.has(key));ids.add(x.id);selectors.add(key);}
- list(d.historicalChallenges,256);let prior=0;const historical=new Set<string>();for(const item of d.historicalChallenges){const h=exact(item,['citationSet','claim','link']),r=ref(h.citationSet,scope,'knowledge-evidence-links'),cr=ref(h.claim,scope,'claim'),x=link(h.link,scope),key=stable([r,x.id]);require(r.id===choice.links.id&&r.revision>=prior&&r.revision<choice.links.revision&&cr.id===choice.claim.id&&cr.revision<=choice.claim.revision&&x.relation==='challenges'&&!historical.has(key));historical.add(key);prior=r.revision;}
+ list(d.historicalChallenges,256);
+ let prior=0;
+ const historical=new Set<string>();
+ const groups=new Map<string,{claim:string;selectors:Set<string>;count:number}>();
+ for(const item of d.historicalChallenges){
+   const h=exact(item,['citationSet','claim','link']);
+   const r=ref(h.citationSet,scope,'knowledge-evidence-links');
+   const cr=ref(h.claim,scope,'claim'),x=link(h.link,scope),key=stable([r,x.id]);
+   require(r.id===choice.links.id&&r.revision>=prior&&r.revision<choice.links.revision&&
+     cr.id===choice.claim.id&&cr.revision<=choice.claim.revision&&x.relation==='challenges'&&!historical.has(key));
+   const groupKey=stable(r),selectorKey=stable(x.selector),group=groups.get(groupKey);
+   if(group){require(group.claim===stable(cr)&&group.count<64&&!group.selectors.has(selectorKey));group.count++;group.selectors.add(selectorKey);}
+   else groups.set(groupKey,{claim:stable(cr),selectors:new Set([selectorKey]),count:1});
+   historical.add(key);prior=r.revision;
+ }
  list(d.subjects,128);require(d.subjects.length===c.value.subjectRefs.length);for(const [i,item]of d.subjects.entries()){const s=exact(item,['record','latestObserved','status']),r=record(s.record,scope,ks.revision),latest=ref(s.latestObserved,scope,r.ref.kind);require(same(r.ref,c.value.subjectRefs[i])&&latest.id===r.ref.id&&latest.revision>=r.ref.revision&&latest.revision<=ks.revision&&s.status===(same(latest,r.ref)?'same-edition':'changed-in-capture'));}
  require(stable(d.unloaded)===stable(['evidence-bytes','current-source-permissions','verification-reviews','raw-audit-events']));
  const observations=[...l.links.map((x:any)=>({citationSet:l.ref,linkId:x.id,selector:x.selector})),...d.historicalChallenges.map((h:any)=>({citationSet:h.citationSet,linkId:h.link.id,selector:h.link.selector}))];require(observations.length<=256&&stable(f.sourceObligations)===stable(observations));return f as SelectedDossierFrame;
@@ -173,7 +187,10 @@ export function renderSelectedDossierFrame(document:Document,scope:DossierScope,
  add('h2','Private unassessed claim dossier');add('p',f.dossier.claim.value.type==='claim'?f.dossier.claim.value.text:'');
  add('p','Current and historical citations are retained. This copy is not authentication, current permission, work proof, findings, answers or closure. Full history prefixes, bytes and audits are not loaded.');
  add('p',`Observed containing revisions: Knowledge ${f.knowledgeStorage.revision}; citations ${f.linksStorage.revision}. These are not creation editions.`);
+ add('p',`Current citations: ${f.dossier.citations.links.length}; retained historical challenges: ${f.dossier.historicalChallenges.length}.`);
  const table=document.createElement('table'),caption=document.createElement('caption');caption.textContent='All current citations and retained historical challenges';table.append(caption);
- for(const [kind,items] of [['Current',f.dossier.citations.links.map(link=>({citationSet:f.dossier.citations.ref,link}))],['Historical challenge',f.dossier.historicalChallenges]] as const){for(const item of items){const row=document.createElement('tr');for(const text of [kind,item.link.id,item.link.relation,JSON.stringify(item.citationSet),JSON.stringify(item.link.selector)]){const cell=document.createElement('td');cell.textContent=text;row.append(cell);}table.append(row);}}
+ const head=document.createElement('thead'),heading=document.createElement('tr'),body=document.createElement('tbody');
+ for(const label of ['Observation','Link','Relation','Citation edition','Selector']){const cell=document.createElement('th');cell.scope='col';cell.textContent=label;heading.append(cell);}head.append(heading);table.append(head,body);
+ for(const [kind,items] of [['Current',f.dossier.citations.links.map(link=>({citationSet:f.dossier.citations.ref,link}))],['Historical challenge',f.dossier.historicalChallenges]] as const){for(const item of items){const row=document.createElement('tr');for(const text of [kind,item.link.id,item.link.relation,JSON.stringify(item.citationSet),JSON.stringify(item.link.selector)]){const cell=document.createElement('td');cell.textContent=text;row.append(cell);}body.append(row);}}
  root.append(table);const metadata=JSON.stringify(f,null,2);require(new TextEncoder().encode(metadata).length<=2*1024*1024);add('pre',metadata);return root;
 }
