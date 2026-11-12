@@ -143,6 +143,10 @@
     "./disposition-write-client": {
       "types": "./dist/disposition-write-client.d.ts",
       "default": "./dist/disposition-write-client.js"
+    },
+    "./disposition-write-controls": {
+      "types": "./dist/disposition-write-controls.d.ts",
+      "default": "./dist/disposition-write-controls.js"
     }
   },
   "engines": {
