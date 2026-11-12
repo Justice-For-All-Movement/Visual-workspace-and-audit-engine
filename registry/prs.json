@@ -163,8 +163,12 @@
       },
       "dispositionWriteClient": {
         "docs": "docs/DISPOSITION_WRITE_CLIENT.md",
-        "status": "WIP;9focused local+9packed groups/types/runtime byte comparison pass. Source review clear limited client profile. Full/current-head CI pending. No mounted editor/browserAT/live acceptance.",
+        "status": "Accepted PR30 source8c55f51d mergedc198abdf after both final-head checks passed204tests, full204local,9local/packed focused/types/runtime bytes. No full installed/browserAT/live acceptance.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/30"
+      },
+      "dispositionWriteControls": {
+        "docs": "docs/DISPOSITION_WRITE_CONTROLS.md",
+        "status": "Incomplete WIP; explicit confirmation/private question editor/manual identical replay. Focused tests and package/current-head qualification pending."
       }
     },
     {
@@ -303,8 +307,12 @@
       },
       "dispositionWriteClient": {
         "docs": "docs/DISPOSITION_WRITE_CLIENT.md",
-        "status": "WIP;9focused local+9packed groups/types/runtime byte comparison pass. Source review clear limited client profile. Full/current-head CI pending. No mounted editor/browserAT/live acceptance.",
+        "status": "Accepted PR30 source8c55f51d mergedc198abdf after both final-head checks passed204tests, full204local,9local/packed focused/types/runtime bytes. No full installed/browserAT/live acceptance.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/30"
+      },
+      "dispositionWriteControls": {
+        "docs": "docs/DISPOSITION_WRITE_CONTROLS.md",
+        "status": "Incomplete WIP; explicit confirmation/private question editor/manual identical replay. Focused tests and package/current-head qualification pending."
       }
     },
     {
@@ -383,8 +391,12 @@
       },
       "dispositionWriteClient": {
         "docs": "docs/DISPOSITION_WRITE_CLIENT.md",
-        "status": "WIP;9focused local+9packed groups/types/runtime byte comparison pass. Source review clear limited client profile. Full/current-head CI pending. No mounted editor/browserAT/live acceptance.",
+        "status": "Accepted PR30 source8c55f51d mergedc198abdf after both final-head checks passed204tests, full204local,9local/packed focused/types/runtime bytes. No full installed/browserAT/live acceptance.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/30"
+      },
+      "dispositionWriteControls": {
+        "docs": "docs/DISPOSITION_WRITE_CONTROLS.md",
+        "status": "Incomplete WIP; explicit confirmation/private question editor/manual identical replay. Focused tests and package/current-head qualification pending."
       }
     },
     {

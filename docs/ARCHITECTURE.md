@@ -89,3 +89,7 @@ SELECTED_DISPOSITIONS.md describes incomplete private literal unanswered-questio
 ## Explicit disposition write client (partial)
 
 DISPOSITION_WRITE_CLIENT.md records the private owning-edition bound write client and manual replay. No mounted editor yet. Accepted PR29 read foundation merged8bf55ae after final195CI.
+
+## Private question disposition editor (partial)
+
+DISPOSITION_WRITE_CONTROLS.md records native private whole-question editing with explicit confirmation and identical-command replay over the accepted client. PR30 mergedc198abdf after final204CI/full204local; browser/AT/live/full closure and Editorial gates remain unmet.
