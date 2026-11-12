@@ -171,6 +171,10 @@
         "docs": "docs/DISPOSITION_WRITE_CONTROLS.md",
         "status": "WIP;6focused local+6PACKEDpublicexport groups/types/compiled control bytes match. Source-review clear bounded editor; full/current-head CI pending. BrowserAT/live/protected reload/fullworkflow remain pending.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/31"
+      },
+      "selectedDossier": {
+        "docs": "docs/SELECTED_DOSSIER.md",
+        "status": "WIP;4pureSDK/JSDOM local groups/typecheck/build/registry pass; expanded/package/full/headCI pending. Wire consistency not authentication/workproof/current-source rights; client-controls separate."
       }
     },
     {
@@ -317,6 +321,10 @@
         "docs": "docs/DISPOSITION_WRITE_CONTROLS.md",
         "status": "WIP;6focused local+6PACKEDpublicexport groups/types/compiled control bytes match. Source-review clear bounded editor; full/current-head CI pending. BrowserAT/live/protected reload/fullworkflow remain pending.",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/31"
+      },
+      "selectedDossier": {
+        "docs": "docs/SELECTED_DOSSIER.md",
+        "status": "WIP;4pureSDK/JSDOM local groups/typecheck/build/registry pass; expanded/package/full/headCI pending. Wire consistency not authentication/workproof/current-source rights; client-controls separate."
       }
     },
     {

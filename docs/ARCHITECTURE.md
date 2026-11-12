@@ -93,3 +93,5 @@ DISPOSITION_WRITE_CLIENT.md records the private owning-edition bound write clien
 ## Private question disposition editor (partial)
 
 DISPOSITION_WRITE_CONTROLS.md records native private whole-question editing with explicit confirmation and identical-command replay over the accepted client. PR30 mergedc198abdf after final204CI/full204local; browser/AT/live/full closure and Editorial gates remain unmet.
+
+SELECTED_DOSSIER.md records incomplete bounded private exact-selection dossier parsing and literal tables over accepted Knowledge38. Historical challenges and actual containing refs remain explicit; no source authority, I/O, client, export or workflow completion is inferred.
