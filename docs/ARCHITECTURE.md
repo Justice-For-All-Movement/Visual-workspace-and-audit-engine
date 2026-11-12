@@ -83,3 +83,5 @@ SELECTED_ACCEPTANCE_READ.md describes incomplete minimal acceptance metadata, cu
 PR26 selected acceptance reads accepted5f90f099/final164pass; older pending notes are historical. ACCEPTANCE_WRITE_CLIENT.md describes incomplete explicit private acceptance and immutable manual replay, distinct from permissions/findings or host/live acceptance.
 
 Visual27 explicit acceptance/replay controls accepted0c023799. SELECTED_COVERAGE_READ.md documents incomplete private current-human coverage client/view over accepted Factual15; pure metadata/wire syntax is not authentication, work proof or closure. Full task/dependency and browser/live gates remain unmet.
+
+SELECTED_DISPOSITIONS.md describes incomplete private literal unanswered-question disposition views and explicit read controls over accepted Factual19/20. Actual containing editions and historical review bases remain separate; no write, authenticated assignment/workproof or full workflow/live qualification.
