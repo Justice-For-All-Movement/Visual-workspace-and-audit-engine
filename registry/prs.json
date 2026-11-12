@@ -158,7 +158,11 @@
       "selectedDispositionRead": {
         "docs": "docs/SELECTED_DISPOSITIONS.md",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/29",
-        "status": "Incomplete;7typed/synthetic/JSDOM+3actual protected-handler twoDB groups pass locally and all10PACKEDpublicexports/declarations/three runtime modules match. Source-review clear limited read profile. Full/current-head CI pending; not browserAT/live/fullworkflow acceptance."
+        "status": "Accepted PR29 source36d8b033 merged8bf55ae; final195CI pass,10focused local/packed groups/types/3runtime bytes matched. BrowserAT/live/fullworkflow pending."
+      },
+      "dispositionWriteClient": {
+        "docs": "docs/DISPOSITION_WRITE_CLIENT.md",
+        "status": "Incomplete WIP; explicit owning-edition bound client, manual identical replay, actual restricted twoDB handler tests. Controls, broader tests/package/source review/current-head CI pending."
       }
     },
     {
@@ -292,7 +296,11 @@
       "selectedDispositionRead": {
         "docs": "docs/SELECTED_DISPOSITIONS.md",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/29",
-        "status": "Incomplete;7typed/synthetic/JSDOM+3actual protected-handler twoDB groups pass locally and all10PACKEDpublicexports/declarations/three runtime modules match. Source-review clear limited read profile. Full/current-head CI pending; not browserAT/live/fullworkflow acceptance."
+        "status": "Accepted PR29 source36d8b033 merged8bf55ae; final195CI pass,10focused local/packed groups/types/3runtime bytes matched. BrowserAT/live/fullworkflow pending."
+      },
+      "dispositionWriteClient": {
+        "docs": "docs/DISPOSITION_WRITE_CLIENT.md",
+        "status": "Incomplete WIP; explicit owning-edition bound client, manual identical replay, actual restricted twoDB handler tests. Controls, broader tests/package/source review/current-head CI pending."
       }
     },
     {
@@ -366,7 +374,11 @@
       "selectedDispositionRead": {
         "docs": "docs/SELECTED_DISPOSITIONS.md",
         "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/29",
-        "status": "Incomplete;7typed/synthetic/JSDOM+3actual protected-handler twoDB groups pass locally and all10PACKEDpublicexports/declarations/three runtime modules match. Source-review clear limited read profile. Full/current-head CI pending; not browserAT/live/fullworkflow acceptance."
+        "status": "Accepted PR29 source36d8b033 merged8bf55ae; final195CI pass,10focused local/packed groups/types/3runtime bytes matched. BrowserAT/live/fullworkflow pending."
+      },
+      "dispositionWriteClient": {
+        "docs": "docs/DISPOSITION_WRITE_CLIENT.md",
+        "status": "Incomplete WIP; explicit owning-edition bound client, manual identical replay, actual restricted twoDB handler tests. Controls, broader tests/package/source review/current-head CI pending."
       }
     },
     {
