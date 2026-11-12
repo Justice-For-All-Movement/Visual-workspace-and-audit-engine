@@ -206,6 +206,7 @@ export function parseSelectedCorrectionImpactFrame(
     for (const [id, latest] of latestPlans)
       require(latest.revision === plans.get(id));
     const observedLatest = new Map<string, string>();
+    const observedNodes = new Map<string, string>();
     for (const row of d.plans) {
       const p = ref(row.plan, scope, "investigation-plan"),
         latest = ref(row.latestPlan, scope, "investigation-plan");
@@ -264,6 +265,10 @@ export function parseSelectedCorrectionImpactFrame(
               (!(same(nr, choice.before) || same(nr, choice.after)) ||
                 n.status !== "missing-edition"),
           );
+        const observed = JSON.stringify([n.status, value]);
+        const priorNode = observedNodes.get(nk);
+        require(priorNode === undefined || priorNode === observed);
+        observedNodes.set(nk, observed);
         nodes.set(nk, n);
       }
       const roots = new Set<string>();

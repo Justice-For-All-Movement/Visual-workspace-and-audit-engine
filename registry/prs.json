@@ -76,7 +76,8 @@
         29,
         30,
         31,
-        32
+        32,
+        33
       ],
       "dependsOn": [
         "VWA-001"
@@ -180,7 +181,8 @@
       },
       "selectedCorrectionImpact": {
         "docs": "docs/SELECTED_CORRECTION_IMPACT.md",
-        "status": "Explicitly incomplete WIP;6owningSDK/parser/JSDOM local groups/typecheck pass; client-controls actualHTTP/packed/full/headCI pending. Full workflow/browserAT/live/SourceConsent separate."
+        "status": "WIP PR33;14 focused groups added/actual2threeDB HTTP groups pass; final combined/packed/types/full/headCI pending. Originaltask/fullworkflow/browserATlive separate.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/33"
       }
     },
     {
@@ -213,7 +215,8 @@
         29,
         30,
         31,
-        32
+        32,
+        33
       ],
       "dependsOn": [
         "VWA-001"
@@ -336,7 +339,8 @@
       },
       "selectedCorrectionImpact": {
         "docs": "docs/SELECTED_CORRECTION_IMPACT.md",
-        "status": "Explicitly incomplete WIP;6owningSDK/parser/JSDOM local groups/typecheck pass; client-controls actualHTTP/packed/full/headCI pending. Full workflow/browserAT/live/SourceConsent separate."
+        "status": "WIP PR33;14 focused groups added/actual2threeDB HTTP groups pass; final combined/packed/types/full/headCI pending. Originaltask/fullworkflow/browserATlive separate.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/33"
       }
     },
     {

@@ -1,12 +1,23 @@
-import {
-  KnowledgeRepository,
-  KNOWLEDGE_KIND,
-  KNOWLEDGE_KEY,
-} from "@accountability/knowledge-verification/repository";
-import {
-  IdentityKnowledgeRepository,
-  KNOWLEDGE_RESOURCE_ID,
-} from "@accountability/knowledge-verification/identity-repository";
+import { createRequire } from "node:module";
+import { pathToFileURL } from "node:url";
+// Use the owning Factual SDK's exact prepared Knowledge dependency: prototype-bound
+// readers intentionally reject instances from a separately pinned root SDK copy.
+const owningRequire = createRequire(
+  import.meta
+    .resolve("@accountability/factual-investigation/correction-impact-current"),
+);
+const { KnowledgeRepository } = (await import(
+  pathToFileURL(
+    owningRequire.resolve("@accountability/knowledge-verification/repository"),
+  ).href
+)) as typeof import("@accountability/knowledge-verification/repository");
+const { IdentityKnowledgeRepository } = (await import(
+  pathToFileURL(
+    owningRequire.resolve(
+      "@accountability/knowledge-verification/identity-repository",
+    ),
+  ).href
+)) as typeof import("@accountability/knowledge-verification/identity-repository");
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
