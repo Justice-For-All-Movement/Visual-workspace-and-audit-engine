@@ -73,7 +73,8 @@
         26,
         27,
         28,
-        29
+        29,
+        30
       ],
       "dependsOn": [
         "VWA-001"
@@ -162,7 +163,8 @@
       },
       "dispositionWriteClient": {
         "docs": "docs/DISPOSITION_WRITE_CLIENT.md",
-        "status": "Incomplete WIP; explicit owning-edition bound client, manual identical replay, actual restricted twoDB handler tests. Controls, broader tests/package/source review/current-head CI pending."
+        "status": "WIP;9focused local+9packed groups/types/runtime byte comparison pass. Source review clear limited client profile. Full/current-head CI pending. No mounted editor/browserAT/live acceptance.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/30"
       }
     },
     {
@@ -192,7 +194,8 @@
         26,
         27,
         28,
-        29
+        29,
+        30
       ],
       "dependsOn": [
         "VWA-001"
@@ -300,7 +303,8 @@
       },
       "dispositionWriteClient": {
         "docs": "docs/DISPOSITION_WRITE_CLIENT.md",
-        "status": "Incomplete WIP; explicit owning-edition bound client, manual identical replay, actual restricted twoDB handler tests. Controls, broader tests/package/source review/current-head CI pending."
+        "status": "WIP;9focused local+9packed groups/types/runtime byte comparison pass. Source review clear limited client profile. Full/current-head CI pending. No mounted editor/browserAT/live acceptance.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/30"
       }
     },
     {
@@ -317,7 +321,8 @@
         26,
         27,
         28,
-        29
+        29,
+        30
       ],
       "dependsOn": [
         "VWA-002",
@@ -378,7 +383,8 @@
       },
       "dispositionWriteClient": {
         "docs": "docs/DISPOSITION_WRITE_CLIENT.md",
-        "status": "Incomplete WIP; explicit owning-edition bound client, manual identical replay, actual restricted twoDB handler tests. Controls, broader tests/package/source review/current-head CI pending."
+        "status": "WIP;9focused local+9packed groups/types/runtime byte comparison pass. Source review clear limited client profile. Full/current-head CI pending. No mounted editor/browserAT/live acceptance.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/30"
       }
     },
     {

@@ -64,3 +64,34 @@ test('malformed ACK with changed actual planning edition locks exact pending wit
  await assert.rejects(f.client.record('cmd','r2',rows,['New record']));assert.ok(f.client.pending);assert.equal(f.client.viewed,null);
  f.state.corrupt=false;assert.equal((await f.client.retryPending()).storage.revision,2);
 });
+function json(value:unknown) {return new Response(JSON.stringify(value),{headers:{'content-type':'application/json','cache-control':'no-store'}});}
+test('blocked late write session cannot POST; signals close and timeout includes synchronous transport',async t=>{
+ const f=await fixture(t);const frame=await f.client.load(f.ack.record);const signals:AbortSignal[]=[];let posts=0;
+ const client=new DispositionWriteClient(origin,c,c.purpose,async(url,init)=>{
+  signals.push(init!.signal! as AbortSignal);
+  if(String(url).endsWith('/read')) return json(frame);
+  if(String(url).endsWith('/disposition-write/session')) {const end=performance.now()+40;while(performance.now()<end){};}
+  if(String(url).endsWith('/record'))posts++;
+  return json({actorId:c.actor.id,csrfToken:'fixture-csrf-token-0000000000000000000000'});
+ },20);t.after(()=>client.dispose());
+ await client.load(f.ack.record);await assert.rejects(client.record('late','r2',rows,['New record']));assert.equal(posts,0);assert.equal(client.pending,null);assert.ok(signals.every(s=>s.aborted));
+});
+test('noncooperative late POST after cancellation retains pending and cancels response body',async t=>{
+ const f=await fixture(t);const frame=await f.client.load(f.ack.record);let release!:(v:Response)=>void;let began!:()=>void;const started=new Promise<void>(r=>began=r);let cancelled=false;
+ const client=new DispositionWriteClient(origin,c,c.purpose,async(url)=>{
+  if(String(url).endsWith('/read'))return json(frame);
+  if(String(url).endsWith('/record')){began();return new Promise<Response>(r=>release=r);}
+  return json({actorId:c.actor.id,csrfToken:'fixture-csrf-token-0000000000000000000000'});
+ });t.after(()=>client.dispose());await client.load(f.ack.record);
+ const ac=new AbortController();const sending=client.record('cancel','r2',rows,['New record'],ac.signal);await started;ac.abort();await assert.rejects(sending);assert.ok(client.pending);assert.equal(client.viewed,null);
+ release(new Response(new ReadableStream({cancel(){cancelled=true;}})));await new Promise(r=>setTimeout(r,0));assert.equal(cancelled,true);assert.ok(client.pending);
+});
+test('preflight reentry and disposal cannot dispatch or replace pending; arrays reject accessor elements',async t=>{
+ const f=await fixture(t);await f.client.load(f.ack.record);const calls=f.calls.length;let entered:Promise<unknown>|null=null;
+ const proxy=new Proxy(rows[0]!,{getPrototypeOf(target){entered=f.client.record('nested','nested',rows,['New record']).catch(e=>e);return Reflect.getPrototypeOf(target);}});
+ await f.client.record('outer','r2',[proxy],['New record']);assert.ok(entered);assert.ok(await entered);assert.equal(f.calls.filter(x=>x.url.endsWith('/record')).length,1);
+ await f.client.load(f.ack.record);const array=[rows[0]!];Object.defineProperty(array,'0',{get(){throw Error('getter must not run');}});
+ await assert.rejects(f.client.record('getter','r3',array,['New record']));
+ const poison=new Proxy(rows[0]!,{getPrototypeOf(target){f.client.dispose();return Reflect.getPrototypeOf(target);}});const before=f.calls.length;
+ await assert.rejects(f.client.record('dispose','r3',[poison],['New record']));assert.equal(f.calls.length,before);assert.ok(calls>0);
+});
