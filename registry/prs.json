@@ -181,8 +181,10 @@
       },
       "selectedCorrectionImpact": {
         "docs": "docs/SELECTED_CORRECTION_IMPACT.md",
-        "status": "WIP PR33;14 focused groups added/actual2threeDB HTTP groups pass; final combined/packed/types/full/headCI pending. Originaltask/fullworkflow/browserATlive separate.",
-        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/33"
+        "status": "WIP PR33;ALL14final focused local+14PACKEDpublic-export groups/types/3runtimebytes PASS0fail0skip. Actual3restrictedDB NativeFetch/JSDOM; copiedprepareddepsNOTfreshinstall. FullfinalLOCAL/headCI pending. Originaltask/fullworkflow/browserATlive separate.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/33",
+        "verification": "docs/selected-correction-impact-verification.json",
+        "example": "docs/examples/private-selected-correction-impact.html"
       }
     },
     {
@@ -339,8 +341,10 @@
       },
       "selectedCorrectionImpact": {
         "docs": "docs/SELECTED_CORRECTION_IMPACT.md",
-        "status": "WIP PR33;14 focused groups added/actual2threeDB HTTP groups pass; final combined/packed/types/full/headCI pending. Originaltask/fullworkflow/browserATlive separate.",
-        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/33"
+        "status": "WIP PR33;ALL14final focused local+14PACKEDpublic-export groups/types/3runtimebytes PASS0fail0skip. Actual3restrictedDB NativeFetch/JSDOM; copiedprepareddepsNOTfreshinstall. FullfinalLOCAL/headCI pending. Originaltask/fullworkflow/browserATlive separate.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/33",
+        "verification": "docs/selected-correction-impact-verification.json",
+        "example": "docs/examples/private-selected-correction-impact.html"
       }
     },
     {

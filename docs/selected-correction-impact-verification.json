@@ -1,0 +1,38 @@
+{
+  "status": "incomplete_until_final_head_CI",
+  "focusedLocal": {
+    "tests": 14,
+    "pass": 14,
+    "fail": 0,
+    "skipped": 0
+  },
+  "packed": {
+    "tests": 14,
+    "pass": 14,
+    "fail": 0,
+    "skipped": 0,
+    "strictDeclarations": "passed",
+    "runtimeModulesByteMatch": 3,
+    "dependencyInstall": "copied/hardlinked normally prepared dependencies, not fresh install",
+    "fullInstalledSuite": "not claimed"
+  },
+  "runtimeQualification": "synthetic proofing/three restricted migrated PGlite DBs/native Fetch/JSDOM; not TCP/browser/AT/live",
+  "factualSource": "def6d757d8cc3910bde6fdf1e8b67bf8b3794fa9",
+  "sha256": {
+    "package.json": "0a4b00eb37452bed7e3da51f573de40b30abe409db3e993fd0cd6a683b2b6a7f",
+    "package-lock.json": "5669e4f68bf434022d4eadc42c98e84d0b6d2da9d891d05ba4a28cb221f04718",
+    "src/correction-impact-controls.ts": "15a6a9c8cd18b92cd296d92941df971ec0f2f4d28d9d4b754a10e589d230877b",
+    "src/selected-correction-impact.ts": "2f18e61db706529c45de559e73580568926c0dce810ff1648b428ac99ea155af",
+    "src/correction-impact-client.ts": "ae587c2784206ebc50937f1204497649cf77bc2816bb60e3a56813625282ec5d",
+    "docs/ARCHITECTURE.md": "a33a204ec43a4c049120502976ac5c064fb888823e1dcf339d679b548861d2b8",
+    "scripts/validate-pr-registry.mjs": "c849c8cf00eda1aed105a3fbb5d7d3acefea86a294af992708570fa74a480ab1",
+    "scripts/render-correction-impact-example.mjs": "51cd1e7a0f257887d18bec0216829fb47b39dae76156f87b2bc327f7edf7cd10",
+    "tests/correction-impact-client.test.ts": "70c99030c0e94e3f609309fb3605963461997ca81b0e549f8178a30324e39256",
+    "tests/selected-correction-impact-fixture.ts": "97a8edc4cde2e9715e78dfd33dda3be22140e721f6a3b659a1c01893de9c0abb",
+    "tests/correction-impact-integration.test.ts": "38070fcacbad158329a9ea5fe4ebe00bf9e8da89a14fb84cfb973b63484b376b",
+    "tests/correction-impact-db-fixture.ts": "29f39001836968003668187c1fc4c3fd36eae50b5ea14cff958c334a0ba83677",
+    "tests/selected-correction-impact.test.ts": "18a965a736cf1038d0ff4e4f6ede7483f51e32189485cc3b7a3b75c580c8e513",
+    "tests/correction-impact-http-fixture.ts": "95eb42a7e72db863c921a2cda4c4f372e798448f1a2cc9b0b786473df1b2531b",
+    "docs/examples/private-selected-correction-impact.html": "db1dae989520b4df89024a3a66b766df906a3841b66e85c5191fa0ff2fffcf2b"
+  }
+}
