@@ -1,0 +1,16 @@
+{
+  "profile": "disposition-write-client-verification-v1",
+  "limitations": [
+    "Private partial client only; no mounted editor or real browser/AT/live acceptance.",
+    "Nine focused local/packed groups; copied hard-linked prepared dependencies, not fresh install.",
+    "Full/final-head CI pending."
+  ],
+  "sha256": {
+    "src/disposition-write-client.ts": "4447cd904ba79cc1d74d87d564630eeee67066aed4c5f22633ae7a0d00eb4d3f",
+    "tests/disposition-write.test.ts": "faa823e8046e97acfef9eed80967fc410b4cb6dbe76970c595c4e5ccbae0449e",
+    "package.json": "96bb2129d8db76a9bb5f3bb211f63c98551af4e70326ab63813b7f537f30f640",
+    "registry/prs.json": "0f835e142753fbe850d3f6ca18f94ba11362abe59c9b2643fb53f6d2f39a3e27",
+    "docs/ARCHITECTURE.md": "271f74152a7d990296ae2e4496411abdb927385b86f79ef6c88e391287fe3bb3",
+    "docs/DISPOSITION_WRITE_CLIENT.md": "84e278ff1dbc3e5d53681401e29f7195e78f1952f8fcd8547dfbcbdc37339465"
+  }
+}
