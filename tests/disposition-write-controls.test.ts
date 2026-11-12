@@ -48,3 +48,25 @@ test('exclusive ownership, direct detach and host ID callback disposal fence dis
  root.querySelector('button')!.click();for(let i=0;i<1000&&!root.querySelector('table');i++)await new Promise(r=>setTimeout(r,5));
  (root.querySelector('[name="confirm"]') as HTMLInputElement).click();const record=Array.from(root.querySelectorAll('button')).find(x=>x.textContent!.includes('Record'))!;record.click();await new Promise(r=>setTimeout(r,0));assert.equal(g.client.closed,true);assert.equal(g.calls.filter(x=>x.url.endsWith('/record')).length,0);assert.equal(root.textContent,'');
 });
+test('literal multiline trigger survives unchanged; editing resets confirmation and discard restores captured values',async t=>{
+ const f=await ready(t);await f.read();const original=f.input('time:reason').value;
+ f.input('confirm').click();assert.equal(f.input('confirm').checked,true);
+ f.change('time:reason','Changed rationale');assert.equal(f.input('confirm').checked,false);assert.equal(f.button('Record').disabled,true);
+ f.button('Discard').click();assert.equal(f.input('time:reason').value,original);assert.equal(f.input('confirm').checked,false);
+ const literal='Line one\nLine two <script>literal</script> λ';f.change('reopeningTriggers',literal);f.input('confirm').click();f.button('Record').click();await f.idle();await f.read();
+ assert.deepEqual(f.client.viewed!.table.latestReview!.reopeningTriggers,[literal]);assert.deepEqual(JSON.parse(f.input('reopeningTriggers').value),[literal]);assert.equal(f.root.querySelector('script'),null);
+});
+test('detaching during a noncooperative read closes client and withholds late private frame',async t=>{
+ const f=await fixture(t);const frame=await f.client.load(f.ack.record);
+ const {DispositionWriteClient}=await import('../src/disposition-write-client.ts');
+ let release!:(r:Response)=>void,began!:()=>void,cancelled=false;const started=new Promise<void>(r=>began=r);
+ const client=new DispositionWriteClient(origin,c,c.purpose,async(url)=>{
+  if(String(url).endsWith('/read')){began();return new Promise<Response>(r=>release=r);}
+  return new Response(JSON.stringify({actorId:c.actor.id,csrfToken:'fixture-csrf-token-0000000000000000000000'}),{headers:{'content-type':'application/json','cache-control':'no-store'}});
+ });
+ const dom=new JSDOM('<main></main>',{url:origin}),root=dom.window.document.querySelector('main')!;
+ const view=mountDispositionWrite(root,client,f.ack.record,()=> 'x',()=> 'y');t.after(()=>{view.dispose();dom.window.close();});
+ root.querySelector('button')!.click();await started;root.remove();await new Promise(r=>setTimeout(r,0));assert.equal(client.closed,true);
+ const bytes=new TextEncoder().encode(JSON.stringify(frame));release(new Response(new ReadableStream({start(controller){controller.enqueue(bytes);},cancel(){cancelled=true;}}),{headers:{'content-type':'application/json','cache-control':'no-store'}}));
+ await new Promise(r=>setTimeout(r,0));assert.equal(cancelled,true);assert.equal(root.textContent,'');assert.equal(client.viewed,null);
+});

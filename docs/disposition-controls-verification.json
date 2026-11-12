@@ -1,0 +1,17 @@
+{
+  "profile": "disposition-write-controls-verification-v1",
+  "limits": [
+    "Private partial editor, not browserAT/live/fullworkflow acceptance",
+    "Six focused local and six packed compiled public-export groups pass; full/current-head CI pending.",
+    "Packed consumer copies hard-linked prepared dependencies; not fresh install"
+  ],
+  "sha256": {
+    "src/disposition-write-controls.ts": "1350e5632d6c8a042d4fbfad2492745fd6bc09a413b2448085cf468886fbfad3",
+    "tests/disposition-write-controls.test.ts": "808473ab16c1d35caa0911170ac2339f4e967ad9c4d605c1e2aa192b64f0e67a",
+    "tests/disposition-editor-fixture.ts": "f6793a9c2bd458e8da78cd3df14fc813e601cd08c391392390bb9006a77f1f7f",
+    "package.json": "7d86966e1bcaaaa6d7be2d6fe5b56717b23cd0c1b4767ec97e69756f476982d2",
+    "registry/prs.json": "e4adaf15975077f4c51efcec9daf22868615a9659cf3dba62e6568d1f85e06b8",
+    "docs/ARCHITECTURE.md": "e7e7ebb9ee58d8d2527206faac79ba82b1091e10026a93036f42d1974c639864",
+    "docs/DISPOSITION_WRITE_CONTROLS.md": "29110c37f62225620d0a0c8369989e646b7a438a4322e2bc0dd2f55968b04adc"
+  }
+}

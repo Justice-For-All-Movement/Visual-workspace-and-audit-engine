@@ -74,7 +74,8 @@
         27,
         28,
         29,
-        30
+        30,
+        31
       ],
       "dependsOn": [
         "VWA-001"
@@ -168,7 +169,8 @@
       },
       "dispositionWriteControls": {
         "docs": "docs/DISPOSITION_WRITE_CONTROLS.md",
-        "status": "Incomplete WIP; explicit confirmation/private question editor/manual identical replay. Focused tests and package/current-head qualification pending."
+        "status": "WIP;6focused local+6PACKEDpublicexport groups/types/compiled control bytes match. Source-review clear bounded editor; full/current-head CI pending. BrowserAT/live/protected reload/fullworkflow remain pending.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/31"
       }
     },
     {
@@ -199,7 +201,8 @@
         27,
         28,
         29,
-        30
+        30,
+        31
       ],
       "dependsOn": [
         "VWA-001"
@@ -312,7 +315,8 @@
       },
       "dispositionWriteControls": {
         "docs": "docs/DISPOSITION_WRITE_CONTROLS.md",
-        "status": "Incomplete WIP; explicit confirmation/private question editor/manual identical replay. Focused tests and package/current-head qualification pending."
+        "status": "WIP;6focused local+6PACKEDpublicexport groups/types/compiled control bytes match. Source-review clear bounded editor; full/current-head CI pending. BrowserAT/live/protected reload/fullworkflow remain pending.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/31"
       }
     },
     {
@@ -330,7 +334,8 @@
         27,
         28,
         29,
-        30
+        30,
+        31
       ],
       "dependsOn": [
         "VWA-002",
@@ -396,7 +401,8 @@
       },
       "dispositionWriteControls": {
         "docs": "docs/DISPOSITION_WRITE_CONTROLS.md",
-        "status": "Incomplete WIP; explicit confirmation/private question editor/manual identical replay. Focused tests and package/current-head qualification pending."
+        "status": "WIP;6focused local+6PACKEDpublicexport groups/types/compiled control bytes match. Source-review clear bounded editor; full/current-head CI pending. BrowserAT/live/protected reload/fullworkflow remain pending.",
+        "pullRequest": "https://github.com/Justice-For-All-Movement/Visual-workspace-and-audit-engine/pull/31"
       }
     },
     {
